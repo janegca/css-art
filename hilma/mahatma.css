@@ -1,0 +1,94 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -- General Styling -- */
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+
+  background-color: #f3f5f7;
+  min-height: 100vh;
+}
+
+/* -- Composition -- */
+.mahatma {
+  /* font sizes */
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+  --fs-xlarge: 2.5rem;
+
+  /* palette */
+  --bg: ivory;
+  --w: white;
+  --b: black;
+
+  --shadow-left: -0.1em 0 hsla(0, 0%, 50%, 0.2);
+  --inset-left: inset 4em 0 0 -0.8em white;
+  --inset-right: inset -4em 0 0 -0.8em black;
+
+  /* style */
+  position: relative;
+  width: 25em;
+  height: 30em;
+
+  background-color: var(--bg);
+  font-size: calc(var(--fs-small) + 0.3vw);
+}
+
+.mahatma::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20em;
+  height: 20em;
+
+  border-radius: 50%;
+  background: linear-gradient(to right, black 50%, white 50% 0%);
+
+  box-shadow: var(--inset-right), var(--inset-left), var(--shadow-left);
+  transform: translate(-50%, -50%);
+}
+
+.mahatma::after {
+  content: "The Mahatmas Present Standing Point, Series II, No. 2a";
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+
+  font-size: larger;
+  text-align: center;
+}
+
+/* -- Media Queries -- */
+@media (min-width: 40rem) {
+  .house {
+    font-size: var(--fs-medium);
+  }
+}
+
+@media (min-width: 80rem) {
+  .house {
+    font-size: var(--fs-large);
+  }
+}
+
+@media (min-width: 110rem) {
+  .house {
+    font-size: var(--fs-xlarge);
+  }
+}
