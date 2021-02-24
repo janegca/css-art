@@ -1,0 +1,90 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -- General Styling -- */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  margin: 0;
+}
+
+/* -- Composition -- */
+.comp-2-rby {
+  /* font sizes */
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+  --fs-xlarge: 2.5rem;
+
+  /* palette */
+  --bg: #0d0f0d;
+  --w: #ebf0d3;
+  --b: #101d40;
+  --r: #821a0d;
+  --y: #d09629;
+
+  /* composition elements */
+  --el-b: linear-gradient(var(--b), var(--b)) 0 22em / 7.3em 8em;
+  --el-r: linear-gradient(var(--r), var(--r)) 8em 0 / 22em 21.3em;
+  --el-w-tl: linear-gradient(var(--w), var(--w)) 0 0 / 7.3em 9em;
+  --el-w-m: linear-gradient(var(--w), var(--w)) 0 10.2em / 7.3em 11.1em;
+  --el-w-bm: linear-gradient(var(--w), var(--w)) 8em 22em / 19.4em 8em;
+  --el-w-br: linear-gradient(var(--w), var(--w)) 28em 22em / 2em 3.6em;
+  --el-y: linear-gradient(var(--y), var(--y)) 28em 26.4em / 2em 3.6em;
+
+  /* styles */
+  position: relative;
+  width: 30em;
+  height: 30em;
+
+  /* sets the base REM value */
+  font-size: calc(var(--fs-small) + 0.3vw);
+
+  background: var(--el-y), var(--el-w-br), var(--el-w-bm), var(--el-b),
+    var(--el-w-m), var(--el-r), var(--el-w-tl);
+  background-color: var(--bg);
+  background-repeat: no-repeat;
+}
+
+.comp-2-rby::after {
+  content: "Piet Mondrian: Composition II in Red, Blue, and Yellow, 1929";
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+
+  font-size: larger;
+  text-align: center;
+}
+
+/* -- Media Queries -- */
+@media (min-width: 40rem) {
+  .house {
+    font-size: var(--fs-medium);
+  }
+}
+
+@media (min-width: 80rem) {
+  .house {
+    font-size: var(--fs-large);
+  }
+}
+
+@media (min-width: 110rem) {
+  .house {
+    font-size: var(--fs-xlarge);
+  }
+}

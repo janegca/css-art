@@ -1,0 +1,128 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -- General Styling -- */
+body {
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* -- Composition -- */
+.swan17 {
+  /* font sizes */
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+  --fs-xlarge: 2.5rem;
+
+  /* palette */
+  --bg: #b1412c;
+  --w: #d0d0ca;
+  --blk: hsl(0, 0%, 11%);
+  --b: hsl(208, 38%, 52%);
+  --y: hsl(40, 66%, 59%);
+  --r: hsla(10, 51%, 66%, 0.7);
+
+  /* style */
+  position: relative;
+  width: 32em;
+  height: 32em;
+
+  background-color: var(--bg);
+
+  font-size: calc(var(--fs-small) + 0.3vw);
+}
+
+.swan17::before {
+  content: "";
+  position: absolute;
+  top: 8em;
+  left: 8em;
+  width: 16em;
+  height: 16em;
+
+  border-radius: 50%;
+  background: conic-gradient(var(--b) 50%, var(--w) 50%);
+
+  background-repeat: no-repeat;
+}
+
+.swan17::after {
+  content: "";
+  position: absolute;
+  top: 11em;
+  right: 11em;
+  width: 10em;
+  height: 10em;
+
+  border-radius: 50%;
+  background-image: conic-gradient(var(--y) 50%, var(--blk) 50%);
+  z-index: 1;
+}
+
+.swan17-inner {
+  position: absolute;
+  top: 13em;
+  right: 13em;
+  width: 6em;
+  height: 6em;
+
+  border-radius: 50%;
+  background-image: conic-gradient(var(--r) 50%, transparent 50%);
+  z-index: 2;
+}
+
+.swan17-inner::before {
+  content: "";
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  width: 2em;
+  height: 2em;
+
+  background: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      transparent 0% 50%,
+      var(--bg) 0% 75%,
+      var(--blk) 0%
+    )
+    2em 2em / 2em 2em;
+
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+/* -- Media Queries -- */
+@media (min-width: 40rem) {
+  .house {
+    font-size: var(--fs-medium);
+  }
+}
+
+@media (min-width: 80rem) {
+  .house {
+    font-size: var(--fs-large);
+  }
+}
+
+@media (min-width: 110rem) {
+  .house {
+    font-size: var(--fs-xlarge);
+  }
+}
