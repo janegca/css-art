@@ -6,4 +6,8 @@ Attempts at creating Pure CSS Art.
 - [Hilma af Klint: The Current Standpoint of the Mahatma's, 1920](./hilma/mahatma.html)
 - [Mondrian Composition II in Red, Blue, and Yellow, 1929](./mondrian/comp-II-rby.html)
 
+## Objects
+
+- [Colour Pencil](./objects/pencil-green.html)
+
 Also on [Codepen](https://codepen.io/collection/XjjkgL)
