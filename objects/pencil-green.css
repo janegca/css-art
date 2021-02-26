@@ -34,7 +34,7 @@ body {
 
   /* palette */
   --base: hsl(84, 96%, 30%);
-  --tip: hsl(93, 50%, 56%);
+  --tip: hsl(93, 48%, 50%);
   --wood: hsl(33, 100%, 78%);
   --base-dk: hsl(84, 42%, 40%);
   --base-grey: hsl(90, 1%, 75%);
@@ -42,6 +42,8 @@ body {
   /* image layers */
   --pencil: linear-gradient(
       to right,
+      var(--wood),
+      2%,
       var(--base) 10%,
       15%,
       var(--base-grey) 30%,
@@ -69,7 +71,7 @@ body {
 .pencil-green::before {
   content: "";
   position: absolute;
-  left: -2.7em;
+  left: -2.75em;
   top: 0.6em;
   height: 0.2em;
 
@@ -78,6 +80,22 @@ body {
   border-top: 0.4em solid transparent;
 
   transform: scale(2.6);
+}
+
+.pencil-green::after {
+  content: "";
+  position: absolute;
+  left: -1%;
+  top: 0.05em;
+  width: 2em;
+  height: 1.95em;
+
+  --shaving: linear-gradient(to right, var(--tip) 10%, var(--wood), var(--base)) -0.5em
+    0.1em / 3em 1em;
+
+  border-radius: 11% / 50%;
+  background: var(--shaving), var(--wood);
+  background-clip: border-box;
 }
 
 /* -- Media Queries -- */
