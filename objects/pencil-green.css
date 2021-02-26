@@ -79,7 +79,11 @@ body {
   outline: 1px solid #aaa;
 }
 
-/* pencil tip */
+/* pencil tip 
+   TODO: look at using a clip-path to create the pencil tip 
+         and figure out how to apply the highlight to the
+         whole length of the pencil, tip included
+ */
 .pencil-green::before {
   content: "";
   position: absolute;
