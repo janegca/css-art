@@ -1,0 +1,100 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -- General Styling -- */
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+
+  background-color: oldlace;
+  min-height: 100vh;
+}
+
+/* -- Composition -- */
+
+.pencil-green {
+  /* font sizes */
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+  --fs-xlarge: 2.5rem;
+
+  /* palette */
+  --base: hsl(84, 96%, 30%);
+  --tip: hsl(93, 50%, 56%);
+  --wood: hsl(33, 100%, 78%);
+  --base-dk: hsl(84, 42%, 40%);
+  --base-grey: hsl(90, 1%, 75%);
+
+  /* image layers */
+  --pencil: linear-gradient(
+      to right,
+      var(--base) 10%,
+      15%,
+      var(--base-grey) 30%,
+      45%,
+      hsla(90, 1%, 75%, 0) 75%
+    )
+    0% 0% / 40em 2em;
+
+  /* style */
+  position: relative;
+  width: 40em;
+  height: 2em;
+
+  background: linear-gradient(to top, var(--base-grey), var(--base-grey)) 36em
+      100% / 0.5em 2em,
+    var(--pencil);
+
+  background-repeat: no-repeat;
+
+  font-size: calc(var(--fs-small) + 0.3vw);
+  outline: 1px solid #aaa;
+}
+
+/* pencil tip */
+.pencil-green::before {
+  content: "";
+  position: absolute;
+  left: -2.7em;
+  top: 0.6em;
+  height: 0.2em;
+
+  border-right: 1.5em solid var(--tip);
+  border-bottom: 0.4em solid transparent;
+  border-top: 0.4em solid transparent;
+
+  transform: scale(2.6);
+}
+
+/* -- Media Queries -- */
+@media (min-width: 40rem) {
+  .house {
+    font-size: var(--fs-medium);
+  }
+}
+
+@media (min-width: 80rem) {
+  .house {
+    font-size: var(--fs-large);
+  }
+}
+
+@media (min-width: 110rem) {
+  .house {
+    font-size: var(--fs-xlarge);
+  }
+}
