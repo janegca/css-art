@@ -1,4 +1,8 @@
 /* -- Standard Resets -- */
+:root {
+  --bg: oldlace;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -19,7 +23,7 @@ body {
   place-items: center;
   margin: 0;
 
-  background-color: oldlace;
+  background-color: var(--bg);
   min-height: 100vh;
 }
 
@@ -77,6 +81,7 @@ body {
   outline: 1px solid #aaa;
 }
 
+/* pencil tip */
 .pencil-green::before {
   content: "";
   position: absolute;
@@ -84,10 +89,22 @@ body {
   width: 6em;
   height: 2em;
 
-  background: linear-gradient(to bottom right, transparent 50%, var(--tip) 50%)
+  /* image layers */
+  --top-half: linear-gradient(to bottom right, transparent 50%, var(--tip) 50%)
+    50% 0 / 6em 1em;
+  --bottom-half: linear-gradient(
+      to left bottom,
+      var(--tip) 50%,
+      transparent 50%
+    )
+    100% 100% / 6em 1em;
+
+  background: linear-gradient(to bottom right, var(--bg) 50%, transparent 50%)
       50% 0 / 6em 1em,
-    linear-gradient(to left bottom, var(--tip) 50%, transparent 50%) 100% 100% /
-      6em 1em;
+    linear-gradient(to left bottom, transparent 50%, var(--bg) 50%) 100% 100% /
+      6em 1em,
+    linear-gradient(to right, transparent 50%, var(--wood)) 50% 0 / 6em 2em,
+    var(--top-half), var(--bottom-half);
   background-repeat: no-repeat;
 }
 
