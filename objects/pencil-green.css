@@ -43,8 +43,6 @@ body {
   /* image layers */
   --pencil: linear-gradient(
       to right,
-      var(--wood),
-      5%,
       var(--base) 10%,
       15%,
       var(--base-grey) 30%,
@@ -75,43 +73,22 @@ body {
   box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, 0.1);
 
   font-size: calc(var(--fs-small) + 0.3vw);
-  transform: rotate(-30deg);
+  /* transform: rotate(-30deg); */
   outline: 1px solid #aaa;
 }
 
-/* pencil tip 
-   TODO: look at using a clip-path to create the pencil tip 
-         and figure out how to apply the highlight to the
-         whole length of the pencil, tip included
- */
 .pencil-green::before {
   content: "";
   position: absolute;
-  left: -2.75em;
-  top: 0.6em;
-  height: 0.2em;
+  left: -6em;
+  width: 6em;
+  height: 2em;
 
-  border-right: 1.5em solid var(--tip);
-  border-bottom: 0.4em solid transparent;
-  border-top: 0.4em solid transparent;
-
-  transform: scale(2.6);
-}
-
-.pencil-green::after {
-  content: "";
-  position: absolute;
-  left: -1%;
-  top: 0.05em;
-  width: 2em;
-  height: 1.95em;
-
-  --shaving: linear-gradient(to right, var(--tip) 10%, var(--wood), var(--base)) -0.5em
-    0.1em / 3em 1em;
-
-  border-radius: 11% / 50%;
-  background: var(--highlight), var(--shaving), var(--wood);
-  background-clip: border-box;
+  background: linear-gradient(to bottom right, transparent 50%, var(--tip) 50%)
+      50% 0 / 6em 1em,
+    linear-gradient(to left bottom, var(--tip) 50%, transparent 50%) 100% 100% /
+      6em 1em;
+  background-repeat: no-repeat;
 }
 
 /* -- Media Queries -- */
