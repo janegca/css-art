@@ -1,6 +1,7 @@
 /* -- Standard Resets -- */
 :root {
   --bg: oldlace;
+  /* --bg: black; */
 }
 
 html {
@@ -47,7 +48,8 @@ body {
   /* image layers */
   --pencil: linear-gradient(
       to right,
-      var(--base) 10%,
+      var(--wood),
+      var(--base) 1%,
       15%,
       var(--base-grey) 30%,
       45%,
@@ -60,10 +62,10 @@ body {
 
   --highlight: linear-gradient(
     to bottom,
-    transparent 12px,
-    var(--hl) 17px,
-    var(--hl) 19px,
-    transparent 24px
+    transparent 0.7em,
+    var(--hl) 0.8em,
+    var(--hl) 1em,
+    transparent 1.5em
   );
 
   /* style */
@@ -77,7 +79,7 @@ body {
   box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, 0.1);
 
   font-size: calc(var(--fs-small) + 0.3vw);
-  /* transform: rotate(-30deg); */
+  transform: rotate(-30deg);
   outline: 1px solid #aaa;
 }
 
@@ -89,22 +91,37 @@ body {
   width: 6em;
   height: 2em;
 
-  /* image layers */
+  /* image layers
+      reversed halves overwrite the wood shaving sections that 'stick' out
+      and overlap the background
+   */
   --top-half: linear-gradient(to bottom right, transparent 50%, var(--tip) 50%)
     50% 0 / 6em 1em;
+  --top-reversed: linear-gradient(
+      to bottom right,
+      var(--bg) 50%,
+      transparent 50%
+    )
+    50% 0 / 6em 1em;
+
   --bottom-half: linear-gradient(
       to left bottom,
       var(--tip) 50%,
       transparent 50%
     )
     100% 100% / 6em 1em;
+  --bottom-reversed: linear-gradient(
+      to left bottom,
+      transparent 50%,
+      var(--bg) 50%
+    )
+    100% 100% / 6em 1em;
 
-  background: linear-gradient(to bottom right, var(--bg) 50%, transparent 50%)
-      50% 0 / 6em 1em,
-    linear-gradient(to left bottom, transparent 50%, var(--bg) 50%) 100% 100% /
-      6em 1em,
-    linear-gradient(to right, transparent 50%, var(--wood)) 50% 0 / 6em 2em,
-    var(--top-half), var(--bottom-half);
+  --wood-shaving: linear-gradient(to right, transparent 50%, var(--wood) 65%)
+    50% 0 / 6em 2em;
+
+  background: var(--highlight), var(--top-reversed), var(--bottom-reversed),
+    var(--wood-shaving), var(--top-half), var(--bottom-half);
   background-repeat: no-repeat;
 }
 
