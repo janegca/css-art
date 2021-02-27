@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: rgb(234, 248, 255);
+  background-color: skyblue;
   margin: 0;
 }
 
@@ -29,6 +29,17 @@ body {
 }
 
 /* -- Compositions -- */
+/* TODO: 
+    have to re-think all the unit measures, take another look at the Egghead tutorial 
+    things are flying apart as the view changes size
+
+    looks like I need to set a fixed font size and then use em's (parasol tutorial)
+    OR
+    set a base size, an aspect-ratio, and a unit measure then do everything using 
+    percentages, no em's or rem's
+       --size: 50;
+       --unit: calc(var(--size) / var(--intrinsic-h) * 1vmin);
+  */
 .cloud {
   /* font sizes */
   --fs-small: 0.75rem;
@@ -43,16 +54,24 @@ body {
   /* palette */
   --cloud: white;
 
+  /*  cloud layers */
+  --base: radial-gradient(18em 12em at 50% 90%, white 50%, transparent 50%);
+  --small-bump: radial-gradient(6em 6em at 30% 55%, white 50%, transparent 50%);
+  --large-bump: radial-gradient(9em 9em at 60% 55%, white 50%, transparent 50%);
+
   /* style */
   position: relative;
 
   min-width: calc(var(--min-unit) * 2);
-  min-height: var(--min-unit);
+  min-height: calc(var(--min-unit) * 2);
   max-width: calc(var(--max-unit) * 2);
-  max-height: var(--max-unit);
+  max-height: calc(var(--max-unit) * 2);
 
-  border-radius: clamp(var(--min-unit), var(--avg-unit), var(--max-unit));
-  background-color: var(--cloud);
+  border-radius: 0 0 3em 3em;
+  background: var(--left-edge), var(--large-bump), var(--small-bump),
+    var(--base);
+
+  background-color: transparent;
 
   font-size: var(--fs-small);
 }
@@ -82,4 +101,13 @@ body {
   .house {
     font-size: var(--fs-xlarge);
   }
+}
+
+.circles {
+  background: radial-gradient(7em 7em at 35% 35%, red 50%, transparent 50%),
+    radial-gradient(7em 7em at 50% 50%, gold 50%, transparent 50%),
+    radial-gradient(7em 7em at 65% 65%, blue 50%, transparent 50%);
+  background-repeat: no-repeat;
+  width: 240px;
+  height: 240px;
 }
