@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(234, 248, 255);
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+
+  min-height: 100vh;
+
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 5vmin;
+}
+
+/* -- Compositions -- */
+.cloud {
+  /* font sizes */
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+  --fs-xlarge: 2.5rem;
+
+  --min-unit: min(12vw, 12em);
+  --max-unit: max(12vw, 12em);
+  --avg-unit: calc((var(--max-unit) - var(--min-unit)) / 2);
+
+  /* palette */
+  --cloud: white;
+
+  /* style */
+  position: relative;
+
+  min-width: calc(var(--min-unit) * 2);
+  min-height: var(--min-unit);
+  max-width: calc(var(--max-unit) * 2);
+  max-height: var(--max-unit);
+
+  border-radius: clamp(var(--min-unit), var(--avg-unit), var(--max-unit));
+  background-color: var(--cloud);
+
+  font-size: var(--fs-small);
+}
+
+/* Sunny cloud */
+.cloud__sunny {
+}
+
+/* Stormy cloud */
+.cloud__stormy {
+}
+
+/* -- Media Queries -- */
+@media (min-width: 40rem) {
+  .house {
+    font-size: var(--fs-medium);
+  }
+}
+
+@media (min-width: 80rem) {
+  .house {
+    font-size: var(--fs-large);
+  }
+}
+
+@media (min-width: 110rem) {
+  .house {
+    font-size: var(--fs-xlarge);
+  }
+}
