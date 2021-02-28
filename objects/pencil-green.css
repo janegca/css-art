@@ -14,10 +14,6 @@ html {
   box-sizing: inherit;
 }
 
-img {
-  max-width: 100%;
-}
-
 /* -- General Styling -- */
 body {
   display: grid;
@@ -31,12 +27,6 @@ body {
 /* -- Composition -- */
 
 .pencil-green {
-  /* font sizes */
-  --fs-small: 0.75rem;
-  --fs-medium: 1rem;
-  --fs-large: 1.5rem;
-  --fs-xlarge: 2.5rem;
-
   /* palette */
   --base: hsl(84, 96%, 30%);
   --tip: hsl(93, 48%, 50%);
@@ -70,6 +60,8 @@ body {
 
   /* style */
   position: relative;
+  top: 0;
+  left: -25%;
   width: 40em;
   height: 2em;
 
@@ -78,8 +70,13 @@ body {
 
   box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, 0.1);
 
-  font-size: calc(var(--fs-small) + 0.3vw);
-  transform: rotate(-30deg);
+  /* allows sizing to be responsive viz-a-viz the viewport
+     and REM sizing (when user increases/descreases font
+     using CTRL+ and CTRL- in the browser)
+   */
+  font-size: 1px + 1vw;
+
+  transform: rotate(-90deg);
   outline: 1px solid #aaa;
 }
 
@@ -92,7 +89,7 @@ body {
   height: 2em;
 
   /* image layers
-      reversed halves overwrite the wood shaving sections that 'stick' out
+      reversed halves overwrite the wood shaving sections that 'stick out'
       and overlap the background
    */
   --top-half: linear-gradient(to bottom right, transparent 50%, var(--tip) 50%)
@@ -120,26 +117,21 @@ body {
   --wood-shaving: linear-gradient(to right, transparent 50%, var(--wood) 65%)
     50% 0 / 6em 2em;
 
-  background: var(--highlight), var(--top-reversed), var(--bottom-reversed),
-    var(--wood-shaving), var(--top-half), var(--bottom-half);
+  /* prettier-ignore */
+  background: 
+    var(--highlight), 
+    var(--top-reversed), 
+    var(--bottom-reversed),
+    var(--wood-shaving), 
+    var(--top-half), 
+    var(--bottom-half);
   background-repeat: no-repeat;
 }
 
 /* -- Media Queries -- */
-@media (min-width: 40rem) {
-  .house {
-    font-size: var(--fs-medium);
-  }
-}
-
-@media (min-width: 80rem) {
-  .house {
-    font-size: var(--fs-large);
-  }
-}
-
-@media (min-width: 110rem) {
-  .house {
-    font-size: var(--fs-xlarge);
+@media (min-width: 40em) {
+  .pencil-green {
+    left: 0;
+    transform: rotate(-30deg);
   }
 }
