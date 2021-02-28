@@ -9,11 +9,13 @@ html {
 }
 
 body {
+  --c: hsl(197, 71%, 73%);
+
   /* prettier-ignore */
   background:
-  radial-gradient(circle at top left, rgb(175, 215, 243), transparent 75%),
-  radial-gradient(circle at 50% 50%, skyblue, transparent 50%),
-  radial-gradient(at bottom right,  hsl(209, 19%, 44%), transparent 90%);
+  radial-gradient(circle at top left, rgba(175, 215, 243, 0.7), transparent 75%),
+  radial-gradient(circle at 50% 50%, hsla(197, 71%, 73%, 0.6), transparent 50%),
+  radial-gradient(at bottom right,  hsla(209, 19%, 44%, 0.7), transparent 90%);
   margin: 0;
 }
 
