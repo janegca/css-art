@@ -35,7 +35,12 @@ body {
 .cloud {
   /* palette */
   --base: white;
-  --base-shadow: 0 1em 0.7em rgba(0, 0, 0, 0.1);
+  --sun: hsla(60, 95%, 50%);
+  --sun-corona: hsl(60, 100%, 50%);
+
+  --shadow-base: 0 1em 0.7em rgba(0, 0, 0, 0.1);
+  --shadow-sun: hsl(203, 91%, 69%);
+  --shadow-storm: hsl(209, 19%, 44%);
 
   /* styling */
   position: relative;
@@ -44,7 +49,7 @@ body {
 
   border-radius: 50em;
   background-color: var(--base);
-  box-shadow: var(--base-shadow);
+  box-shadow: var(--shadow-base);
 
   font-size: 1em;
 }
@@ -72,9 +77,9 @@ body {
   height: 12em;
 
   border-radius: 50%;
-  background-color: hsla(60, 95%, 50%);
+  background-color: var(--sun);
 
-  box-shadow: 0 0 5em 2.5em yellow;
+  box-shadow: 0 0 5em 2.5em var(--sun-corona);
   z-index: -1;
 }
 
@@ -86,14 +91,18 @@ body {
   position: absolute;
   top: 2em;
   min-width: 22em;
-  min-height: 22em;
+  min-height: 12em;
 
   border-radius: 40em;
-  background-color: #69c1f8;
+  background-color: var(--shadow-sun);
 
   filter: blur(2.5em);
   opacity: 0.5;
   z-index: 2;
+}
+
+.cloud .flash + .shadow {
+  background-color: var(--shadow-storm);
 }
 
 /* Media Queries */
