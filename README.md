@@ -8,6 +8,7 @@ Attempts at creating Pure CSS Art.
 
 ## Objects
 
+- [Clouds](./objects/clouds.html)
 - [Coloured Pencil](./objects/pencil-green.html)
 
 Also on [Codepen](https://codepen.io/collection/XjjkgL)
