@@ -11,8 +11,9 @@ html {
 body {
   /* prettier-ignore */
   background:
-    linear-gradient(to right, rgb(175, 215, 243), skyblue, hsl(209, 19%, 44%));
-  background-color: skyblue;
+  radial-gradient(circle at top left, rgb(175, 215, 243), transparent 75%),
+  radial-gradient(circle at 50% 50%, skyblue, transparent 50%),
+  radial-gradient(at bottom right,  hsl(209, 19%, 44%), transparent 90%);
   margin: 0;
 }
 
@@ -32,7 +33,7 @@ body {
 
   padding: 5vmin;
 
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
 }
 
 /* -- Composition -- */
@@ -232,5 +233,23 @@ body {
   .wrapper {
     flex-direction: row;
     margin-top: 0;
+  }
+
+  div:not(.wrapper):first-of-type {
+    top: -5em;
+  }
+
+  div:not(.wrapper):last-of-type {
+    top: 5em;
+  }
+
+  .wind {
+    top: 5em;
+    left: 0;
+  }
+
+  .wind::before {
+    top: 10em;
+    right: -18em;
   }
 }
