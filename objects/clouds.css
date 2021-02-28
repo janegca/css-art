@@ -9,6 +9,9 @@ html {
 }
 
 body {
+  /* prettier-ignore */
+  background:
+    linear-gradient(to right, rgb(175, 215, 243), skyblue, hsl(209, 19%, 44%));
   background-color: skyblue;
   margin: 0;
 }
