@@ -74,7 +74,7 @@ body {
      and REM sizing (when user increases/descreases font
      using CTRL+ and CTRL- in the browser)
    */
-  font-size: 1px + 1vw;
+  font-size: 1em;
 
   transform: rotate(-90deg);
   outline: 1px solid #aaa;
