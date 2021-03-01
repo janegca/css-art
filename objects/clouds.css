@@ -10,14 +10,7 @@ html {
 
 body {
   margin: 0;
-
-  /* prettier-ignore */
-  background:
-  radial-gradient(circle at top left, rgba(175, 215, 243, 0.7), transparent 75%),
-  radial-gradient(circle at 50% 50%, hsla(197, 71%, 73%, 0.6), transparent 50%),
-  radial-gradient(at bottom right,  hsla(209, 19%, 44%, 0.7), transparent 90%);
-
-  font-size: 10px;
+  background-color: rgba(175, 215, 243, 0.5);
 }
 
 .wrapper {
@@ -25,16 +18,16 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 5em;
+  gap: 5rem;
 
   min-height: 100vh;
 
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10em;
+  margin-top: 10rem;
 
-  padding: 5vmin;
+  padding: 1rem;
 
   transition: all 1s ease-in;
 }
