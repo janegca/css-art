@@ -12,4 +12,7 @@ Attempts at creating Pure CSS Art.
 - [Coloured Pencil](./objects/pencil-green.html)
 - [Eye-ball, animated](./objects/eye-ball.html)
 
-Also on [Codepen](https://codepen.io/collection/XjjkgL)
+## Code
+
+[Codepen](https://codepen.io/collection/XjjkgL)
+[Github](https://github.com/janegca/css-art)
