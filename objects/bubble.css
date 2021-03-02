@@ -1,0 +1,151 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling -- */
+body {
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 100, 100, 0.2) 0%,
+    rgba(255, 255, 255, 0.5) 40%,
+    #ffffff 100%
+  );
+  background-repeat: no-repeat;
+}
+
+/* -- Composition -- */
+.stage {
+  /* palette */
+  --primary: hsla(215, 100%, 58%, 0.4);
+  --primary-90-7: hsla(215, 100%, 90%, 0.7);
+  --primary-95-8: hsla(215, 100%, 95%, 0.8);
+  --primary-100-9: hsla(215, 100%, 100%, 0.9);
+
+  /* sizing */
+  --unit: calc(0.5em + 0.5vmin);
+  --size: calc(300 / 16); /* orig pixel size */
+  --width: calc(var(--size) * var(--unit));
+
+  /* image layers */
+  --base: radial-gradient(
+    circle at 50% 55%,
+    var(--primary-100-9),
+    var(--primary-95-8) 40%,
+    var(--primary-90-7) 60%,
+    var(--primary)
+  );
+
+  --bottom-highlight: radial-gradient(
+    circle at 130% 130%,
+    hsla(0, 0%, 100%, 0) 0,
+    hsla(0, 0%, 100%, 0) 46%,
+    hsla(0, 0%, 100%, 0.8) 50%,
+    hsla(0, 0%, 100%, 0.8) 58%,
+    hsla(0, 0%, 100%, 0) 60%,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+
+  --top-highlight: radial-gradient(
+    circle at 50% 80%,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0) 74%,
+    hsl(0, 0%, 100%) 80%,
+    hsl(0, 0%, 100%) 84%,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+
+  /* styling */
+  position: relative;
+  width: var(--width);
+  height: var(--width);
+
+  font-size: var(--unit);
+
+  perspective: calc(var(--width) * 4);
+  perspective-origin: 50% 50%;
+}
+
+.bubble {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 100%;
+  background: var(--base);
+  animation: bubble-anim 2s ease-out infinite;
+}
+
+.bubble:before {
+  /* bottom, square highlight */
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  height: 80%;
+  width: 40%;
+
+  border-radius: 100%;
+  background: var(--bottom-highlight);
+
+  transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  z-index: 2;
+}
+
+.bubble:after {
+  /* top, curved hightlight */
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+
+  border-radius: 100%;
+  background: var(--top-highlight);
+
+  filter: blur(1px);
+  z-index: 2;
+
+  transform: rotateZ(-30deg);
+}
+
+/* -- Animation -- */
+@-webkit-keyframes bubble-anim {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+  }
+
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+  }
+
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+  }
+
+  97%,
+  100% {
+    transform: scale(1);
+  }
+}

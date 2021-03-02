@@ -8,6 +8,7 @@ Attempts at creating Pure CSS Art.
 
 ## Objects
 
+- [Bubble, animated](./objects/bubble.html)
 - [Clouds](./objects/clouds.html)
 - [Coloured Pencil](./objects/pencil-green.html)
 - [Eye-ball, animated](./objects/eye-ball.html)
