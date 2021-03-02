@@ -10,5 +10,6 @@ Attempts at creating Pure CSS Art.
 
 - [Clouds](./objects/clouds.html)
 - [Coloured Pencil](./objects/pencil-green.html)
+- [Eye-ball, animated](./objects/eye-ball.html)
 
 Also on [Codepen](https://codepen.io/collection/XjjkgL)
