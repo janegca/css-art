@@ -31,7 +31,7 @@ body {
 /* -- Composition -- */
 .eye {
   /* sizing */
-  --unit: calc(0.5em + 0.5vmin);
+  --unit: calc(0.5rem + 0.5vmin);
   --size: calc(300 / 16);
   --width: calc(var(--size) * var(--unit));
 

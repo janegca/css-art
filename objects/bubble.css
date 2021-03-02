@@ -35,7 +35,7 @@ body {
   --primary-100-9: hsla(215, 100%, 100%, 0.9);
 
   /* sizing */
-  --unit: calc(0.5em + 0.5vmin);
+  --unit: calc(0.5rem + 0.5vmin);
   --size: calc(300 / 16); /* orig pixel size */
   --width: calc(var(--size) * var(--unit));
 
