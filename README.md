@@ -14,5 +14,5 @@ Attempts at creating Pure CSS Art.
 
 ## Code
 
-[Codepen](https://codepen.io/collection/XjjkgL)
-[Github](https://github.com/janegca/css-art)
+- [Codepen](https://codepen.io/collection/XjjkgL)
+- [Github](https://github.com/janegca/css-art)
