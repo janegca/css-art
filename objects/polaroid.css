@@ -1,0 +1,196 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling -- */
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: hsl(196, 90%, 85%);
+}
+
+/* -- Composition -- */
+.polaroid {
+  /* sizing */
+  --unit: calc(0.5rem + 0.5vmin);
+  --size: calc(420 / 16); /* original pixel width */
+  --width: calc(var(--size) * var(--unit));
+
+  /* palette */
+  --bg: hsl(0, 0%, 100%);
+  --bg-shadow: hsla(0, 6%, 95%, 0.5);
+  --button: hsl(346, 72%, 46%);
+
+  --zoom-bg: hsl(210, 29%, 24%);
+  --zoom-shadow: hsla(0, 0%, 0%, 0.1);
+
+  --grey: hsl(210, 29%, 29%);
+  --grey-light: hsl(210, 29%, 59%);
+  --grey-dark: hsl(210, 30%, 18%);
+
+  /* styling */
+  position: relative;
+  width: var(--width);
+  height: calc(var(--width) * 2 / 3);
+
+  font-size: var(--unit);
+}
+
+.polaroid * {
+  position: absolute;
+}
+
+.polaroid *::before,
+.polaroid *::after {
+  content: "";
+  position: absolute;
+}
+
+/* polaroid body */
+.polaroid .polaroid-body {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 2.5em;
+  background-color: var(--bg);
+  box-shadow: 0.6em 0.6em var(--bg-shadow);
+}
+
+/* button */
+.polaroid .button {
+  top: -4%;
+  left: 14%;
+  width: 10%;
+  height: 5%;
+
+  background-color: var(--button);
+  border-radius: 1em;
+}
+
+/* flash */
+.polaroid .flash {
+  top: -12%;
+  left: 38%;
+  width: 24%;
+  height: 15%;
+
+  background-color: var(--grey);
+  border-radius: 0.5em;
+}
+
+.polaroid .flash::after {
+  top: 10%;
+  left: 32%;
+  width: 36%;
+  height: 60%;
+  background-color: var(--grey-light);
+  border-radius: 0.3em;
+}
+
+/* blinker */
+.polaroid .blinker {
+  top: 15%;
+  left: 15%;
+  width: 1em;
+  height: 1em;
+
+  border-radius: 1em;
+  background-color: var(--grey-dark);
+}
+
+/* zoom */
+.polaroid .zoom {
+  left: 25%;
+  top: 12.5%;
+  width: 50%;
+  height: 75%;
+
+  border-radius: 50%;
+  border: 0.3em solid var(--grey);
+
+  background: var(--grey-dark);
+  box-shadow: 0.6em 0.6em var(--zoom-shadow);
+
+  overflow: hidden;
+}
+
+.polaroid .zoom::before {
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+
+  border-radius: 50%;
+  background: var(--zoom-bg);
+
+  border: 0.6em solid var(--grey);
+}
+
+.polaroid .zoom::after {
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+
+  border-radius: 50%;
+  background: var(--grey-dark);
+}
+
+.polaroid .zoom .reflections {
+  left: -35%;
+  top: -35%;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--bg);
+
+  transform: rotate(-45deg);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.polaroid .zoom .reflections::after {
+  left: 50%;
+  top: 105%;
+  width: 1.25em;
+  height: 1.25em;
+
+  border-radius: 50%;
+  background-color: var(--bg);
+  opacity: 0.5;
+}
+
+/* stripes */
+.polaroid .stripes {
+  top: 35%;
+  right: 0;
+  width: 50%;
+  height: 1em;
+
+  --stripe-red: hsl(326, 100%, 42%);
+  --stripe-orange: hsl(34, 83%, 49%);
+  --stripe-yo: hsl(47, 99%, 50%);
+  --stripe-yellow: rgb(221, 229, 107);
+  --stripe-green: hsl(113, 54%, 41%);
+  --stripe-blue: hsl(198, 99%, 38%);
+
+  /* prettier-ignore */
+  box-shadow: 
+    0em 0.5em var(--stripe-red), 
+    0em 1em var(--stripe-orange),
+    0em 1.5em var(--stripe-yo), 
+    0em 2em var(--stripe-yellow),
+    0em 2.5em var(--stripe-green), 
+    0em 3em var(--stripe-blue);
+}

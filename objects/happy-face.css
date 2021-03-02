@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: hsl(50, 98%, 91%);
+}
+
+/* Composition */
+.head {
+  /* sizing */
+  --unit: calc(0.5rem + 0.5vmin);
+  --size: calc(300 / 16); /* original pixel size */
+  --width: calc(var(--size) * var(--unit));
+
+  /* palette */
+  --head: hsl(44, 95%, 71%);
+  --head-shadow: hsl(44, 84%, 60%);
+  --details: hsl(249, 53%, 20%);
+  --tongue: hsl(356, 84%, 65%);
+
+  /* styling */
+  position: relative;
+  width: var(--width);
+  height: var(--width);
+
+  font-size: var(--unit);
+
+  border-radius: 50%;
+  background-color: var(--head);
+  box-shadow: inset -0.6em -0.6em 0em var(--head-shadow);
+}
+
+/* head */
+.head * {
+  position: absolute;
+}
+
+.head *::before,
+.head *::after {
+  content: "";
+  position: absolute;
+}
+
+/* face */
+.face {
+  left: 5em;
+  top: 5em;
+  width: 9em;
+  height: 11em;
+}
+
+/* eyes */
+.eyes {
+  left: 1em;
+  width: 2.5em;
+  height: 3.5em;
+
+  border-radius: 50%;
+  background-color: var(--details);
+  box-shadow: 5em 0 0 0 var(--details);
+}
+
+.eyes::before {
+  top: 0.5em;
+  left: 0.5em;
+  width: 0.6em;
+  height: 1em;
+
+  border-radius: 50%;
+  background-color: var(--head);
+  box-shadow: 5em 0 0 0 var(--head);
+}
+
+/* mouth */
+.mouth {
+  bottom: 0;
+  width: 100%;
+  height: 5em;
+
+  border-radius: 0.6em 0.6em 9em 9em;
+  border: 0.3em solid var(--details);
+
+  background-color: var(--details);
+  overflow: hidden;
+}
+
+.mouth::before {
+  left: 1.5em;
+  top: 2em;
+  width: 6em;
+  height: 5em;
+
+  border-radius: 50%;
+  background-color: var(--tongue);
+}
