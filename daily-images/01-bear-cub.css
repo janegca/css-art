@@ -1,0 +1,82 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: hsl(177, 50%, 85%);
+}
+
+img {
+  max-width: 100%;
+  opacity: 0;
+}
+
+/* Composition */
+.bear-cub {
+  /* sizing */
+  --unit: calc(0.5em + 0.5vmin);
+  --size: calc(967 / 16);
+  --width: calc(var(--size) * var(--unit));
+
+  /* image layers */
+  --head: radial-gradient(circle at center, white 43%, transparent 50%);
+  --snout: radial-gradient(
+    circle at 51% 62%,
+    hsl(0, 30%, 92%) 5%,
+    hsl(0, 30%, 94%) 10%,
+    hsl(0, 30%, 96%) 20%,
+    transparent 25%
+  );
+
+  --eye-left: radial-gradient(circle at 38% 46%, black 3%, transparent 4%);
+  --eye-right: radial-gradient(circle at 60% 43%, black 3%, transparent 4%);
+  --eye-left-shadow: linear-gradient(hsl(0, 0%, 87%), transparent) 41% 50% / 5em
+    3.5em;
+  --eye-right-shadow: linear-gradient(hsl(0, 0%, 87%), transparent) 60% 47% /
+    3em 3.5em;
+
+  --ear-left: radial-gradient(
+    circle at 23% 31%,
+    hsl(0, 0%, 85%) 1%,
+    hsl(0, 0%, 87%) 3%,
+    hsl(0, 3%, 94%) 6%,
+    transparent 9%
+  );
+  --ear-right: radial-gradient(
+    circle at 70% 22%,
+    hsl(0, 0%, 85%) 1%,
+    hsl(0, 0%, 87%) 3%,
+    hsl(0, 3%, 94%) 6%,
+    transparent 9%
+  );
+
+  /* styling */
+  width: var(--width);
+
+  /* prettier-ignore */
+  background: 
+ 
+  var(--snout),
+  var(--eye-right),
+  var(--eye-right-shadow),
+  var(--eye-left),
+  var(--eye-left-shadow),
+  var(--head),
+  var(--ear-right),
+  var(--ear-left);
+
+  background-repeat: no-repeat;
+  /* background-color: lightpink; */
+  opacity: 04;
+}
