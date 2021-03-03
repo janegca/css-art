@@ -8,14 +8,19 @@ Attempts at creating Pure CSS Art.
 
 ## Objects
 
-- [Bubble, animated](./objects/bubble.html)
-- [Clouds](./objects/clouds.html)
+- [Bubble, animated](./objects/bubble.html)<sup>\*</sup>
+- [Clouds](./objects/clouds.html)<sup>\*</sup>
 - [Coloured Pencil](./objects/pencil-green.html)
-- [Eye-ball, animated](./objects/eye-ball.html)
-- [Happy-face](./objects/happy-face.html)
-- [Polaroid Camera](./objects/polaroid.html)
+- [Eye-ball, animated](./objects/eye-ball.html)<sup>\*</sup>
+- [Happy-face](./objects/happy-face.html)<sup>\*</sup>
+- [Polaroid Camera](./objects/polaroid.html)<sup>\*</sup>
 
 ## Code
 
 - [Codepen](https://codepen.io/collection/XjjkgL)
 - [Github](https://github.com/janegca/css-art)
+
+---
+
+<sup>\*</sup> Images built using tutorials. In each case I have refactored the
+code in an effort to ensure I understand how the image has been built.
