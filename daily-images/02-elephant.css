@@ -1,0 +1,56 @@
+:root {
+  /* sizing  
+        Source image: 417x440 
+
+     TODO: move into .elephant when done
+   */
+  --intrinsic-w: 417;
+  --intrinsic-h: 440;
+  --size: 50;
+  --unit-base: calc(0.5em + 0.5vmin);
+  --unit: calc(var(--size) / var(--intrinsic-h) * var(--unit-base));
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: ghostwhite;
+}
+
+/* TODO: remove when done */
+img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: calc(var(--intrinsic-w) * var(--unit));
+  height: calc(var(--intrinsic-h) * var(--unit));
+
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Composition */
+.elephant {
+  position: relative;
+
+  width: calc(var(--intrinsic-w) * var(--unit));
+  height: calc(var(--intrinsic-h) * var(--unit));
+
+  background-color: hsla(0, 100%, 50%, 0.2);
+}

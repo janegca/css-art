@@ -27,7 +27,6 @@ img {
   /* sizing */
   --unit: calc(0.5em + 0.5vmin);
   --size: 50;
-  /* --size: calc(967 / 16); */
   --width: calc(var(--size) * var(--unit));
 
   /* image layers */
@@ -50,10 +49,6 @@ img {
     hsl(0, 5%, 30%) 4%,
     transparent 4%
   );
-  --eye-left-shadow: linear-gradient(hsl(0, 0%, 87%), transparent) 41% 50% / 5em
-    3.5em;
-  --eye-right-shadow: linear-gradient(hsl(0, 0%, 87%), transparent) 60% 47% /
-    3em 3.5em;
 
   --ear-left: radial-gradient(
     circle at 23% 31%,
@@ -80,9 +75,7 @@ img {
  
   var(--snout),
   var(--eye-right),
-  /* var(--eye-right-shadow), */
   var(--eye-left),
-  /* var(--eye-left-shadow), */
   var(--head),
   var(--ear-right),
   var(--ear-left);
