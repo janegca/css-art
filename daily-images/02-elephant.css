@@ -52,7 +52,7 @@ img {
   width: calc(var(--intrinsic-w) * var(--unit));
   height: calc(var(--intrinsic-h) * var(--unit));
 
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .elephant *,
@@ -104,7 +104,7 @@ img {
 }
 
 .elephant .head::after {
-  /* eye highlght */
+  /* eye highlight */
   top: 40%;
   left: 20%;
   width: 0.75em;
@@ -136,4 +136,17 @@ img {
 .elephant .head .ear.ear-right {
   left: 86%;
   transform: rotate(180deg);
+}
+
+/* trunk */
+.elephant .head .trunk {
+  top: 74%;
+  left: 28%;
+  width: 43%;
+  height: 68%;
+
+  /* border: 1vw solid hsl(214, 41%, 48%); */
+  background-color: lightsteelblue;
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+  box-shadow: inset 0 -1em 2em hsla(214, 41%, 48%, 0.5);
 }
