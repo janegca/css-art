@@ -26,21 +26,30 @@ img {
 .bear-cub {
   /* sizing */
   --unit: calc(0.5em + 0.5vmin);
-  --size: calc(967 / 16);
+  --size: 50;
+  /* --size: calc(967 / 16); */
   --width: calc(var(--size) * var(--unit));
 
   /* image layers */
-  --head: radial-gradient(circle at center, white 43%, transparent 50%);
+  --head: radial-gradient(circle at center, white 49%, transparent 50%);
   --snout: radial-gradient(
     circle at 51% 62%,
     hsl(0, 30%, 92%) 5%,
     hsl(0, 30%, 94%) 10%,
     hsl(0, 30%, 96%) 20%,
-    transparent 25%
+    transparent 20%
   );
 
-  --eye-left: radial-gradient(circle at 38% 46%, black 3%, transparent 4%);
-  --eye-right: radial-gradient(circle at 60% 43%, black 3%, transparent 4%);
+  --eye-left: radial-gradient(
+    circle at 38% 46%,
+    hsl(0, 5%, 30%) 4%,
+    transparent 4%
+  );
+  --eye-right: radial-gradient(
+    circle at 60% 43%,
+    hsl(0, 5%, 30%) 4%,
+    transparent 4%
+  );
   --eye-left-shadow: linear-gradient(hsl(0, 0%, 87%), transparent) 41% 50% / 5em
     3.5em;
   --eye-right-shadow: linear-gradient(hsl(0, 0%, 87%), transparent) 60% 47% /
@@ -50,36 +59,35 @@ img {
     circle at 23% 31%,
     hsl(0, 20%, 85%) 1%,
     hsl(0, 20%, 87%) 3%,
-    hsl(0, 0%, 94%) 6%,
+    hsl(0, 0%, 94%) 9%,
     transparent 9%
   );
   --ear-right: radial-gradient(
     circle at 70% 22%,
     hsl(0, 20%, 85%) 1%,
     hsl(0, 20%, 87%) 3%,
-    hsl(0, 0%, 94%) 6%,
+    hsl(0, 0%, 94%) 9%,
     transparent 9%
   );
 
   /* styling */
   position: relative;
   width: var(--width);
+  height: calc(659 / 16 * var(--unit));
 
   /* prettier-ignore */
   background: 
  
   var(--snout),
   var(--eye-right),
-  var(--eye-right-shadow),
+  /* var(--eye-right-shadow), */
   var(--eye-left),
-  var(--eye-left-shadow),
+  /* var(--eye-left-shadow), */
   var(--head),
   var(--ear-right),
   var(--ear-left);
 
   background-repeat: no-repeat;
-  /* background-color: lightpink; */
-  opacity: 04;
 }
 
 .bear-cub::before {
@@ -100,15 +108,16 @@ img {
 }
 
 .bear-cub::after {
+  /* mouth */
   content: "";
   position: absolute;
-  top: 64%;
-  left: 48.5%;
-  width: 3em;
-  height: 3em;
+  top: 62%;
+  left: 47%;
+  width: 4em;
+  height: 4em;
 
   border-radius: 50%;
-  box-shadow: 0.5em 0.5em 0 0 black;
+  box-shadow: 0.5em 0.5em 0 0 hsl(0, 3%, 40%);
 
-  transform: rotate(40deg);
+  transform: rotate(37deg);
 }
