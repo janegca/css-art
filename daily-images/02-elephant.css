@@ -150,10 +150,12 @@ img {
   width: 43%;
   height: 68%;
 
-  border-radius: 54% 46% 49% 51% / 18% 17% 83% 82%;
+  border-radius: 4% 46% 49% 51% / 18% 17% 99% 99%;
+  border: 1vw solid var(--border-clr);
+  border-top: none;
   background-color: var(--body-clr);
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  box-shadow: inset 0em -0.5em 1.5em var(--border-clr);
+  /* clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%); */
+  /* box-shadow: inset 0em -0.5em 1.5em var(--border-clr); */
 }
 
 /* feet */
