@@ -49,15 +49,17 @@ img {
 .elephant {
   /* palette */
   --body-clr: lightsteelblue;
-  --border-clr: hsla(214, 41%, 48%, 0.5);
+  --border-clr: hsla(214, 41%, 48%, 1);
+  --bg-clr: ghostwhite;
 
   position: relative;
 
   width: calc(var(--intrinsic-w) * var(--unit));
   height: calc(var(--intrinsic-h) * var(--unit));
 
+  border-bottom: 1vw solid darkgreen;
   overflow: hidden;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .elephant *,
@@ -69,7 +71,7 @@ img {
 
 /* -- Body -- */
 .elephant .body {
-  top: 62%;
+  top: 63%;
   left: 50.5%;
   width: 69%;
   height: 69%;
@@ -85,7 +87,7 @@ img {
 /* -- Head -- */
 .elephant .head {
   left: 24%;
-  top: 7%;
+  top: 8.5%;
   width: 53%;
   height: 50%;
 
@@ -135,11 +137,11 @@ img {
 }
 
 .elephant .head .ear.ear-left {
-  left: -48%;
+  left: -49%;
 }
 
 .elephant .head .ear.ear-right {
-  left: 86%;
+  left: 87%;
   transform: rotate(180deg);
 }
 
@@ -150,15 +152,13 @@ img {
   width: 43%;
   height: 68%;
 
-  border-radius: 4% 46% 49% 51% / 18% 17% 99% 99%;
+  border-radius: 35% 46% 49% 51% / 18% 17% 99% 99%;
   border: 1vw solid var(--border-clr);
   border-top: none;
   background-color: var(--body-clr);
-  /* clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%); */
-  /* box-shadow: inset 0em -0.5em 1.5em var(--border-clr); */
 }
 
-/* feet */
+/* -- Feet -- */
 .elephant .foot {
   width: 25%;
   height: 25%;
@@ -176,4 +176,52 @@ img {
 .elephant .foot.foot-right {
   left: 51%;
   bottom: -7%;
+}
+
+/* toes */
+.toes {
+  bottom: 15%;
+  width: 33%;
+  height: 33%;
+
+  border-radius: 50%;
+  border: 0.5vw solid var(--border-clr);
+  background-color: var(--bg-clr);
+}
+
+.toes::before {
+  top: -10%;
+  left: 100%;
+  width: 145%;
+  height: 145%;
+
+  border-radius: 50%;
+  border: 0.5vw solid var(--border-clr);
+  background-color: var(--bg-clr);
+}
+
+.toes::after {
+  top: -10%;
+  left: 225%;
+  width: 130%;
+  height: 130%;
+
+  border-radius: 50%;
+  border: 0.5vw solid var(--border-clr);
+  background-color: var(--bg-clr);
+}
+
+/* -- Tail -- */
+.elephant .tail {
+  top: 55%;
+  left: 80%;
+  width: 14vmin;
+  height: 12vmin;
+
+  border-radius: 50%;
+  /* border: 0.5vw solid var(--border-clr); */
+  box-shadow: 2vmin 2vmin 0 0 var(--border-clr);
+
+  transform: rotate(90deg);
+  z-index: -2;
 }
