@@ -47,12 +47,17 @@ img {
 
 /* Composition */
 .elephant {
+  /* palette */
+  --body-clr: lightsteelblue;
+  --border-clr: hsla(214, 41%, 48%, 0.5);
+
   position: relative;
 
   width: calc(var(--intrinsic-w) * var(--unit));
   height: calc(var(--intrinsic-h) * var(--unit));
 
-  opacity: 1;
+  overflow: hidden;
+  opacity: 0.5;
 }
 
 .elephant *,
@@ -70,8 +75,8 @@ img {
   height: 69%;
 
   border-radius: 50%;
-  border: 1vw solid hsl(214, 41%, 48%);
-  background-color: lightsteelblue;
+  border: 1vw solid var(--border-clr);
+  background-color: var(--body-clr);
 
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -85,8 +90,8 @@ img {
   height: 50%;
 
   border-radius: 50%;
-  border: 1vw solid hsl(214, 41%, 48%);
-  background-color: lightsteelblue;
+  border: 1vw solid var(--border-clr);
+  background-color: var(--body-clr);
 }
 
 /* eyes */
@@ -123,8 +128,8 @@ img {
   height: 90%;
 
   border-radius: 50% 35% 37% 50%;
-  border: 1vw solid hsl(214, 41%, 48%);
-  background-color: lightsteelblue;
+  border: 1vw solid var(--border-clr);
+  background-color: var(--body-clr);
 
   z-index: -1;
 }
@@ -145,8 +150,28 @@ img {
   width: 43%;
   height: 68%;
 
-  /* border: 1vw solid hsl(214, 41%, 48%); */
-  background-color: lightsteelblue;
+  border-radius: 54% 46% 49% 51% / 18% 17% 83% 82%;
+  background-color: var(--body-clr);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  box-shadow: inset 0 -1em 2em hsla(214, 41%, 48%, 0.5);
+  box-shadow: inset 0em -0.5em 1.5em var(--border-clr);
+}
+
+/* feet */
+.elephant .foot {
+  width: 25%;
+  height: 25%;
+
+  border-radius: 50%;
+  border: 1vw solid var(--border-clr);
+  background-color: var(--body-clr);
+}
+
+.elephant .foot.foot-left {
+  left: 24%;
+  bottom: -7%;
+}
+
+.elephant .foot.foot-right {
+  left: 51%;
+  bottom: -7%;
 }
