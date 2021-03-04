@@ -52,12 +52,18 @@ img {
   width: calc(var(--intrinsic-w) * var(--unit));
   height: calc(var(--intrinsic-h) * var(--unit));
 
-  /* background-color: hsla(0, 100%, 50%, 0.2); */
   opacity: 0.4;
 }
 
-.body {
+.elephant *,
+.elephant *::before,
+.elephant *::after {
+  content: "";
   position: absolute;
+}
+
+/* -- Body -- */
+.elephant .body {
   top: 62%;
   left: 50.5%;
   width: 69%;
@@ -71,10 +77,10 @@ img {
   z-index: -1;
 }
 
-.head {
-  position: absolute;
+/* -- Head -- */
+.elephant .head {
   left: 24%;
-  top: 8%;
+  top: 7%;
   width: 53%;
   height: 50%;
 
@@ -83,8 +89,36 @@ img {
   background-color: lightsteelblue;
 }
 
-.ear {
-  position: absolute;
+/* eyes */
+.elephant .head::before {
+  top: 38%;
+  left: 18%;
+  width: 2.4em;
+  height: 2.4em;
+
+  border-radius: 50%;
+  background-color: black;
+
+  /* right eye */
+  box-shadow: 8em 0 0 0 black;
+}
+
+.elephant .head::after {
+  /* eye highlght */
+  top: 40%;
+  left: 20%;
+  width: 0.75em;
+  height: 0.75em;
+
+  border-radius: 50%;
+  background-color: white;
+
+  /* right eye highlight */
+  box-shadow: 8em 0 0 0 white;
+}
+
+/* ears */
+.elephant .head .ear {
   width: 60%;
   height: 90%;
 
@@ -95,11 +129,11 @@ img {
   z-index: -1;
 }
 
-.ear.ear-left {
+.elephant .head .ear.ear-left {
   left: -48%;
 }
 
-.ear.ear-right {
+.elephant .head .ear.ear-right {
   left: 86%;
   transform: rotate(180deg);
 }
