@@ -52,5 +52,32 @@ img {
   width: calc(var(--intrinsic-w) * var(--unit));
   height: calc(var(--intrinsic-h) * var(--unit));
 
-  background-color: hsla(0, 100%, 50%, 0.2);
+  /* background-color: hsla(0, 100%, 50%, 0.2); */
+  opacity: 0.4;
+}
+
+.body {
+  position: absolute;
+  top: 62%;
+  left: 50.5%;
+  width: 69%;
+  height: 69%;
+
+  border-radius: 50%;
+  border: 1vw solid hsl(214, 41%, 48%);
+  background-color: lightsteelblue;
+
+  transform: translate(-50%, -50%);
+}
+
+.head {
+  position: absolute;
+  left: 24.5%;
+  top: 8%;
+  width: 52%;
+  height: 52%;
+
+  border-radius: 50%;
+  border: 1vw solid hsl(214, 41%, 48%);
+  background-color: lightsteelblue;
 }
