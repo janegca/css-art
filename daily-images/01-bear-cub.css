@@ -14,25 +14,15 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  background-color: hsl(177, 50%, 85%);
-}
-
-img {
-  max-width: 100%;
-  opacity: 0;
+  background-color: lightsteelblue;
 }
 
 /* Composition */
 .bear-cub {
-  /* sizing */
-  --unit: calc(0.5rem + 0.5vmin);
-  --size: 50;
-  --width: calc(var(--size) * var(--unit));
-
   /* image layers */
   --head: radial-gradient(circle at center, white 49%, transparent 50%);
   --snout: radial-gradient(
-    circle at 51% 62%,
+    circle at 50% 62%,
     hsl(0, 30%, 92%) 5%,
     hsl(0, 30%, 94%) 10%,
     hsl(0, 30%, 96%) 20%,
@@ -67,22 +57,20 @@ img {
 
   /* styling */
   position: relative;
-  width: var(--width);
-  height: calc(659 / 16 * var(--unit));
+  width: 60em;
+  height: 40em;
 
   /* prettier-ignore */
   background: 
- 
-  var(--snout),
-  var(--eye-right),
-  var(--eye-left),
-  var(--head),
-  var(--ear-right),
-  var(--ear-left);
+    var(--snout),
+    var(--eye-right),
+    var(--eye-left),
+    var(--head),
+    var(--ear-right),
+    var(--ear-left);
 
   background-repeat: no-repeat;
-font-size: var(--unit);
-
+  font-size: calc(0.5rem + 0.5vmin);
 }
 
 .bear-cub::before {
