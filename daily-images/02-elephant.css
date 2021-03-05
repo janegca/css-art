@@ -23,8 +23,8 @@ body {
   --intrinsic-w: 417;
   --intrinsic-h: 440;
   --size: 50;
-  --unit-base: calc(0.5rem + 0.5vmin);
-  --unit: calc(var(--size) / var(--intrinsic-h) * 1vmin);
+  --unit-base: calc(0.0625rem + 1vmin);
+  --unit: calc(var(--size) / var(--intrinsic-h) * var(--unit-base));
 
   /* palette */
   --body-clr: hsl(214, 41%, 78%);
