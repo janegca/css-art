@@ -23,7 +23,7 @@ body {
   --intrinsic-w: 417;
   --intrinsic-h: 440;
   --size: 50;
-  --unit-base: calc(0.5em + 0.5vmin);
+  --unit-base: calc(0.5rem + 1vmin);
   --unit: calc(var(--size) / var(--intrinsic-h) * var(--unit-base));
 
   /* palette */
