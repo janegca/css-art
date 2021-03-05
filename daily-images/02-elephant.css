@@ -24,7 +24,7 @@ body {
   --intrinsic-h: 440;
   --size: 50;
   --unit-base: calc(0.5rem + 0.5vmin);
-  --unit: calc(var(--size) / var(--intrinsic-h) * var(--unit-base));
+  --unit: calc(var(--size) / var(--intrinsic-h) * 1vmin);
 
   /* palette */
   --body-clr: hsl(214, 41%, 78%);
