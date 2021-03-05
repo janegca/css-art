@@ -1,3 +1,4 @@
+/* -- Standard Resets -- */
 html {
   box-sizing: border-box;
 }
@@ -7,14 +8,8 @@ html {
 *::after {
   box-sizing: inherit;
 }
-img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.4;
-}
 
+/* -- General Styling -- */
 body {
   display: grid;
   place-content: center;
@@ -53,6 +48,7 @@ body {
   border: 1vmin solid var(--border-clr);
 
   background-color: var(--body-clr);
+  box-shadow: inset -1em 1em 0 var(--body-shadow);
 }
 
 /* -- Body -- */
@@ -62,7 +58,6 @@ body {
   width: 70%;
   height: 70%;
 
-  box-shadow: inset -1em 1em 0 var(--body-shadow);
   z-index: -1;
 }
 
@@ -72,8 +67,6 @@ body {
   top: 7%;
   width: 53%;
   height: 53%;
-
-  box-shadow: inset -1em 1em 0 var(--body-shadow);
 }
 
 /* ears */
@@ -81,16 +74,17 @@ body {
   width: 70%;
   height: 90%;
 
-  box-shadow: inset -1em 1em 0 var(--body-shadow);
   z-index: -1;
 }
 
 .elephant .head .ear.ear-left {
   left: -50%;
+  box-shadow: inset -1em 1em 0 var(--body-shadow);
 }
 
 .elephant .head .ear.ear-right {
   right: -49%;
+  box-shadow: inset 1em 1em 0 var(--body-shadow);
 }
 
 /* eyes */
@@ -133,10 +127,7 @@ body {
   height: 68%;
 
   border-radius: 44% 46% 49% 51% / 18% 17% 99% 99%;
-  border: 1vw solid var(--border-clr);
   border-top: none;
-
-  box-shadow: inset -1em 1em 0 var(--body-shadow);
 }
 
 /* -- Feet -- */
@@ -144,8 +135,6 @@ body {
   bottom: -7%;
   width: 24%;
   height: 24%;
-
-  box-shadow: inset -1em 1em 0 var(--body-shadow);
 }
 
 .elephant .foot.foot-left {
@@ -164,6 +153,7 @@ body {
 
   border-width: 0.5vmin;
   background-color: var(--bg-clr);
+  box-shadow: unset;
 }
 
 .elephant .foot .toe:nth-of-type(2) {
