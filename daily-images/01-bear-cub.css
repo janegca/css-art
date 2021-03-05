@@ -25,7 +25,7 @@ img {
 /* Composition */
 .bear-cub {
   /* sizing */
-  --unit: calc(0.5em + 0.5vmin);
+  --unit: calc(0.5rem + 1vmin);
   --size: 50;
   --width: calc(var(--size) * var(--unit));
 
