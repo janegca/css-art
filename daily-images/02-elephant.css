@@ -38,6 +38,7 @@ body {
   height: calc(var(--intrinsic-h) * var(--unit));
 
   border-bottom: 1vw solid darkgreen;
+  font-size: var(--unit);
   overflow: hidden;
   /* opacity: 0.3; */
 }
