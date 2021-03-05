@@ -87,7 +87,7 @@ body {
 }
 
 .elephant .head .ear.ear-right {
-  right: -50%;
+  right: -49%;
 }
 
 /* eyes */
@@ -165,4 +165,20 @@ body {
 
   border-width: 0.5vmin;
   background-color: var(--bg-clr);
+}
+
+/* -- Tail -- */
+.elephant .tail {
+  top: 45%;
+  left: 70%;
+  width: 28%;
+  height: 24%;
+
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  box-shadow: 2vmin -2vmin 0 0 var(--border-clr);
+
+  transform: rotate(150deg);
+  z-index: -2;
 }
