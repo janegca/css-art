@@ -12,7 +12,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 body {
@@ -32,6 +32,7 @@ body {
   --body-shadow: hsl(214, 41%, 68%);
   --border-clr: hsl(214, 41%, 48%);
   --bg-clr: ghostwhite;
+  --eyes: black;
 
   /* styling */
   position: relative;
@@ -40,20 +41,81 @@ body {
 
   font-size: calc(0.5rem + 0.5vmin);
 
-  background-color: pink;
-  opacity: 0.2;
+  /* background-color: pink; */
+  opacity: 0.5;
 }
 
-.elephant .body {
+.elephant * {
   position: absolute;
-  left: 50%;
-  bottom: 1%;
-  width: 70%;
-  height: 70%;
 
   border-radius: 50%;
   border: 1vmin solid var(--border-clr);
 
   background-color: var(--body-clr);
-  transform: translateX(-50%);
+}
+
+/* -- Body -- */
+.elephant .body {
+  left: 15%;
+  bottom: 1%;
+  width: 70%;
+  height: 70%;
+
+  z-index: -1;
+}
+
+/* -- Head -- */
+.elephant .head {
+  left: 24%;
+  top: 7%;
+  width: 53%;
+  height: 53%;
+}
+
+/* ears */
+.elephant .head .ear {
+  width: 70%;
+  height: 90%;
+
+  z-index: -1;
+}
+
+.elephant .head .ear.ear-left {
+  left: -50%;
+}
+
+.elephant .head .ear.ear-right {
+  right: -50%;
+}
+
+/* eyes */
+.elephant .head::before {
+  content: "";
+  position: absolute;
+  left: 17%;
+  top: 33%;
+  width: 2.8em;
+  height: 2.8em;
+
+  border-radius: 50%;
+  background-color: var(--eyes);
+
+  /* right eye */
+  box-shadow: 9em 0 0 0 var(--eyes);
+}
+
+/* pupils */
+.elephant .head::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  width: 1em;
+  height: 1em;
+
+  border-radius: 50%;
+  background-color: var(--bg-clr);
+
+  /* right pupil */
+  box-shadow: 9em 0 0 0 var(--bg-clr);
 }
