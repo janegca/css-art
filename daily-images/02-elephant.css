@@ -41,7 +41,7 @@ body {
 
   font-size: calc(0.5rem + 0.5vmin);
 
-  /* background-color: pink; */
+  overflow: hidden;
   opacity: 0.5;
 }
 
@@ -118,4 +118,19 @@ body {
 
   /* right pupil */
   box-shadow: 9em 0 0 0 var(--bg-clr);
+}
+
+/* feet */
+.elephant .foot {
+  bottom: -7%;
+  width: 24%;
+  height: 24%;
+}
+
+.elephant .foot.foot-left {
+  left: 24%;
+}
+
+.elephant .foot.foot-right {
+  left: 51%;
 }
