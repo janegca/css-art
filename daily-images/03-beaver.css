@@ -77,5 +77,46 @@ body {
   font-size: calc(0.5rem + 0.5vmin);
 
   transform: rotate(-50deg);
-  /* opacity: 0.5; */
+  opacity: 0.5;
+}
+
+.beaver::before,
+.beaver::after {
+  content: "";
+  position: absolute;
+}
+
+/* Body */
+.beaver::before {
+  /* image layers */
+  --body: radial-gradient(
+      ellipse at center 100%,
+      var(--clr-body) 60%,
+      transparent 40%
+    )
+    0 -2em;
+
+  /* styling */
+  width: 20em;
+  height: 12em;
+  margin-left: -1em;
+  margin-top: 21em;
+
+  /* prettier-ignore */
+  background:
+    var(--body);
+
+  /* background-position: 0 -2em; */
+  /* background-size: 100% 100%; */
+
+  border-top-left-radius: 10em;
+  border-top-right-radius: 10em;
+  /* background-color: var(--clr-body); */
+  transform: rotate(50deg);
+
+  outline: 1px solid red;
+}
+
+img {
+  /* opacity: 0; */
 }
