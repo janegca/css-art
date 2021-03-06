@@ -1,0 +1,81 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* -- General Styling -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: ghostwhite;
+}
+
+/* Composition */
+.beaver {
+  /* palette */
+  --clr-body: hsl(17, 91%, 23%);
+  --clr-patches: hsl(14, 98%, 67%);
+  --clr-tail: hsl(17, 51%, 30%);
+  --clr-nose: black;
+  --clr-teeth: white;
+  --clr-grid: hsl(17, 30%, 10%);
+
+  --grid-spacer: 2em;
+  --grid-increment: 0.1em;
+
+  /* image layers */
+  --line-horiz: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent var(--grid-spacer),
+    var(--clr-grid) var(--grid-spacer),
+    var(--clr-grid) calc(var(--grid-spacer) + var(--grid-increment))
+  );
+
+  --line-vertical: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent var(--grid-spacer),
+    var(--clr-grid) var(--grid-spacer),
+    var(--clr-grid) calc(var(--grid-spacer) + var(--grid-increment))
+  );
+
+  /* styling */
+  position: relative;
+  left: -7em;
+  top: 3em;
+  width: 14em;
+  height: 25em;
+
+  /* shape tail */
+  border-radius: 10em;
+  border-bottom-left-radius: 7em 25em;
+  border-bottom-right-radius: 7em 25em;
+
+  /* add x-hatch pattern to tail */
+  background: var(--line-horiz), var(--line-vertical);
+
+  background-color: var(--clr-tail);
+  font-size: calc(0.5rem + 0.5vmin);
+
+  transform: rotate(-50deg);
+  /* opacity: 0.5; */
+}

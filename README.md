@@ -10,6 +10,7 @@ Attempts at creating Pure CSS Art.
 
 - [01. Bear Cub](./daily-images/01-bear-cub.html)
 - [02. Elephant](./daily-images/02-elephant.html)
+- [03. Beaver](./daily-images/03-beaver.html)
 
 ## Objects
 
