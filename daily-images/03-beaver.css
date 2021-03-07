@@ -31,19 +31,40 @@ body {
 /* Composition */
 .beaver {
   /* palette */
-  --clr-body: hsl(17, 91%, 23%);
+  --clr-body: hsl(17, 81%, 33%);
   --clr-patches: hsl(14, 98%, 67%);
-  --clr-tail: hsl(17, 51%, 30%);
+  --clr-tail: hsl(17, 41%, 30%);
   --clr-nose: black;
   --clr-teeth: white;
   --clr-grid: hsl(17, 30%, 10%);
 
+  /* styling */
+  position: relative;
+  width: 37em;
+  height: 31em;
+
+  font-size: calc(0.5rem + 0.5vmin);
+}
+
+.beaver * {
+  position: absolute;
+}
+
+.beaver *::before,
+.beaver *::after {
+  content: "";
+  position: absolute;
+}
+
+/* Tail */
+.beaver .tail {
+  /* x-lines spacing */
   --grid-spacer: 2em;
   --grid-increment: 0.1em;
 
   /* image layers */
   --line-horiz: repeating-linear-gradient(
-    to bottom,
+    45deg,
     transparent,
     transparent var(--grid-spacer),
     var(--clr-grid) var(--grid-spacer),
@@ -51,7 +72,7 @@ body {
   );
 
   --line-vertical: repeating-linear-gradient(
-    to right,
+    90deg,
     transparent,
     transparent var(--grid-spacer),
     var(--clr-grid) var(--grid-spacer),
@@ -59,9 +80,8 @@ body {
   );
 
   /* styling */
-  position: relative;
-  left: -7em;
-  top: 3em;
+  top: 20%;
+  left: 13%;
   width: 14em;
   height: 25em;
 
@@ -74,49 +94,54 @@ body {
   background: var(--line-horiz), var(--line-vertical);
 
   background-color: var(--clr-tail);
-  font-size: calc(0.5rem + 0.5vmin);
-
   transform: rotate(-50deg);
-  opacity: 0.5;
 }
 
-.beaver::before,
-.beaver::after {
-  content: "";
-  position: absolute;
-}
-
-/* Body */
-.beaver::before {
-  /* image layers */
-  --body: radial-gradient(
-      ellipse at center 100%,
-      var(--clr-body) 60%,
-      transparent 40%
-    )
-    0 -2em;
-
-  /* styling */
-  width: 20em;
-  height: 12em;
-  margin-left: -1em;
-  margin-top: 21em;
-
-  /* prettier-ignore */
-  background:
-    var(--body);
-
-  /* background-position: 0 -2em; */
-  /* background-size: 100% 100%; */
+/* -- Body -- */
+.beaver .body {
+  bottom: 5%;
+  left: 45%;
+  width: 14em;
+  height: 10em;
 
   border-top-left-radius: 10em;
   border-top-right-radius: 10em;
-  /* background-color: var(--clr-body); */
-  transform: rotate(50deg);
 
-  outline: 1px solid red;
+  background-color: var(--clr-body);
+}
+
+/* legs */
+.beaver .body::before {
+  bottom: 0;
+  left: -2em;
+  width: 18em;
+  height: 6em;
+
+  border-top-left-radius: 70%;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+
+  background-color: var(--clr-body);
+}
+
+/* feet */
+.beaver .body::after {
+  bottom: -1.5em;
+  left: -2em;
+  width: 9em;
+  height: 2em;
+
+  /* tl tr br bl */
+  border-radius: 5em 2em 8em 2em / 1rem;
+
+  box-shadow: 8.9em 0 0 0 var(--clr-body);
+  background-color: var(--clr-body);
 }
 
 img {
-  /* opacity: 0; */
+  opacity: 0.5;
+}
+.beaver {
+  /* opacity: 0.4; */
 }
