@@ -44,20 +44,23 @@ body {
   height: 31em;
 
   font-size: calc(0.5rem + 0.5vmin);
+  outline: 1px solid red;
 }
 
-.beaver * {
+/* .beaver * {
   position: absolute;
-}
+} */
 
-.beaver *::before,
+/* .beaver *::before,
 .beaver *::after {
   content: "";
   position: absolute;
-}
+} */
 
 /* Tail */
 .beaver .tail {
+  position: absolute;
+
   /* x-lines spacing */
   --grid-spacer: 2em;
   --grid-increment: 0.1em;
@@ -97,8 +100,129 @@ body {
   transform: rotate(-50deg);
 }
 
+/* -- Head -- */
+.beaver .head {
+  position: relative;
+  /* image layers */
+  /* prettier-ignore */
+  --eye-left: radial-gradient(
+      circle at 6.9em 9.2em,
+      white 0.4em,
+      transparent 0.4em
+    ),
+    radial-gradient(
+      circle at 6.6em 9.2em, 
+      #333 0.9em, 
+      transparent 0.9em
+    ),
+    radial-gradient(
+      circle at 6.5em 9.2em, 
+      white 1.4em, 
+      transparent 1.4em
+    );
+
+  /* prettier-ignore */
+  --eye-right: radial-gradient(
+    circle at 15em 9.2em,
+    white 0.4em,
+    transparent 0.4em
+  ),
+  radial-gradient(
+    circle at 14.9em 9.2em, 
+    #333 0.9em, 
+    transparent 0.9em
+  ),
+  radial-gradient(
+    circle at 14.8em 9.2em, 
+    white 1.4em, 
+    transparent 1.4em
+  );
+
+  /* prettier-ignore */
+  --cheek-left:
+    radial-gradient(
+      ellipse at 5.2em 12.6em,
+      var(--clr-patches) 1.2em,
+      transparent 1.2em);
+
+  /* prettier-ignore */
+  --cheek-right:
+   radial-gradient(
+     ellipse at 16.5em 12.6em,
+     var(--clr-patches) 1.2em,
+     transparent 1.2em);
+
+  /* styling */
+  top: 1.5em;
+  left: 13.2em;
+  width: 21em;
+  height: 19em;
+
+  border-top-left-radius: 12em;
+  border-top-right-radius: 12em;
+  border-bottom-left-radius: 10em 8em;
+  border-bottom-right-radius: 10em 8em;
+
+  /* prettier-ignore */
+  background-image: 
+    var(--cheek-right),
+    var(--cheek-left),
+    var(--eye-right), 
+    var(--eye-left);
+
+  background-color: var(--clr-body);
+}
+
+/* ears */
+.beaver .ears {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: -0.8em;
+  width: 30%;
+  height: 30%;
+
+  border-radius: 50%;
+
+  background-color: var(--clr-body);
+
+  /* prettier-ignore */
+  /* right ear */
+  box-shadow: 16em 0.3em 0 0 var(--clr-body);
+}
+/* inner ear - right */
+.beaver .ears::before {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: 18.5em;
+  width: 50%;
+  height: 40%;
+
+  border-radius: 50% 50% 0 0;
+  background-color: var(--clr-patches);
+
+  transform: rotate(45deg);
+}
+
+/* inner ear - left */
+.beaver .ears::after {
+  content: "";
+  position: absolute;
+  top: 1.5em;
+  left: 1em;
+  width: 50%;
+  height: 40%;
+
+  border-radius: 50% 50% 0 0;
+  background-color: var(--clr-patches);
+
+  transform: rotate(-45deg);
+}
+
 /* -- Body -- */
 .beaver .body {
+  position: absolute;
   bottom: 5%;
   left: 45%;
   width: 14em;
@@ -112,6 +236,7 @@ body {
 
 /* stomach */
 .beaver .stomach {
+  position: absolute;
   top: 3em;
   left: 4.7em;
   width: 5em;
@@ -123,6 +248,8 @@ body {
 
 /* left hand */
 .beaver .stomach::before {
+  content: "";
+  position: absolute;
   top: 1em;
   left: -1em;
   width: 2em;
@@ -136,6 +263,8 @@ body {
 
 /* right hand */
 .beaver .stomach::after {
+  content: "";
+  position: absolute;
   top: 0.5em;
   left: 4.5em;
   width: 2em;
@@ -149,6 +278,8 @@ body {
 
 /* legs */
 .beaver .body::before {
+  content: "";
+  position: absolute;
   bottom: 0;
   left: -1.5em;
   width: 17em;
@@ -164,6 +295,8 @@ body {
 
 /* feet */
 .beaver .body::after {
+  content: "";
+  position: absolute;
   bottom: -1.5em;
   left: -2em;
   width: 9em;
@@ -174,11 +307,4 @@ body {
 
   box-shadow: 8.9em 0 0 0 var(--clr-body);
   background-color: var(--clr-body);
-}
-
-img {
-  opacity: 0.4;
-}
-.beaver {
-  opacity: 0.4;
 }
