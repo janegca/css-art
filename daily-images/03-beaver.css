@@ -47,15 +47,15 @@ body {
   outline: 1px solid red;
 }
 
-/* .beaver * {
+.beaver * {
   position: absolute;
-} */
+}
 
-/* .beaver *::before,
+.beaver *::before,
 .beaver *::after {
   content: "";
   position: absolute;
-} */
+}
 
 /* Tail */
 .beaver .tail {
@@ -102,7 +102,6 @@ body {
 
 /* -- Head -- */
 .beaver .head {
-  position: relative;
   /* image layers */
   /* prettier-ignore */
   --eye-left: radial-gradient(
@@ -175,8 +174,6 @@ body {
 
 /* ears */
 .beaver .ears {
-  content: "";
-  position: absolute;
   top: 1em;
   left: -0.8em;
   width: 30%;
@@ -192,8 +189,6 @@ body {
 }
 /* inner ear - right */
 .beaver .ears::before {
-  content: "";
-  position: absolute;
   top: 1.2em;
   left: 18.5em;
   width: 50%;
@@ -207,8 +202,6 @@ body {
 
 /* inner ear - left */
 .beaver .ears::after {
-  content: "";
-  position: absolute;
   top: 1.5em;
   left: 1em;
   width: 50%;
@@ -220,9 +213,25 @@ body {
   transform: rotate(-45deg);
 }
 
+/* nose */
+.beaver .nose {
+  top: 11em;
+  left: 9em;
+  width: 20%;
+  height: 10%;
+
+  border-radius: 50%;
+
+  /* prettier-ignore */
+  background: 
+    radial-gradient(
+      ellipse at 65% 40%, white 20%, transparent 30%);
+
+  background-color: var(--clr-nose);
+}
+
 /* -- Body -- */
 .beaver .body {
-  position: absolute;
   bottom: 5%;
   left: 45%;
   width: 14em;
@@ -236,7 +245,6 @@ body {
 
 /* stomach */
 .beaver .stomach {
-  position: absolute;
   top: 3em;
   left: 4.7em;
   width: 5em;
@@ -248,8 +256,6 @@ body {
 
 /* left hand */
 .beaver .stomach::before {
-  content: "";
-  position: absolute;
   top: 1em;
   left: -1em;
   width: 2em;
@@ -263,8 +269,6 @@ body {
 
 /* right hand */
 .beaver .stomach::after {
-  content: "";
-  position: absolute;
   top: 0.5em;
   left: 4.5em;
   width: 2em;
@@ -278,8 +282,6 @@ body {
 
 /* legs */
 .beaver .body::before {
-  content: "";
-  position: absolute;
   bottom: 0;
   left: -1.5em;
   width: 17em;
@@ -295,8 +297,6 @@ body {
 
 /* feet */
 .beaver .body::after {
-  content: "";
-  position: absolute;
   bottom: -1.5em;
   left: -2em;
   width: 9em;
