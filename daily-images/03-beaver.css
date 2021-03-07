@@ -230,6 +230,17 @@ body {
   background-color: var(--clr-nose);
 }
 
+/* mouth */
+.beaver .mouth {
+  top: 14em;
+  left: 8em;
+  width: 30%;
+  height: 15%;
+
+  border-radius: 0.6em 0.6em 9em 9em;
+  background-color: var(--clr-nose);
+}
+
 /* -- Body -- */
 .beaver .body {
   bottom: 5%;
