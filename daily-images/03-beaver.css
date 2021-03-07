@@ -110,11 +110,48 @@ body {
   background-color: var(--clr-body);
 }
 
+/* stomach */
+.beaver .stomach {
+  top: 3em;
+  left: 4.7em;
+  width: 5em;
+  height: 7em;
+
+  border-radius: 50% 50% 42% 45%;
+  background-color: var(--clr-patches);
+}
+
+/* left hand */
+.beaver .stomach::before {
+  top: 1em;
+  left: -1em;
+  width: 2em;
+  height: 4em;
+
+  border-radius: 50%;
+  background-color: var(--clr-body);
+
+  transform: rotate(-30deg);
+}
+
+/* right hand */
+.beaver .stomach::after {
+  top: 0.5em;
+  left: 4.5em;
+  width: 2em;
+  height: 4em;
+
+  border-radius: 50%;
+  background-color: var(--clr-body);
+
+  transform: rotate(30deg);
+}
+
 /* legs */
 .beaver .body::before {
   bottom: 0;
-  left: -2em;
-  width: 18em;
+  left: -1.5em;
+  width: 17em;
   height: 6em;
 
   border-top-left-radius: 70%;
@@ -140,8 +177,8 @@ body {
 }
 
 img {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .beaver {
-  /* opacity: 0.4; */
+  opacity: 0.4;
 }
