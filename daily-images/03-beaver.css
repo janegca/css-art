@@ -180,13 +180,12 @@ body {
   height: 30%;
 
   border-radius: 50%;
-
   background-color: var(--clr-body);
 
-  /* prettier-ignore */
   /* right ear */
   box-shadow: 16em 0.3em 0 0 var(--clr-body);
 }
+
 /* inner ear - right */
 .beaver .ears::before {
   top: 1.2em;
@@ -239,6 +238,17 @@ body {
 
   border-radius: 0.6em 0.6em 9em 9em;
   background-color: var(--clr-nose);
+}
+
+.beaver .mouth::before {
+  left: 15%;
+  width: 2em;
+  height: 3.5em;
+
+  border-radius: 0 0 1em 1em;
+  background-color: var(--clr-teeth);
+
+  box-shadow: 2.1em 0 0 0 var(--clr-teeth);
 }
 
 /* -- Body -- */
