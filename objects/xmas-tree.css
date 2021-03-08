@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: honeydew;
+}
+
+/* -- Composition -- */
+.xmas-tree {
+  /* palette */
+  --clr-tree-bottom: hsl(120, 50%, 25%);
+  --clr-tree-middle: hsl(120, 50%, 30%);
+  --clr-tree-middle-2: hsl(120, 50%, 35%);
+  --clr-tree-top-2: hsl(120, 50%, 40%);
+  --clr-tree-top: hsl(120, 50%, 45%);
+  --clr-trunk: hsl(0, 59%, 21%);
+
+  /* image layers */
+  --tree-bottom: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--clr-tree-bottom) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 50% / 30em 30em;
+
+  --tree-middle: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--clr-tree-middle) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 40% / 25em 25em;
+
+  --tree-middle-2: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--clr-tree-middle-2) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 30% / 22em 22em;
+
+  --tree-top-2: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--clr-tree-top-2) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 20% / 20em 20em;
+
+  --tree-top: conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--clr-tree-top) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    50% 12% / 18em 18em;
+
+  /* prettier-ignore */
+  --tree-trunk: 
+      linear-gradient(
+        var(--clr-trunk) 50%,
+        var(--clr-trunk) 100%) 
+        50% 88% / 5em 5em;
+
+  /* styling */
+  position: relative;
+  width: 50em;
+  height: 50em;
+
+  /* prettier-ignore */
+  background: 
+    var(--tree-top),
+    var(--tree-top-2),
+    var(--tree-middle-2),
+    var(--tree-middle),
+    var(--tree-bottom),
+    var(--tree-trunk);
+
+  background-repeat: no-repeat;
+
+  font-size: calc(0.5rem + 0.5vmin);
+  outline: 1px solid red;
+}
