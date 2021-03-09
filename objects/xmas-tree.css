@@ -30,7 +30,8 @@ body {
   --clr-star-bg: hsla(60, 90%, 82%, 0.8);
   --clr-ball-red: hsl(0, 100%, 50%);
   --clr-ball-blue: blue;
-  --clr-ball-yellow: yellow;
+  --clr-ball-yellow: hsl(60, 90%, 60%);
+  --clr-ball-shine: hsla(0, 0%, 100%, 0.8);
 
   /* image layers */
   --star-bg: radial-gradient(
@@ -101,12 +102,116 @@ body {
 
   --ball-1-shine: radial-gradient(
       circle at center center,
-      hsla(0, 0%, 100%, 0.8) 25%,
+      var(--clr-ball-shine) 25%,
       25%,
-      transparent 47%,
       transparent 50%
     )
     15.5em 19.5em / 5em 5em;
+
+  --ball-2: radial-gradient(
+      circle at center center,
+      var(--clr-ball-blue) 49.5%,
+      transparent 50%
+    )
+    23em 14em / 5em 5em;
+
+  --ball-2-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 25%,
+      25%,
+      transparent 50%
+    )
+    23.5em 13.5em / 5em 5em;
+
+  --ball-3: radial-gradient(
+      circle at center center,
+      var(--clr-ball-yellow) 49.5%,
+      transparent 50%
+    )
+    28em 25em / 5em 5em;
+
+  --ball-3-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 25%,
+      25%,
+      transparent 50%
+    )
+    28.5em 24.5em / 5em 5em;
+
+  --ball-4: radial-gradient(
+      circle at center center,
+      var(--clr-ball-yellow) 49.5%,
+      transparent 50%
+    )
+    17em 30em / 5em 5em;
+
+  --ball-4-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 25%,
+      25%,
+      transparent 50%
+    )
+    17.5em 29.5em / 5em 5em;
+
+  --ball-5: radial-gradient(
+      circle at center center,
+      var(--clr-ball-red) 49.5%,
+      transparent 50%
+    )
+    25em 35em / 5em 5em;
+
+  --ball-5-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 25%,
+      25%,
+      transparent 50%
+    )
+    25.5em 34.5em / 5em 5em;
+
+  --ball-6: radial-gradient(
+      circle at center center,
+      var(--clr-tree-top) 49.5%,
+      transparent 50%
+    )
+    14em 36em / 4em 4em;
+
+  --ball-6-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 20%,
+      20%,
+      transparent 50%
+    )
+    13.8em 35.2em / 5em 5em;
+
+  --ball-7: radial-gradient(
+      circle at center center,
+      var(--clr-tree-middle) 49.5%,
+      transparent 50%
+    )
+    22em 22em / 4em 4em;
+
+  --ball-7-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 20%,
+      20%,
+      transparent 50%
+    )
+    21.8em 21.2em / 5em 5em;
+
+  --ball-8: radial-gradient(
+      circle at center center,
+      var(--clr-ball-blue) 49.5%,
+      transparent 50%
+    )
+    30em 32em / 4em 4em;
+
+  --ball-8-shine: radial-gradient(
+      circle at center center,
+      var(--clr-ball-shine) 20%,
+      20%,
+      transparent 50%
+    )
+    29.8em 31.2em / 5em 5em;
 
   /* styling */
   position: relative;
@@ -115,6 +220,20 @@ body {
 
   /* prettier-ignore */
   background: 
+    var(--ball-8-shine),
+    var(--ball-8),
+    var(--ball-7-shine),
+    var(--ball-7),
+    var(--ball-6-shine),
+    var(--ball-6),
+    var(--ball-5-shine),
+    var(--ball-5),
+    var(--ball-4-shine),
+    var(--ball-4),
+    var(--ball-3-shine),
+    var(--ball-3),
+    var(--ball-2-shine),
+    var(--ball-2),
     var(--ball-1-shine),
     var(--ball-1),
     var(--tree-top),
