@@ -27,8 +27,19 @@ body {
   --clr-tree-top-2: hsl(120, 50%, 40%);
   --clr-tree-top: hsl(120, 50%, 45%);
   --clr-trunk: hsl(0, 59%, 21%);
+  --clr-star-bg: hsla(60, 90%, 82%, 0.8);
+  --clr-ball-red: hsl(0, 100%, 50%);
+  --clr-ball-blue: blue;
+  --clr-ball-yellow: yellow;
 
   /* image layers */
+  --star-bg: radial-gradient(
+      circle at center center,
+      var(--clr-star-bg) 49.5%,
+      transparent 50%
+    )
+    top 2em center / 18em 18em;
+
   --tree-bottom: conic-gradient(
       from 45deg,
       transparent 25%,
@@ -81,6 +92,22 @@ body {
         var(--clr-trunk) 100%) 
         50% 88% / 5em 5em;
 
+  --ball-1: radial-gradient(
+      circle at center center,
+      var(--clr-ball-red) 49.5%,
+      transparent 50%
+    )
+    15em 20em / 5em 5em;
+
+  --ball-1-shine: radial-gradient(
+      circle at center center,
+      hsla(0, 0%, 100%, 0.8) 25%,
+      25%,
+      transparent 47%,
+      transparent 50%
+    )
+    15.5em 19.5em / 5em 5em;
+
   /* styling */
   position: relative;
   width: 50em;
@@ -88,7 +115,10 @@ body {
 
   /* prettier-ignore */
   background: 
+    var(--ball-1-shine),
+    var(--ball-1),
     var(--tree-top),
+    var(--star-bg),
     var(--tree-top-2),
     var(--tree-middle-2),
     var(--tree-middle),
@@ -100,17 +130,18 @@ body {
   font-size: calc(0.5rem + 0.5vmin);
 }
 
+/* -- Star -- */
 .xmas-tree::before {
   content: "";
   position: absolute;
-  top: 6em;
+  top: 5.8em;
   left: 20em;
   width: 10em;
   height: 10em;
 
   background: radial-gradient(
     100% 100% at center,
-    yellow 10%,
+    hsl(60, 100%, 50%) 10%,
     lightgoldenrodyellow 60%,
     lemonchiffon 80%
   );
