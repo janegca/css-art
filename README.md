@@ -20,6 +20,7 @@ Attempts at creating Pure CSS Art.
 - [Eye-ball, animated](./objects/eye-ball.html)<sup>\*</sup>
 - [Happy-face](./objects/happy-face.html)<sup>\*</sup>
 - [Polaroid Camera](./objects/polaroid.html)<sup>\*</sup>
+- [Xmas Tree](./objects/xmas-tree.html)<sup>\*</sup>
 
 ## Code
 
@@ -28,5 +29,6 @@ Attempts at creating Pure CSS Art.
 
 ---
 
-<sup>\*</sup> Images built using tutorials. In each case I have refactored the
-code in an effort to ensure I understand how the image has been built.
+<sup>\*</sup> Images are built using a tutorial reference. In each case the code
+is refactored or the design slightly modified in an effort to understand how the
+image is being built.
