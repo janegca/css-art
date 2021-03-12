@@ -47,6 +47,7 @@ body {
   width: 25em;
   height: 25em;
 
+  /* responsive to REM and viewport */
   font-size: calc(0.5rem + 0.5vmin);
   overflow: hidden;
 }
