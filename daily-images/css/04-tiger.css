@@ -1,0 +1,120 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Image used as drawing template 
+   See Jhey Tompkins tutorial on Egghead
+   https://egghead.io/courses/create-css-illustrations-b24c
+ */
+img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: ivory;
+}
+
+/* Composition */
+.tiger {
+  /* palette */
+  --clr-body: hsl(19, 88%, 55%);
+  --clr-patches: hsl(21, 98%, 79%);
+  --clr-stripes: hsl(22, 74%, 25%);
+  --clr-tongue: hsl(351, 79%, 50%);
+  --clr-teeth: white;
+
+  /* styling */
+  position: relative;
+  width: 25em;
+  height: 25em;
+
+  font-size: calc(0.5rem + 0.5vmin);
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+.tiger * {
+  position: absolute;
+}
+
+.tiger *::before,
+.tiger *::after {
+  content: "";
+  position: absolute;
+}
+
+/* -- Body -- */
+.tiger .body {
+  top: 15em;
+  left: 6em;
+  width: 12.5em;
+  height: 18em;
+
+  border-radius: 100%;
+  background-color: var(--clr-body);
+}
+
+/* stomach */
+.tiger .body::before {
+  left: 3em;
+  width: 50%;
+  height: 75%;
+
+  border-radius: 100%;
+  background-color: var(--clr-patches);
+}
+
+/* -- Head -- */
+.tiger .head {
+  top: 0.5em;
+  left: 4em;
+  width: 16.5em;
+  height: 17em;
+
+  border-radius: 35% 35% 50% 50% / 55% 55% 50% 50%;
+
+  background-color: var(--clr-body);
+}
+
+/* ears */
+.tiger .head::before {
+  /* shapes the inner left ear */
+  top: 1.7em;
+  left: -1.1em;
+  width: 4em;
+  height: 4em;
+
+  border-radius: 50%;
+  background-color: var(--clr-patches);
+
+  /* prettier-ignore */
+  box-shadow:
+    /* right ear */
+    15em 0 0 0 var(--clr-patches),
+    16.2em -0.5em 0 1.2em var(--clr-body),
+    15em 0 0 1.8em var(--clr-body),
+    /* outer left ear */
+   -1.2em -0.5em  0 1.2em var(--clr-body),
+    0 0 0 1.8em var(--clr-body);
+
+  z-index: -1;
+}
