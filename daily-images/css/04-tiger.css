@@ -9,7 +9,7 @@ html {
   box-sizing: inherit;
 }
 
-/* Image used as drawing template 
+/* Image used as reference 
    See Jhey Tompkins tutorial on Egghead
    https://egghead.io/courses/create-css-illustrations-b24c
  */
@@ -49,7 +49,6 @@ body {
 
   font-size: calc(0.5rem + 0.5vmin);
   overflow: hidden;
-  opacity: 0.5;
 }
 
 .tiger * {
@@ -132,7 +131,7 @@ body {
 
 /* -- Head -- */
 .tiger .head {
-  top: 0.5em;
+  top: 1em;
   left: 4em;
   width: 16.5em;
   height: 17em;
@@ -143,6 +142,38 @@ body {
   overflow: hidden;
 }
 
+/* eyes */
+.tiger .eye-left {
+  top: 4em;
+  left: 3em;
+  width: 5em;
+  height: 5em;
+  background-color: transparent;
+
+  border-radius: 50%;
+  border: 0.5em solid;
+
+  /* prettier-ignore */
+  border-color: 
+    var(--clr-stripes) transparent transparent transparent;
+}
+
+.tiger .eye-right {
+  top: 4em;
+  left: 9em;
+  width: 5em;
+  height: 5em;
+  background-color: transparent;
+
+  border-radius: 50%;
+  border: 0.5em solid;
+
+  /* prettier-ignore */
+  border-color: 
+    var(--clr-stripes) transparent transparent transparent;
+}
+
+/* stripes */
 .tiger .head-stripes-top {
   top: -1em;
   left: 7.4em;
@@ -192,8 +223,8 @@ body {
   transform: rotate(30deg);
 }
 
-/* jowels, mouth, and nose */
-.tiger .jowels {
+/* jowls, mouth, and nose */
+.tiger .jowls {
   top: 5.6em;
   left: 2.8em;
   width: 11em;
@@ -204,7 +235,7 @@ body {
   overflow: hidden;
 }
 
-.tiger .jowels::before {
+.tiger .jowls::before {
   /* nose and open mouth */
   top: -1em;
   left: 2em;
@@ -215,7 +246,7 @@ body {
   background-color: var(--clr-stripes);
 }
 
-.tiger .jowels::after {
+.tiger .jowls::after {
   /* define the nose and top of mouth */
   top: 0.4em;
   left: 1.8em;
@@ -239,47 +270,30 @@ body {
 
 .tiger .tooth.top-left {
   /* teeth pointing down */
-  top: -3.5em;
+  top: -4em;
+  left: -1em;
   width: 2em;
   height: 2em;
 
   /* prettier-ignore */
-  border-left: 2vmin solid transparent;
-  border-right: 2vmin solid transparent;
-  border-top: 4vmin solid var(--clr-teeth);
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  border-top: 4em solid var(--clr-teeth);
+
+  transform: scale(0.5);
 }
 
 .tiger .tooth.top-right {
   /* teeth pointing down */
-  top: -3.5em;
-  left: 3.5em;
+  top: -4em;
+  left: 2.8em;
   width: 2em;
   height: 2em;
 
   /* prettier-ignore */
-  border-left: 2vmin solid transparent;
-  border-right: 2vmin solid transparent;
-  border-top: 4vmin solid var(--clr-teeth);
-}
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  border-top: 4em solid var(--clr-teeth);
 
-.tiger .tooth.bottom-left {
-  bottom: -1em;
-  left: 1em;
-  width: 2em;
-  height: 2em;
-
-  border-left: 2vmin solid transparent;
-  border-right: 2vmin solid transparent;
-  border-bottom: 4vmin solid var(--clr-teeth);
-}
-
-.tiger .tooth.bottom-right {
-  bottom: -1em;
-  left: 2.5em;
-  width: 2em;
-  height: 2em;
-
-  border-left: 2vmin solid transparent;
-  border-right: 2vmin solid transparent;
-  border-bottom: 4vmin solid var(--clr-teeth);
+  transform: scale(0.5);
 }
