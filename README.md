@@ -31,5 +31,4 @@ Attempts at creating Pure CSS Art.
 ---
 
 <sup>\*</sup> Images are built using a tutorial reference. In each case the code
-is refactored or the design slightly modified in an effort to understand how the
-image is being built.
+is refactored or the design slightly modified.
