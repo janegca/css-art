@@ -19,7 +19,7 @@ img {
   left: 50%;
   max-width: 100%;
   transform: translate(-50%, -50%);
-  opacity: 0.5;
+  opacity: 0;
 }
 
 /* -- General Styling for display only -- */
@@ -190,4 +190,96 @@ body {
     1.5em 1.5em 0 0 var(--clr-stripes);
 
   transform: rotate(30deg);
+}
+
+/* jowels, mouth, and nose */
+.tiger .jowels {
+  top: 5.6em;
+  left: 2.8em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+
+  background-color: var(--clr-patches);
+  overflow: hidden;
+}
+
+.tiger .jowels::before {
+  /* nose and open mouth */
+  top: -1em;
+  left: 2em;
+  width: 6.5em;
+  height: 12em;
+
+  border-radius: 100%;
+  background-color: var(--clr-stripes);
+}
+
+.tiger .jowels::after {
+  /* define the nose and top of mouth */
+  top: 0.4em;
+  left: 1.8em;
+  width: 3.5em;
+  height: 3em;
+  border-radius: 50%;
+
+  background-color: var(--clr-patches);
+  box-shadow: 3.6em 0 0 0 var(--clr-patches);
+}
+
+.tiger .tongue {
+  left: 2.4em;
+  top: 5.7em;
+  width: 5.8em;
+  height: 5em;
+
+  border-radius: 50% 49% 52% 48% / 10% 11% 88% 89%;
+  background-color: var(--clr-tongue);
+}
+
+.tiger .tooth.top-left {
+  /* teeth pointing down */
+  top: -3.5em;
+  width: 2em;
+  height: 2em;
+
+  /* prettier-ignore */
+  border-left: 2vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-top: 4vmin solid var(--clr-teeth);
+}
+
+.tiger .tooth.top-right {
+  /* teeth pointing down */
+  top: -3.5em;
+  left: 3.5em;
+  width: 2em;
+  height: 2em;
+
+  /* prettier-ignore */
+  border-left: 2vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-top: 4vmin solid var(--clr-teeth);
+}
+
+.tiger .tooth.bottom-left {
+  bottom: -1em;
+  left: 1em;
+  width: 2em;
+  height: 2em;
+
+  border-left: 2vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-bottom: 4vmin solid var(--clr-teeth);
+}
+
+.tiger .tooth.bottom-right {
+  bottom: -1em;
+  left: 2.5em;
+  width: 2em;
+  height: 2em;
+
+  border-left: 2vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-bottom: 4vmin solid var(--clr-teeth);
 }
