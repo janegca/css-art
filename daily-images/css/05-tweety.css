@@ -42,30 +42,32 @@ body {
   --clr-pupils: hsl(0, 0%, 0%);
   --clr-whites: hsl(0, 0%, 100%);
 
-  /* image layers */
-  --head: radial-gradient(at center center, 
-  var(--clr-body) 50%,    transparent 51.5%)
-  -0.7em 1.8em / 15em 14em;
-
-  /* prettier-ignore */
-  --head-shape-left:  
-    linear-gradient(-118deg, var(--clr-body) 50%, 
-    transparent 50%) 
-    1.6em 9.4em / 2.8em 6.3em;
-
-  /* prettier-ignore */
-  --head-shape-right: linear-gradient(118deg, var(--clr-body) 49.5%, transparent 50%)
-  9.2em 7.5em / 2.8em 10em;
-
   /* styling */
   position: relative;
   width: 14em;
   height: 17em;
 
-  
 
   /* prettier-ignore */
   background:  
+    /* beak */
+    radial-gradient(at center center, 
+      var(--clr-beak) 25%,
+      transparent 25%) 
+      3.7em 13.35em / 6em 2em,
+
+    radial-gradient(at center center, 
+      var(--clr-beak) 25%,
+      var(--clr-pupils) 25%, var(--clr-pupils) 26.5%,
+      transparent 27%) 
+      3.7em 13.4em / 6em 2em,
+
+    radial-gradient(at center center, 
+      var(--clr-beak) 25%,
+      var(--clr-pupils) 25%, var(--clr-pupils) 26.5%,
+      transparent 27%) 
+      4.2em 13.6em / 5em 2em, 
+
     /* right cheek */
     radial-gradient(at 50% 50%,
     var(--clr-body) 50%, transparent 50%)
