@@ -66,18 +66,32 @@ body {
 
   /* prettier-ignore */
   background:  
+    /* right cheek */
+    radial-gradient(at 50% 50%,
+    var(--clr-body) 50%, transparent 50%)
+    5.4em 13.1em / 6em 3.5em,
+
+    /* left cheek */
+    radial-gradient(at 50% 50%,
+      var(--clr-body) 50%, transparent 50%)
+      2em 13.1em / 6em 3.5em,
+
     /* head */
     radial-gradient(at center center, 
       var(--clr-body) 50%,    transparent 51.5%)
       -1.3em 1.5em / 16em 14em,
 
+    /* head shape middle */
+    linear-gradient(to right, var(--clr-body), var(--clr-body))
+      3.6em 12em / 6em 3em,
+
     /* head shape left */
     linear-gradient(-118deg, var(--clr-body) 50%, transparent 50%) 
-        1.2em 7.6em / 2.7em 9em,
+        1.1em 7.6em / 2.7em 9em,
 
     /* head  shape right */
     linear-gradient(118deg, var(--clr-body) 49.5%, transparent 50%)
-        9.5em 7.6em / 2.8em 9em;
+        9.6em 7.6em / 2.8em 9em;
 
    
 
