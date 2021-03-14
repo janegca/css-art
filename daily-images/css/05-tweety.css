@@ -50,6 +50,20 @@ body {
 
   /* prettier-ignore */
   background:  
+
+    /* hairs */
+    radial-gradient(ellipse farthest-corner at 30% 250%, 
+    transparent 0% 79%, var(--clr-pupils) 81%, transparent 80.5%)
+    6em 1.8em / 2em 2em,
+
+    radial-gradient(ellipse farthest-corner at 30% 250%, 
+    transparent 0% 79%, var(--clr-pupils) 79.5%, transparent 80%)
+    3.3em -0.5em / 4em 4em,
+
+    radial-gradient(ellipse farthest-corner at 30% 250%, 
+    transparent 0% 79%, var(--clr-pupils) 79.5%, transparent 80%)
+    2em -1em / 5em 5em,
+
     /* beak */
     radial-gradient(at center center, 
       var(--clr-beak) 25%,
@@ -115,5 +129,5 @@ body {
 
   font-size: calc(0.75rem + 0.75vmin);
  
-  opacity: 1;
+  opacity: 0.5;
 }
