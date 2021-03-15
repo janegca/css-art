@@ -167,8 +167,34 @@ body {
   border-radius: 50%;
   background-color: var(--clr-whites);
 
-  
-
   transform: rotate(-15deg);
-  overflow: hidden;
+}
+
+.tweety::after{
+  content: "";
+  position: absolute;
+  top: 9.5em;
+  left: 7.6em;
+  width: 1.8em;
+  height: 4.6em;
+
+  /* prettier-ignore */
+  background: 
+    radial-gradient(at center center, 
+        var(--clr-pupils) 50%, 
+        transparent 50%) 
+        0.25em 2em / 70% 70%,
+
+    radial-gradient(at center center, 
+      var(--clr-eyes) 50%, var(--clr-pupils) 50%, 
+      var(--clr-pupils) 52%, transparent 52%) 
+      -0.4em 0.9em / 150% 100% ;
+
+  background-repeat: no-repeat;
+
+  border: 0.2vmin solid var(--clr-pupils);
+  border-radius: 50%;
+  background-color: var(--clr-whites);
+
+  transform: rotate(13deg);
 }
