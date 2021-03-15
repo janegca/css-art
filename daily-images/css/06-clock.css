@@ -1,0 +1,68 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: ivory;
+}
+
+/* Composition */
+.clock{
+  /* palette */
+  --clr-bg: hsla(0,0%,0%, 0.95);
+  --clr-ticks: hsl(111, 100%, 54%);
+ 
+  position: relative;
+  width: 21em;
+  height: 21em;
+
+  border: 0.2em solid silver;
+  border-radius: 50%;
+
+  /* prettier-ignore */
+  background:
+
+    /* line running through ticks */
+    radial-gradient(circle at center, var(--clr-bg) 52%,
+      transparent 54%,var(--clr-ticks) 55%, transparent 55%),
+
+    /* circle in center to mask lines, leaving only ticks */
+    radial-gradient(circle at center, var(--clr-bg) 52%,
+      transparent 52%, transparent 57%, var(--clr-bg) 57%),
+
+    /* diameter lines for hour ticks */
+    linear-gradient(90deg, transparent 50%,
+      var(--clr-ticks) 50%, var(--clr-ticks) 51%, transparent 51%),
+    linear-gradient(180deg, transparent 50%,
+      var(--clr-ticks) 50%, var(--clr-ticks) 51%, transparent 51%),
+    linear-gradient(60deg, transparent 50%,
+      var(--clr-ticks) 50%,  var(--clr-ticks) 51%, transparent 51%),
+    linear-gradient(30deg, transparent 50%,
+      var(--clr-ticks) 50%,  var(--clr-ticks) 51%, transparent 51%),
+    linear-gradient(-60deg, transparent 50%,
+      var(--clr-ticks) 50%,   var(--clr-ticks) 51%, transparent 51%),
+    linear-gradient(-30deg, transparent 50%,
+      var(--clr-ticks) 50%, var(--clr-ticks) 51%, transparent 51%);
+    
+  background-color: hsla(0,0%,0%, 0.95);
+  background-repeat: no-repeat;
+  
+  box-shadow: 
+    inset 0 0 0.5em 0.25em var(--clr-ticks),
+    0 0em 0 1em darkgrey,
+    0 0 0 1.2em hsl(0, 0%, 95%);
+}
