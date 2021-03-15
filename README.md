@@ -13,6 +13,7 @@ Attempts at creating Pure CSS Art.
 - [03. Beaver](./daily-images/03-beaver.html)
 - [04. Tiger](./daily-images/04-tiger.html)
 - [05. Tweety Bird](./daily-images/05-tweety.html)
+- [06. Analog Clock](./daily-images/06-clock)
 
 ## Objects
 
