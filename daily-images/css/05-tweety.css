@@ -19,7 +19,7 @@ img {
   left: 50%;
   max-width: 100%;
   transform: translate(-50%, -50%);
-  opacity: 0.5;
+  opacity: 0;
 }
 
 /* -- General Styling for display only -- */
@@ -50,11 +50,36 @@ body {
 
   /* prettier-ignore */
   background:  
+    /* right eye lashes */
+    radial-gradient(ellipse farthest-side at -10% -300%, 
+    transparent 0% 90%, var(--clr-pupils) 91%, transparent 91.5%)
+    8.5em 7em / 3em 5em,
+    
+    radial-gradient(ellipse farthest-side at -10% -300%, 
+    transparent 0% 90%, var(--clr-pupils) 91%, transparent 91.5%)
+    9.2em 7em / 3em 5em,
+
+    radial-gradient(ellipse farthest-side at -10% -300%, 
+    transparent 0% 90%, var(--clr-pupils) 91%, transparent 91.5%)
+    9.3em 8.4em / 3em 4em,
+
+    /* left eye lashes */
+     radial-gradient(ellipse farthest-side at 100% -300%, 
+     transparent 0% 90%, var(--clr-pupils) 91%, transparent 91.5%)
+     1.8em 7.3em / 3em 5em,
+
+     radial-gradient(ellipse farthest-side at 100% -300%, 
+     transparent 0% 90%, var(--clr-pupils) 91%, transparent 91.5%)
+     1.1em 7em / 3em 5em,
+
+     radial-gradient(ellipse farthest-side at 100% -300%, 
+     transparent 0% 90%, var(--clr-pupils) 91%, transparent 91.5%)
+     0.7em 8em / 3em 4em,
 
     /* hairs */
     radial-gradient(ellipse farthest-corner at 30% 250%, 
     transparent 0% 79%, var(--clr-pupils) 81%, transparent 80.5%)
-    6em 1.8em / 2em 2em,
+    5.8em 1.8em / 2em 2em,
 
     radial-gradient(ellipse farthest-corner at 30% 250%, 
     transparent 0% 79%, var(--clr-pupils) 79.5%, transparent 80%)
@@ -83,20 +108,11 @@ body {
       4.2em 13.6em / 5em 2em, 
 
     /* right cheek */
-    /* radial-gradient(ellipse farthest-side at 150% 40%, 
-    transparent 0% 79%,var(--clr-pupils) 82%, transparent 82.5%)
-    7.2em 13.8em / 2em 2em, */
-
     radial-gradient(at 50% 50%,
     var(--clr-body) 50%, transparent 50%)
     5.4em 13.1em / 6em 3.5em,
 
     /* left cheek */
-
-    /* radial-gradient(ellipse farthest-side at -150% 40%, 
-    transparent 0% 79%,var(--clr-pupils) 82%, transparent 82.5%)
-    4.6em 13.8em / 2em 2em, */
-
     radial-gradient(at 50% 50%,
       var(--clr-body) 50%, transparent 50%)
       2em 13.1em / 6em 3.5em,
@@ -134,11 +150,8 @@ body {
       5.5em 16em / 2.5em 1.5em;
    
   background-repeat: no-repeat;
-  /* background-color: pink; */
-
+  
   font-size: calc(0.75rem + 0.75vmin);
- 
-  opacity: 1;
 }
 
 .tweety::before{
@@ -146,7 +159,7 @@ body {
   position: absolute;
   top: 9.5em;
   left: 3.5em;
-  width: 1.8em;
+  width: 1.9em;
   height: 4.6em;
 
   /* prettier-ignore */
