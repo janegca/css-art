@@ -17,20 +17,23 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  background-color: ivory;
+  background-color: whitesmoke;
 }
 
 /* Composition */
 .clock{
   /* palette */
   --clr-bg: hsla(0,0%,0%, 0.95);
+  --clr-border: silver;
+  --clr-rim-inner: hsl(0, 0%, 97%);
+  --clr-rim-outer: hsl(0, 0%, 66%);
   --clr-ticks: hsl(111, 100%, 54%);
  
   position: relative;
   width: 21em;
   height: 21em;
 
-  border: 0.2em solid silver;
+  border: 0.2em solid var(--clr-border);
   border-radius: 50%;
 
   /* prettier-ignore */
@@ -58,35 +61,44 @@ body {
     linear-gradient(-30deg, transparent 50%,
       var(--clr-ticks) 50%, var(--clr-ticks) 51%, transparent 51%);
     
-  background-color: hsla(0,0%,0%, 0.95);
+  background-color: var(--clr-bg);
   background-repeat: no-repeat;
   
   box-shadow: 
     inset 0 0 0.5em 0.25em var(--clr-ticks),
-    0 0em 0 1em darkgrey,
-    0 0 0 1.2em hsl(0, 0%, 97%);
-}
-
-.clock::before,
-.clock::after{
-  content: "";
-  position: absolute;
-
-  border-radius: 0.25em;
+    0 0em 0 1em var(--clr-rim-outer),
+    0 0 0 1.2em var(--clr-rim-inner);
 }
 
 .clock::before{
+  content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
 
   /* prettier-ignore */
   background: 
     /* center dot */
-    radial-gradient(circle at center center, var(--clr-ticks) 3%, transparent 3%),
+    radial-gradient(circle at center center, 
+      var(--clr-rim-outer) 3%, transparent 3%),  
+
+    /* mask parts of hour and minute hands */
+    linear-gradient(var(--clr-bg), var(--clr-bg))
+    10em 10em / 4.5em 6em,
+
+    /* hour hand */
+    linear-gradient(180deg, 
+      transparent 50%, var(--clr-ticks) 50% 53%, transparent 53.5%)
+      47% 50% / 8em 10em,
     
-    /* second hand */
+    /* minute hand */
+    linear-gradient(60deg, 
+      transparent 50%, var(--clr-ticks) 50% 53%, transparent 53.5%)
+      47% 50% / 10em 10em,
+
+    /* second hand and mask */
     linear-gradient(var(--clr-bg),var(--clr-bg))
-      5em 11em / 4.5em 4.5em,
+      4.5em 11em / 4.5em 4.5em,
     linear-gradient(-45deg, 
       transparent 50%, var(--clr-ticks) 51%, transparent 50%)
       50% 50% / 10em 10em;
