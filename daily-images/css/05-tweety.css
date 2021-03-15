@@ -93,19 +93,19 @@ body {
     radial-gradient(at center center, 
       var(--clr-beak) 25%,
       transparent 25%) 
-      3.7em 13.35em / 6em 2em,
+      3.5em 13.35em / 6em 2em,
 
     radial-gradient(at center center, 
       var(--clr-beak) 25%,
       var(--clr-pupils) 25%, var(--clr-pupils) 26.5%,
       transparent 27%) 
-      3.7em 13.4em / 6em 2em,
+      3.5em 13.4em / 6em 2em,
 
     radial-gradient(at center center, 
       var(--clr-beak) 25%,
       var(--clr-pupils) 25%, var(--clr-pupils) 26.5%,
       transparent 27%) 
-      4.2em 13.6em / 5em 2em, 
+      4em 13.6em / 5em 2em, 
 
     /* right cheek */
     radial-gradient(at 50% 50%,
@@ -154,7 +154,10 @@ body {
   font-size: calc(0.75rem + 0.75vmin);
 }
 
-.tweety::before{
+/* eyes */
+.tweety::before,
+.tweety::after{
+  /* left eye styled first */
   content: "";
   position: absolute;
   top: 9.5em;
@@ -181,33 +184,13 @@ body {
   background-color: var(--clr-whites);
 
   transform: rotate(-15deg);
+
 }
 
+/* right eye */
 .tweety::after{
-  content: "";
-  position: absolute;
-  top: 9.5em;
   left: 7.6em;
   width: 1.8em;
-  height: 4.6em;
-
-  /* prettier-ignore */
-  background: 
-    radial-gradient(at center center, 
-        var(--clr-pupils) 50%, 
-        transparent 50%) 
-        0.25em 2em / 70% 70%,
-
-    radial-gradient(at center center, 
-      var(--clr-eyes) 50%, var(--clr-pupils) 50%, 
-      var(--clr-pupils) 52%, transparent 52%) 
-      -0.4em 0.9em / 150% 100% ;
-
-  background-repeat: no-repeat;
-
-  border: 0.2vmin solid var(--clr-pupils);
-  border-radius: 50%;
-  background-color: var(--clr-whites);
 
   transform: rotate(13deg);
 }
