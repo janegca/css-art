@@ -68,6 +68,8 @@ body {
     inset 0 0 0.5em 0.25em var(--clr-ticks),
     0 0em 0 1em var(--clr-rim-outer),
     0 0 0 1.2em var(--clr-rim-inner);
+  
+  font-size: calc(0.5rem + 0.5vmin);
 }
 
 .clock::before{
