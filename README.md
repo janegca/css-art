@@ -14,6 +14,7 @@ Attempts at creating Pure CSS Art.
 - [04. Tiger](./daily-images/04-tiger.html)
 - [05. Tweety Bird](./daily-images/05-tweety.html)
 - [06. Analog Clock](./daily-images/06-clock)
+- [07. Ruler](./daily-images/07-ruler)
 
 ## Objects
 
