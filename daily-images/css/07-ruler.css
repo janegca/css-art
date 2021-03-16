@@ -68,6 +68,6 @@ body {
   content: "inches";
   position: absolute;
   top: 78%;
-  right: 2%;
+  left: 1%;
   font-variant-caps: small-caps;
 }
