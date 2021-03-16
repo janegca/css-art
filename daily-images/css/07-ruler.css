@@ -1,0 +1,49 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: whitesmoke;
+}
+
+/* Composition */
+.ruler{
+  /* palette */
+  --clr-bg: hsl(39, 77%, 83%);
+  --clr-border: hsl(39, 77%,33%);
+
+  /* styling */
+  position: relative;
+  width: 19.8em;
+  height: 5em;
+
+  border: 0.1em solid var(--clr-border);
+  border-radius: 0.2em;
+
+  /* prettier-ignore */
+  background: 
+    repeating-linear-gradient(
+      to right, transparent,
+      transparent 1.5em,
+      var(--clr-border) 1.5em,
+      var(--clr-border) 1.65em,
+      transparent 1.65em);
+    
+  background-color: var(--clr-bg);
+  font-size: calc(0.75rem + 0.75vmin);
+
+}
