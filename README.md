@@ -8,23 +8,23 @@ Attempts at creating Pure CSS Art.
 
 ## (Not Quite) Daily Images
 
-- [01. Bear Cub](./daily-images/01-bear-cub.html)
-- [02. Elephant](./daily-images/02-elephant.html)
-- [03. Beaver](./daily-images/03-beaver.html)
-- [04. Tiger](./daily-images/04-tiger.html)
-- [05. Tweety Bird](./daily-images/05-tweety.html)
-- [06. Analog Clock](./daily-images/06-clock)
-- [07. Ruler](./daily-images/07-ruler)
+- [01. Bear Cub](https://janegca.github.io/css-art/daily-images/01-bear-cub.html)
+- [02. Elephant](https://janegca.github.io/css-art/daily-images/02-elephant.html)
+- [03. Beaver](https://janegca.github.io/css-art/daily-images/03-beaver.html)
+- [04. Tiger](https://janegca.github.io/css-art/daily-images/04-tiger.html)
+- [05. Tweety Bird](https://janegca.github.io/css-art/daily-images/05-tweety.html)
+- [06. Analog Clock](https://janegca.github.io/css-art/daily-images/06-clock)
+- [07. Ruler](https://janegca.github.io/css-art/daily-images/07-ruler)
 
 ## Objects
 
-- [Bubble, animated](./objects/bubble.html)<sup>\*</sup>
-- [Clouds](./objects/clouds.html)<sup>\*</sup>
-- [Coloured Pencil](./objects/pencil-green.html)
-- [Eye-ball, animated](./objects/eye-ball.html)<sup>\*</sup>
-- [Happy-face](./objects/happy-face.html)<sup>\*</sup>
-- [Polaroid Camera](./objects/polaroid.html)<sup>\*</sup>
-- [Xmas Tree](./objects/xmas-tree.html)<sup>\*</sup>
+- [Bubble, animated](https://janegca.github.io/css-art/objects/bubble.html)<sup>\*</sup>
+- [Clouds](https://janegca.github.io/css-art/objects/clouds.html)<sup>\*</sup>
+- [Coloured Pencil](https://janegca.github.io/css-art/objects/pencil-green.html)
+- [Eye-ball, animated](https://janegca.github.io/css-art/objects/eye-ball.html)<sup>\*</sup>
+- [Happy-face](https://janegca.github.io/css-art/objects/happy-face.html)<sup>\*</sup>
+- [Polaroid Camera](https://janegca.github.io/css-art/objects/polaroid.html)<sup>\*</sup>
+- [Xmas Tree](https://janegca.github.io/css-art/objects/xmas-tree.html)<sup>\*</sup>
 
 ## Code
 
