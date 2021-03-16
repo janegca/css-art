@@ -2,9 +2,9 @@
 
 Attempts at creating Pure CSS Art.
 
-- [Hilma af Klint The Swan (No.17), 1915](https://janegca.github.io/hilma/swan-17.html)
-- [Hilma af Klint: The Present Standpoint of the Mahatma's, 1920](https://janegca.github.io/hilma/mahatma.html)
-- [Mondrian Composition II in Red, Blue, and Yellow, 1929](https://janegca.github.io/mondrian/comp-II-rby.html)
+- [Hilma af Klint The Swan (No.17), 1915](https://janegca.github.io/css-art/hilma/swan-17.html)
+- [Hilma af Klint: The Present Standpoint of the Mahatma's, 1920](https://janegca.github.io/css-art/hilma/mahatma.html)
+- [Mondrian Composition II in Red, Blue, and Yellow, 1929](https://janegca.github.io/css-art/mondrian/comp-II-rby.html)
 
 ## (Not Quite) Daily Images
 
