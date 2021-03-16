@@ -36,6 +36,11 @@ body {
 
   /* prettier-ignore */
   background: 
+    /* center grove */
+    linear-gradient(to bottom, var(--clr-border), var(--clr-bg))
+      0 55% / 100% 15%,
+    linear-gradient(to top, var(--clr-border), var(--clr-bg))
+      0 55% / 100% 15%,
     /* inch ticks */
     linear-gradient(transparent 35%, var(--clr-bg) 35%),
     repeating-linear-gradient(
@@ -62,7 +67,7 @@ body {
 .ruler::before{
   content: "inches";
   position: absolute;
-  top: 33%;
-
+  top: 78%;
+  right: 2%;
   font-variant-caps: small-caps;
 }
