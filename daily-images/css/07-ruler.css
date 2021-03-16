@@ -57,5 +57,12 @@ body {
   background-repeat: no-repeat;
 
   font-size: calc(0.75rem + 0.75vmin);
+}
 
+.ruler::before{
+  content: "inches";
+  position: absolute;
+  top: 33%;
+
+  font-variant-caps: small-caps;
 }
