@@ -28,7 +28,7 @@ body {
 
   /* styling */
   position: relative;
-  width: 19.8em;
+  width: 19.2em;
   height: 5em;
 
   border: 0.1em solid var(--clr-border);
@@ -36,14 +36,26 @@ body {
 
   /* prettier-ignore */
   background: 
+    /* inch ticks */
+    linear-gradient(transparent 35%, var(--clr-bg) 35%),
     repeating-linear-gradient(
       to right, transparent,
       transparent 1.5em,
       var(--clr-border) 1.5em,
-      var(--clr-border) 1.65em,
-      transparent 1.65em);
+      var(--clr-border) 1.6em,
+      transparent 1.6em),
+      
+    /* quarter ticks */
+    linear-gradient(transparent 20%, var(--clr-bg) 20%),
+    repeating-linear-gradient(to right, transparent,
+      transparent 0.75em,
+     var(--clr-border) 0.75em,
+     var(--clr-border) 0.8em,
+      transparent 0.8em);
     
   background-color: var(--clr-bg);
+  background-repeat: no-repeat;
+
   font-size: calc(0.75rem + 0.75vmin);
 
 }
