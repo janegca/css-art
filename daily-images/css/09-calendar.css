@@ -9,19 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-/* Image used as reference 
-   See Jhey Tompkins tutorial on Egghead
-   https://egghead.io/courses/create-css-illustrations-b24c
- */
-img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  max-width: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
 /* -- General Styling for display only -- */
 body {
   display: grid;
