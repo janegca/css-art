@@ -15,6 +15,7 @@ Attempts at creating Pure CSS Art.
 - [05. Tweety Bird](https://janegca.github.io/css-art/daily-images/05-tweety.html)
 - [06. Analog Clock](https://janegca.github.io/css-art/daily-images/06-clock)
 - [07. Ruler](https://janegca.github.io/css-art/daily-images/07-ruler)
+- [08. Notepad](https://janegca.github.io/css-art/daily-images/08-notepad)
 
 ## Objects
 
@@ -28,8 +29,11 @@ Attempts at creating Pure CSS Art.
 
 ## Code
 
-Code for the above is stored on both  [Codepen](https://codepen.io/collection/XjjkgL) and [Github](https://github.com/janegca/css-art).
+Code for the above is stored on both
+[Codepen](https://codepen.io/collection/XjjkgL) and
+[Github](https://github.com/janegca/css-art).
 
 ---
 
-<sup>\*</sup> Images are built using a tutorial as reference. In each case the code is refactored or the design slightly modified.
+<sup>\*</sup> Images are built using a tutorial as reference. In each case the
+code is refactored or the design slightly modified.
