@@ -1,0 +1,75 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: whitesmoke;
+}
+
+/* Composition */
+.notepad {
+  /* palette */
+  --clr-bg: hsl(60, 100%, 50%);
+  --clr-pages: hsla(54, 100%, 62%, 0.7);
+  --clr-line: powderblue;
+  --clr-margin: red;
+  --clr-binding: darkslategray;
+
+  /* styling */
+  position: relative;
+  width: 15em;
+  height: 20em;
+
+  /* prettier-ignore */
+  background:  
+    /* binding */
+    linear-gradient(to bottom,
+      var(--clr-binding),
+      lightgrey)
+      0 2em / 100% 0.3em,
+
+    linear-gradient(to bottom,
+      var(--clr-binding),
+      var(--clr-binding))
+      0 0 / 100% 2em,
+
+    /* margin */
+    linear-gradient(to right,
+      transparent,
+      transparent 2em,
+      var(--clr-margin) 2em, 
+      var(--clr-margin) 2.1em,
+      transparent 2.1em),
+
+    /* lines */
+    repeating-linear-gradient(to bottom,
+    transparent,
+    transparent 0.9em,
+    var(--clr-line) 0.9em,
+    var(--clr-line) 1em);
+
+  background-color: var(--clr-bg);
+  background-repeat: no-repeat;
+
+  /* prettier-ignore */
+  box-shadow:
+    -0.2em 0em 0 0 var(--clr-pages),
+    -0.2em 0.3em 0 0 var(--clr-pages),
+    -0.3em 0.4em 0 0 hsla(54, 100%, 32%, 0.7);
+
+  font-size: calc(0.75rem + 0.75vmin);
+}
