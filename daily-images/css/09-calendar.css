@@ -1,0 +1,149 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Image used as reference 
+   See Jhey Tompkins tutorial on Egghead
+   https://egghead.io/courses/create-css-illustrations-b24c
+ */
+img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: mintcream;
+}
+
+/* Composition */
+.calendar {
+  /* palette 
+      grayscale from grayscale.design
+  */
+  --clr-gs-100: hsl(0, 0%, 98%);
+  --clr-gs-200: hsl(240, 7%, 97%);
+  --clr-gs-300: hsl(240, 4%, 95%);
+  --clr-gs-400: hsl(0, 0%, 91%);
+  --clr-gs-500: hsl(240, 2%, 89%);
+  --clr-gs-600: hsl(0, 0%, 61%);
+  --clr-gs-700: hsl(0, 0%, 46%);
+  --clr-gs-800: hsl(0, 0%, 32%);
+  --clr-gs-900: hsl(0, 0%, 16%);
+  --clr-border: hsl(156, 100%, 31%);
+  --clr-border-dark: hsl(156, 100%, 21%);
+
+  position: relative;
+  width: 12em;
+  height: 14em;
+
+  border-radius: 1em;
+
+  /* prettier-ignore */
+  background:  
+    /* holes */
+    radial-gradient(circle at center center,
+        var(--clr-gs-900) 50%, transparent 50%)
+        80% 3% / 1.5em 1.5em,
+    radial-gradient(circle at center center,
+      var(--clr-gs-900) 50%, transparent 50%)
+      20% 3% / 1.5em 1.5em,
+
+    /* left edge */
+    linear-gradient(to bottom,
+      var(--clr-border-dark) 15%,
+      var(--clr-gs-700) 15%) 
+      0 0 / 5% 100%,
+
+    /* paper stack */
+    repeating-linear-gradient(to bottom,
+      transparent,
+      var(--clr-gs-700) 0.1em,
+      var(--clr-gs-700) 0.2em,
+      transparent 0.2em) 0 100% / 100% 10%,
+
+    /* top band */
+    linear-gradient(to right,
+    var(--clr-border), var(--clr-border)) 0 0 / 100% 15%;
+
+  background-color: var(--clr-gs-100);
+  background-repeat: no-repeat;
+
+  font-size: calc(0.75rem + 0.75vmin);
+
+  /* prettier-ignore */
+  box-shadow:  
+    -0.2em 0.1em 0 0.1em var(--clr-gs-900);
+}
+
+.calendar::before {
+  content: "";
+  position: absolute;
+  top: -0.3em;
+  left: 2.6em;
+  width: 0.5em;
+  height: 1.5em;
+
+  border-radius: 1em;
+
+  /* prettier-ignore */
+  background: 
+    radial-gradient(at center center,
+      var(--clr-gs-500) 90%,
+      transparent 50%) 65% 40% / 30% 75%;
+
+  background-color: var(--clr-gs-600);
+  background-repeat: no-repeat;
+
+  /* prettier-ignore */
+  box-shadow:   
+    6.35em 0 0 -0.18em var(--clr-gs-500),
+    6.3em 0 0 0 var(--clr-gs-600);
+}
+
+.calendar::after {
+  content: "Wed March 17, 2021";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+
+  /* prettier-ignore */
+  background:   
+    linear-gradient(to bottom,
+      var(--clr-border),
+      var(--clr-border))
+      84% 35% / 0.2em 1em,
+    radial-gradient(circle at center center,
+      var(--clr-border) 35%,
+      transparent 35%) 96% 30% / 2em 2em, 
+      radial-gradient(circle at center center,
+      var(--clr-border) 35%,
+      transparent 35%) 84% 30% / 2em 2em, 
+    radial-gradient(circle at center center,
+      var(--clr-border) 35%,
+      transparent 35%) 90% 25% / 2em 2em;
+
+  background-repeat: no-repeat;
+
+  text-align: center;
+  transform: translateX(-50%) translateY(-5%);
+}
