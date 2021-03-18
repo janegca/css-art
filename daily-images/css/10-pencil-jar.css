@@ -54,18 +54,19 @@ body {
       var(--clr-body) 70%, transparent 30%)
       0em 100% / 7.9em 1em,
       
-       /* cup body */
-       linear-gradient(
-        to right,
-          var(--clr-body),
-          var(--clr-body))
-          0.05em 1em / 7.85em 10em;
+    /* cup body */
+    linear-gradient(
+      to right,
+        var(--clr-body),
+        var(--clr-body))
+        0.05em 1em / 7.85em 10em;
 
   background-repeat: no-repeat;
 
   font-size: calc(0.75rem + 0.75vmin);
 }
 
+/* the pencil */
 .pencil-jar::before {
   content: "";
   position: absolute;
