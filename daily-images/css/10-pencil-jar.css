@@ -1,0 +1,87 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: powderblue;
+}
+
+/* Composition 
+    can't use box-shadow as actual shape is a box
+    the shadow won't conform to the round contours
+    created by background images
+ */
+.pencil-jar {
+  /* palette */
+  --clr-body: hsl(0, 47%, 53%);
+  --clr-liner: hsl(0, 0%, 100%);
+  --clr-pencil: gold;
+  --clr-pencil-band: goldenrod;
+
+  /* styling */
+  position: relative;
+  width: 8em;
+  height: 12em;
+
+  /* prettier-ignore */
+  background:  
+  
+    /* top of cup */
+    radial-gradient(at 50% 50%,
+       var(--clr-liner) 70%, 
+       transparent 70%)
+       0.2em 0.1em / 7.5em 1.8em,
+    radial-gradient(at 50% 50%,
+      var(--clr-body) 69.5%, transparent 50%)
+      0 0 / 8em 2em,
+
+    /* bottom of cup */
+    radial-gradient( at 50% 0,
+      var(--clr-body) 70%, transparent 30%)
+      0em 100% / 7.9em 1em,
+      
+       /* cup body */
+       linear-gradient(
+        to right,
+          var(--clr-body),
+          var(--clr-body))
+          0.05em 1em / 7.85em 10em;
+
+  background-repeat: no-repeat;
+
+  font-size: calc(0.75rem + 0.75vmin);
+}
+
+.pencil-jar::before {
+  content: "";
+  position: absolute;
+  top: -44.5%;
+  left: 50%;
+  width: 1em;
+  height: 7.2em;
+
+  /* prettier-ignore */
+  background:   
+    linear-gradient(to bottom,
+      var(--clr-body) 15%,
+      var(--clr-pencil-band) 15%,
+      var(--clr-pencil-band) 20%,
+      transparent 20%);
+
+  background-repeat: no-repeat;
+  background-color: var(--clr-pencil);
+}

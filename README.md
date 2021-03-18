@@ -17,6 +17,7 @@ Attempts at creating Pure CSS Art.
 - [07. Ruler](https://janegca.github.io/css-art/daily-images/07-ruler)
 - [08. Notepad](https://janegca.github.io/css-art/daily-images/08-notepad)
 - [09. Calendar](https://janegca.github.io/css-art/daily-images/09-calendar)
+- [10. Pencil Jar](https://janegca.github.io/css-art/daily-images/10-pencil-jar)
 
 ## Objects
 
