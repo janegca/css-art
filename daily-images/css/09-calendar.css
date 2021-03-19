@@ -64,7 +64,7 @@ body {
       transparent,
       var(--clr-gs-700) 0.1em,
       var(--clr-gs-700) 0.2em,
-      transparent 0.2em) 0 100% / 100% 10%,
+      transparent 0.2em) 0 100% / 100% 5%,
 
     /* top band */
     linear-gradient(to right,
