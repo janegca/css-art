@@ -27,6 +27,7 @@ Attempts at creating Pure CSS Art.
 - [Coloured Pencil](https://janegca.github.io/css-art/objects/pencil-green.html)
 - [Eye-ball, animated](https://janegca.github.io/css-art/objects/eye-ball.html)<sup>\*</sup>
 - [Happy-face](https://janegca.github.io/css-art/objects/happy-face.html)<sup>\*</sup>
+- [Marbles](https://janegca.github.io/css-art/objects/marbles.html)
 - [Polaroid Camera](https://janegca.github.io/css-art/objects/polaroid.html)<sup>\*</sup>
 - [Xmas Tree](https://janegca.github.io/css-art/objects/xmas-tree.html)<sup>\*</sup>
 
