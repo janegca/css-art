@@ -18,6 +18,7 @@ Attempts at creating Pure CSS Art.
 - [08. Notepad](https://janegca.github.io/css-art/daily-images/08-notepad)
 - [09. Calendar](https://janegca.github.io/css-art/daily-images/09-calendar)
 - [10. Pencil Jar](https://janegca.github.io/css-art/daily-images/10-pencil-jar)
+- [11. Pizza](https://janegca.github.io/css-art/daily-images/11-pizza)
 
 ## Objects
 
