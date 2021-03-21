@@ -1,0 +1,111 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: honeydew;
+}
+
+/* Composition */
+
+.taco {
+  /* palette */
+  --clr-beef: brown;
+  --clr-cheese: hsl(39, 100%, 90%);
+  --clr-taco: hsl(45, 97%, 61%);
+  --clr-taco-dk: hsl(45, 97%, 51%);
+  --clr-taco-01: hsla(45, 97%, 61%, 0.1);
+  --clr-taco-02: hsla(45, 97%, 61%, 0.2);
+  --clr-taco-03: hsla(45, 97%, 61%, 0.3);
+  --clr-tomato: hsl(9, 100%, 64%);
+  --clr-tomato-dk: hsl(9, 60%, 54%);
+  --clr-lettuce: lightgreen;
+
+  /* styling */
+  width: 20em;
+  height: 20em;
+
+  /* prettier-ignore */
+  background:   
+
+    /* front shell */
+    radial-gradient(circle at center bottom, 
+      var(--clr-taco) 48%, 
+      var(--clr-taco-dk) 49.5%, 
+      transparent 50%)
+      3em 1em / 15em 13em,
+
+     /* cheese */
+     linear-gradient(-45deg, var(--clr-cheese), 
+     var(--clr-cheese))
+     4em 9em / 3em 3em,  
+
+    /* tomato */
+    radial-gradient(circle at center,
+      var(--clr-tomato) 46%,
+      var(--clr-tomato-dk) 49.5%,
+      transparent 50%)
+      2.3em 7.5em / 5em 5em,
+
+    /* cheese */
+    linear-gradient(-45deg, var(--clr-cheese), 
+      var(--clr-cheese))
+      2.8em 9em / 3em 3em,
+
+    /* lettuce */
+    radial-gradient(circle at bottom right, 
+      var(--clr-lettuce) 49.5%,
+      transparent 50%)
+      0.8em 9em / 5em 5em,
+    radial-gradient(circle at bottom left, 
+      var(--clr-lettuce) 49.5%, 
+      transparent 50%)
+      4.5em 5em / 2em 5em,
+
+     /* cheese */
+     linear-gradient(-45deg, var(--clr-cheese), 
+     var(--clr-cheese))
+     5em 7em / 3em 3em,
+
+    /* beef */
+    radial-gradient(circle at center bottom, 
+      var(--clr-beef) 49.5%, 
+      transparent 50%)
+      2.5em 1em / 15em 13em,
+
+    /* back shell */
+    radial-gradient(circle at center bottom, 
+      var(--clr-taco-dk) 48%, 
+      var(--clr-taco-dk) 49.5%, 
+      transparent 50%)
+      2em 0 / 16em 14em,
+
+    /* shadows */
+    linear-gradient(to right,
+      transparent,
+      var(--clr-taco-03), 
+      var(--clr-taco-01) 1%)
+      2em 90% / 1em 1em,
+    linear-gradient(to bottom,
+     var(--clr-taco-03) 1%, 
+     var(--clr-taco-02) 3%, 
+     var(--clr-taco-01), transparent)
+     2em 90%  / 16em 5em;
+  background-repeat: no-repeat;
+
+  font-size: calc(0.75em + 0.75vmin);
+}
