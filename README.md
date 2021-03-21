@@ -20,6 +20,7 @@ Attempts at creating Pure CSS Art.
 - [10. Pencil Jar](https://janegca.github.io/css-art/daily-images/10-pencil-jar)
 - [11. Pizza](https://janegca.github.io/css-art/daily-images/11-pizza)
 - [12. Hamburger](https://janegca.github.io/css-art/daily-images/12-hamburger)
+- [13. Taco](https://janegca.github.io/css-art/daily-images/13-taco)
 
 ## Objects
 
