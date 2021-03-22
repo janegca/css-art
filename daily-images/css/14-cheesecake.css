@@ -1,0 +1,150 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: hsl(180, 100%, 93%);
+}
+
+/* Composition */
+.cheesecake {
+  /* palette */
+  --clr-crumb: hsl(30, 59%, 53%);
+  --clr-glaze: hsla(359, 80%, 60%, 0.7);
+  --clr-slice: hsl(48, 100%, 93%);
+  --clr-side: hsl(48, 100%, 83%);
+  --clr-shade: hsl(48, 90%, 53%);
+  --clr-shade-light: hsl(48, 90%, 90%);
+  --clr-cherry: hsl(359, 82%, 49%);
+  --clr-cherry-07: hsla(359, 52%, 49%, 0.7);
+  --clr-cherry-shade: hsl(359, 71%, 33%);
+  --clr-cherry-leaf: hsl(120, 100%, 25%);
+  --clr-cherry-stem: hsl(30, 59%, 33%);
+  --clr-cherry-stem-shade: hsl(30, 39%, 23%);
+
+  /* styling */
+  position: relative;
+
+  /* pie slice shape */
+  border-radius: 50%;
+  border-left: 14em solid transparent;
+  border-right: 14em solid transparent;
+  border-top: 20em solid var(--clr-slice);
+
+  filter: drop-shadow(-2em 1em 3em var(--clr-shade-light));
+
+  font-size: calc(0.75rem + 0.75vmin);
+
+  transform: rotate(-28deg) skew(25deg) scale(0.75);
+}
+
+.cheesecake * {
+  position: absolute;
+}
+
+.cheesecake::before,
+.cheesecake *::before,
+.cheesecake::after,
+.cheesecake *::after {
+  content: "";
+  position: absolute;
+}
+
+/* side of slice */
+.cheesecake::before {
+  top: -10em;
+  left: -16em;
+  width: 19.7em;
+  height: 5em;
+
+  background: linear-gradient(
+    to bottom,
+    var(--clr-shade),
+    var(--clr-side),
+    var(--clr-slice)
+  );
+  background-color: var(--clr-side);
+
+  border-radius: 2% 0% 0% 6% / 50% 0% 0% 50%;
+  border-bottom: 0.5em solid var(--clr-crumb);
+  border-left: 0.5em solid var(--clr-crumb);
+
+  transform: rotate(55deg) skew(15deg);
+}
+
+/* glaze */
+.cheesecake::after {
+  top: -17em;
+  left: -6em;
+  width: 6em;
+  height: 12em;
+
+  border-radius: 50%;
+  background-color: var(--clr-glaze);
+
+  /* prettier-ignore */
+  box-shadow: 
+    0em -4em 0 0 var(--clr-glaze);
+
+  transform: rotate(65deg);
+}
+
+/* -- Cherry -- */
+.cheesecake .cherry {
+  top: -15em;
+  left: -1em;
+  width: 4em;
+  height: 4em;
+
+  border-radius: 50%;
+  border-left: 0.5em solid var(--clr-cherry-shade);
+
+  background-color: var(--clr-cherry);
+
+  box-shadow: inset 0.2em 0 1em 0 var(--clr-cherry-07);
+
+  z-index: 5;
+}
+
+.cheesecake .cherry::before {
+  top: 1em;
+  left: 1.8em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+
+  background-color: var(--clr-cherry-shade);
+}
+
+.cheesecake .cherry::after {
+  top: -0.5em;
+  left: 2.3em;
+  width: 3em;
+  height: 3em;
+
+  border-top: 0.8em solid var(--clr-cherry-stem);
+  border-left-width: 1em;
+  border-right: 1em solid transparent;
+  border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+
+  /* prettier-ignore */
+  box-shadow: 
+    inset 0.5em 0 3em 0 var(--clr-cherry-leaf), 
+    -0.1em 0 0 0 var(--clr-cherry-stem-shade);
+
+  transform: rotate(10deg);
+}
