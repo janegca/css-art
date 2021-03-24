@@ -1,0 +1,75 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: mediumaquamarine;
+}
+
+/* Composition */
+.pie {
+  /* palette */
+  --plate: hsl(96, 20%, 26%);
+  --plate-light: hsl(96, 20%, 46%);
+  --crust: hsl(38, 78%, 71%);
+  --crust-light: hsl(39, 91%, 82%);
+  --crust-dark: hsl(33, 51%, 60%);
+  --filling: #9d171b;
+
+  /* styling */
+  position: relative;
+  width: 20em;
+  height: 20em;
+
+  border: 2em solid var(--plate);
+  border-radius: 50%;
+
+  /* prettier-ignore */
+  background:   
+
+    repeating-linear-gradient(
+      45deg,
+      var(--crust-light),
+      var(--crust-dark) 1em,
+      transparent 1em,
+      transparent 2em),
+    repeating-linear-gradient(
+      -45deg,
+      var(--crust-dark),
+      var(--crust-light) 1em,
+      transparent 1em,
+      transparent 2em);
+
+  background-repeat: no-repeat;
+  background-color: var(--filling);
+
+  font-size: calc(0.75rem + 0.75vmin);
+}
+
+.pie::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20em;
+  height: 20em;
+
+  border-radius: 50%;
+  border: 0.25em solid var(--plate-light);
+
+  transform: translate(-50%, -50%);
+}
