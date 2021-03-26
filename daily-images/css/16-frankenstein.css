@@ -107,6 +107,19 @@ body {
 
   /* prettier-ignore */
   background:  
+    /* tear */
+    radial-gradient(circle at center,
+      var(--clr-eyes) 50%, transparent 50%)
+      2.6em 7.7em / 1.2em 1.2em,
+    conic-gradient(
+      from 45deg,
+      transparent 25%,
+      var(--clr-eyes) 0% 50%,
+      transparent 0% 75%,
+      transparent 0%
+    )
+    2.8em 7.1em / 0.8em 1.2em,
+
     /* chin */
     radial-gradient(
         at center bottom,
