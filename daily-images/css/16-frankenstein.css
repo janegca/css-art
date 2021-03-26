@@ -24,9 +24,9 @@ body {
 .frankie {
   /* palette */
   --clr-hair: #262220;
-  --clr-skin: hsl(49, 50%, 26%);
-  --clr-skin-light: hsl(56, 20%, 73%);
-  --clr-skin-dark: hsl(66, 34%, 34%);
+  --clr-skin-dark: hsl(49, 50%, 26%);
+  --clr-skin-light: hsl(56, 20%, 53%);
+  --clr-skin: hsl(66, 34%, 34%);
   --clr-shirt: #2d3234;
 
   /* styling */
@@ -36,7 +36,27 @@ body {
 
   /* prettier-ignore */
   background:   
+    /* head */
 
+    /* neck */
+    linear-gradient(to right,
+      transparent,
+      var(--clr-skin-dark),
+      var(--clr-skin),
+      var(--clr-skin-light),
+      var(--clr-skin),
+      transparent)
+      48.3% 74% / 7em 3.5em,
+    linear-gradient(75deg, 
+      var(--clr-skin-dark),
+      var(--clr-skin) 80%, 
+      transparent 15%)
+      66% 74% / 6em 4em,
+    linear-gradient(-75deg, 
+      var(--clr-skin-dark),
+      
+      var(--clr-skin) 80%, transparent 15%)
+      36% 74% / 6em 4em,
     /* shoulders */
     radial-gradient(var(--clr-shirt) 80%, transparent 20%)
       100% 110% / 100% 8em;
