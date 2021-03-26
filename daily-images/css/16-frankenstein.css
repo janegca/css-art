@@ -23,12 +23,13 @@ body {
 /* Composition */
 .frankie {
   /* palette */
-  --clr-hair: #262220;
+  --clr-eyes: hsl(69, 59%, 88%);
+  --clr-hair: hsl(20, 9%, 14%);
   --clr-skin-dark: hsl(49, 50%, 26%);
   --clr-skin-dark2: hsl(66, 34%, 24%);
   --clr-skin-light: hsl(56, 20%, 53%);
   --clr-skin: hsl(66, 34%, 34%);
-  --clr-shirt: #2d3234;
+  --clr-shirt: hsl(197, 7%, 19%);
 
   /* styling */
   position: relative;
@@ -111,10 +112,10 @@ body {
     /* eyes */
     radial-gradient(ellipse at center top,
     var(--clr-hair) 49.5%, transparent 50%)
-    4em 7em / .6em .6em,
+    4em 7em / .7em .7em,
     radial-gradient(ellipse at center top,
     var(--clr-hair) 49.5%, transparent 50%)
-    8.2em 7em / .6em .6em,
+    8.2em 7em / .7em .7em,
     radial-gradient(ellipse at center top,
     var(--clr-skin-dark) 49.5%, transparent 50%)
     3.5em 7em / 1.5em 1em,
@@ -122,29 +123,29 @@ body {
       var(--clr-skin-dark) 49.5%, transparent 50%)
       7.8em 7em / 1.5em 1em,
     radial-gradient(ellipse at center top,
-      white 49.5%, transparent 50%)
+      var(--clr-eyes) 49.5%, transparent 50%)
       2em 7em / 4em 1em,
     radial-gradient(ellipse at center top,
-      white 49.5%, transparent 50%)
+      var(--clr-eyes) 49.5%, transparent 50%)
       7em 7em / 4em 1em,
     /* nostrils */
     radial-gradient(at center, 
      var(--clr-shirt) 50%, 
      transparent)
-     6.8em 10.1em / 1.2em 1em,
+     6.8em 10.5em / 1.2em 1em,
     radial-gradient(at center, 
       var(--clr-shirt) 50%, 
       transparent)
-       5.3em 10.1em / 1.2em 1em,
+       5.3em 10.5em / 1.2em 1em,
      /* nose */
     linear-gradient(-55deg,
       var(--clr-skin-dark) 25%,
       transparent 25%)
-      4em -1em / 20% 12em,
+      4em -2em / 20% 13.5em,
     linear-gradient(55deg,
       var(--clr-skin-dark2) 25%,
       transparent 25%)
-      6.4em -1em / 20% 12em,
+      6.4em -2em / 20% 13.5em,
     /* hair - strands */
     linear-gradient(120deg,
       var(--clr-hair) 25%,
@@ -200,7 +201,11 @@ body {
     /* hair - top of head */
     linear-gradient(var(--clr-hair), 
       var(--clr-hair))
-      0 0 / 100% 10%;
+      0 0 / 100% 10%,
+    /* face shading */
+    linear-gradient(to right,
+      var(--clr-skin-dark),
+      transparent);
 
   background-repeat: no-repeat;
   background-color: var(--clr-skin);
