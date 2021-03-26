@@ -162,6 +162,32 @@ body {
       var(--clr-hair) 25%,
       transparent 25%)
       2.8em 1em / 10% 50%,
+    /* scar */
+    linear-gradient(10deg,
+      transparent 25%,
+      var(--clr-shirt) 25%,
+      var(--clr-shirt) 30%,
+      transparent 30%)
+    9.3em 10em / 1.5em 2em,
+    linear-gradient(10deg,
+      transparent 25%,
+      var(--clr-shirt) 25%,
+      var(--clr-shirt) 30%,
+      transparent 30%)
+      9.3em 9em / 1.5em 2em,
+    linear-gradient(10deg,
+      transparent 25%,
+      var(--clr-shirt) 25%,
+      var(--clr-shirt) 30%,
+      transparent 30%)
+      9.8em 8em / 1.5em 2em,
+    linear-gradient(110deg,
+      transparent 25%,
+      var(--clr-shirt) 25%,
+      var(--clr-skin-dark2) 27%,
+      transparent 27%)
+      9.5em 8.5em / 3em 7em,
+
     /* hair - sides */
     linear-gradient(-110deg,
       var(--clr-hair)25%,
