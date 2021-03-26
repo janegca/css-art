@@ -36,6 +36,8 @@ body {
   width: 18em;
   height: 27em;
 
+  border-radius: 50%;
+
   /* prettier-ignore */
   background:      
      /* ears */
@@ -65,14 +67,32 @@ body {
       var(--clr-skin-dark),
       var(--clr-skin) 80%, transparent 15%)
       36% 74% / 6em 4em,
+    
+    /* neck bolts */
+    linear-gradient(to bottom, 
+      darkgrey 0%,
+      darkgrey 15%,
+      silver, 
+      grey)
+      76% 18.5em / 1.5em 1.5em,
+    linear-gradient(to bottom, 
+      darkgrey 0%,
+      darkgrey 15%,
+      silver, 
+      grey)
+      4em 18.5em / 1.5em 1.5em,
+    
     /* shoulders */
-    radial-gradient(var(--clr-shirt) 80%, transparent 20%)
+    radial-gradient(
+      var(--clr-shirt) 80%,
+      transparent 20%)
       100% 110% / 100% 8em;
 
   background-repeat: no-repeat;
 
+  box-shadow: inset 0 0 3em var(--clr-skin-light);
+
   font-size: calc(0.75rem + 0.75vmin);
-  outline: 1px solid red;
 }
 
 /* head */
