@@ -35,18 +35,8 @@ body {
   height: 27em;
 
   /* prettier-ignore */
-  background:   
-    /* head */
-
+  background:      
     /* neck */
-    linear-gradient(to right,
-      transparent,
-      var(--clr-skin-dark),
-      var(--clr-skin),
-      var(--clr-skin-light),
-      var(--clr-skin),
-      transparent)
-      48.3% 74% / 7em 3.5em,
     linear-gradient(75deg, 
       var(--clr-skin-dark),
       var(--clr-skin) 80%, 
@@ -54,7 +44,6 @@ body {
       66% 74% / 6em 4em,
     linear-gradient(-75deg, 
       var(--clr-skin-dark),
-      
       var(--clr-skin) 80%, transparent 15%)
       36% 74% / 6em 4em,
     /* shoulders */
@@ -65,4 +54,51 @@ body {
 
   font-size: calc(0.75rem + 0.75vmin);
   outline: 1px solid red;
+}
+
+/* head */
+.frankie::before {
+  content: "";
+  position: absolute;
+  left: 2.5em;
+  width: 13em;
+  height: 18em;
+
+  border-radius: 10% 10% 25% 25%;
+
+  /* prettier-ignore */
+  background:   
+    /* hair - strands */
+    linear-gradient(120deg,
+      var(--clr-hair) 25%,
+      transparent 25%)
+      9em 1em / 5% 50%,
+    linear-gradient(120deg,
+      var(--clr-hair) 25%,
+      transparent 25%)
+      5em 1em / 25% 50%,
+    linear-gradient(110deg,
+      var(--clr-hair) 25%,
+      transparent 25%)
+      8em 1.2em /10% 50%,
+    linear-gradient(-110deg,
+      var(--clr-hair) 25%,
+      transparent 25%)
+      2.8em 1em / 10% 50%,
+    /* hair - sides */
+    linear-gradient(-110deg,
+      var(--clr-hair)25%,
+      transparent 25%)
+      2.8em 0 / 80% 60%,
+    linear-gradient(110deg,
+      var(--clr-hair)25%,
+      transparent 25%)
+      0 0 / 80% 60%,
+    /* hair - top of head */
+    linear-gradient(var(--clr-hair), 
+      var(--clr-hair))
+      0 0 / 100% 10%;
+
+  background-repeat: no-repeat;
+  background-color: var(--clr-skin);
 }
