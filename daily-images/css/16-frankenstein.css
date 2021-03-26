@@ -1,0 +1,48 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: #eeeeee;
+}
+
+/* Composition */
+.frankie {
+  /* palette */
+  --clr-hair: #262220;
+  --clr-skin: hsl(49, 50%, 26%);
+  --clr-skin-light: hsl(56, 20%, 73%);
+  --clr-skin-dark: hsl(66, 34%, 34%);
+  --clr-shirt: #2d3234;
+
+  /* styling */
+  position: relative;
+  width: 18em;
+  height: 27em;
+
+  /* prettier-ignore */
+  background:   
+
+    /* shoulders */
+    radial-gradient(var(--clr-shirt) 80%, transparent 20%)
+      100% 110% / 100% 8em;
+
+  background-repeat: no-repeat;
+
+  font-size: calc(0.75rem + 0.75vmin);
+  outline: 1px solid red;
+}
