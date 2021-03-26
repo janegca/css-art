@@ -25,6 +25,7 @@ body {
   /* palette */
   --clr-hair: #262220;
   --clr-skin-dark: hsl(49, 50%, 26%);
+  --clr-skin-dark2: hsl(66, 34%, 24%);
   --clr-skin-light: hsl(56, 20%, 53%);
   --clr-skin: hsl(66, 34%, 34%);
   --clr-shirt: #2d3234;
@@ -68,6 +69,24 @@ body {
 
   /* prettier-ignore */
   background:   
+    /* nostrils */
+    radial-gradient(at center, 
+     var(--clr-shirt) 50%, 
+     transparent)
+     6.8em 10em / 1.2em 1em,
+    radial-gradient(at center, 
+      var(--clr-shirt) 50%, 
+      transparent)
+       5.3em 10em / 1.2em 1em,
+     /* nose */
+    linear-gradient(-55deg,
+      var(--clr-skin-dark) 25%,
+      transparent 25%)
+      4em -1em / 20% 12em,
+    linear-gradient(55deg,
+      var(--clr-skin-dark2) 25%,
+      transparent 25%)
+      6.4em -1em / 20% 12em,
     /* hair - strands */
     linear-gradient(120deg,
       var(--clr-hair) 25%,
