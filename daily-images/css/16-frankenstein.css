@@ -37,6 +37,23 @@ body {
 
   /* prettier-ignore */
   background:      
+     /* ears */
+     radial-gradient(at center left,
+      var(--clr-shirt) 50%,
+      transparent 50%)
+      15.1em 8.3em / 2em 6em,
+    radial-gradient(at center left,
+      var(--clr-skin) 50%,
+      transparent 50%)
+      15em 8em / 3em 7em,
+    radial-gradient(at center right,
+      var(--clr-shirt) 50%,
+      transparent 50%)
+      1em 8.3em / 2em 6em,  
+    radial-gradient(at center right,
+      var(--clr-skin) 50%,
+      transparent 50%)
+      0em 8em / 3em 7em,
     /* neck */
     linear-gradient(75deg, 
       var(--clr-skin-dark),
@@ -114,11 +131,11 @@ body {
     radial-gradient(at center, 
      var(--clr-shirt) 50%, 
      transparent)
-     6.8em 10em / 1.2em 1em,
+     6.8em 10.1em / 1.2em 1em,
     radial-gradient(at center, 
       var(--clr-shirt) 50%, 
       transparent)
-       5.3em 10em / 1.2em 1em,
+       5.3em 10.1em / 1.2em 1em,
      /* nose */
     linear-gradient(-55deg,
       var(--clr-skin-dark) 25%,
