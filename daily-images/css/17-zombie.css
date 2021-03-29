@@ -128,7 +128,7 @@ body {
 
   box-shadow: inset 0.5em 0 1.5em 0 var(--clr-shadow);
 
-  font-size: calc(0.75rem + 0.75vmin);
+  font-size: calc(0.5rem + 0.5vmin);
 }
 
 .zombie::before {
