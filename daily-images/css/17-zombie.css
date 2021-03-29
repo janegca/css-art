@@ -1,0 +1,168 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: #eeeeee;
+}
+
+/* Composition */
+.zombie {
+  /* palette */
+  --clr-body: hsl(115, 39%, 72%);
+  --clr-shadow: hsl(115, 39%, 52%);
+  --clr-shadow-dk: #333;
+  --clr-eye: hsl(71, 83%, 84%);
+  --clr-eye-lights: ghostwhite;
+  --clr-pupil: hsl(18, 55%, 38%);
+  --clr-bandage: hsl(0, 0%, 95%);
+
+  /* styling */
+  position: relative;
+  width: 25em;
+  height: 25em;
+
+  border-radius: 30% 70% 52% 48% / 30% 30% 70% 70%;
+
+  /* prettier-ignore */
+  background:   
+    /* bandage */
+    linear-gradient(45deg,
+      transparent 25%,
+      var(--clr-bandage) 25%,
+      var(--clr-bandage) 30%,
+      transparent 30%)
+      16.5em -11em / 100% 21em,
+    linear-gradient(45deg,
+      transparent 25%,
+      var(--clr-bandage) 25%,
+     var(--clr-bandage) 30%,
+      var(--clr-shadow-dk) 30%,
+      transparent 31%)
+      13em -9.3em / 100% 21em,
+    linear-gradient(45deg,
+      transparent 25%,
+      var(--clr-bandage) 25%,
+      var(--clr-bandage) 30%,
+      var(--clr-shadow-dk) 30%,
+      transparent 31%)
+      14em -11em / 100% 21em,
+    /* mouth */
+    radial-gradient(ellipse at top,
+      var(--clr-shadow-dk) 38%,
+      var(--clr-pupil) 40%,
+      transparent 47%)
+      8em 22em / 8em 3em,
+    radial-gradient(ellipse at bottom,
+      var(--clr-shadow-dk) 38%,
+      var(--clr-pupil) 40%,
+      transparent 47%)
+      8em 15em / 8em 7em,
+    /* nostrils */
+    radial-gradient(ellipse at center center,
+      var(--clr-shadow-dk) 20%,
+      var(--clr-shadow) 50%,
+      transparent 60%)
+      12em 13em / 2em 4em,
+    radial-gradient(ellipse at center center,
+      var(--clr-shadow-dk) 20%,
+      var(--clr-shadow) 50%,
+      transparent 60%)
+      10em 12.7em / 2em 4em,
+    /* right eye */
+    radial-gradient(circle at center center,
+    var(--clr-pupil) 50%,
+    transparent 50%)
+    16.5em 8.5em / 2em 2em,
+  radial-gradient(ellipse at center center,
+    var(--clr-eye-lights) 50%,
+    transparent 50%)
+    15em 8.5em / 5em 2em,
+  radial-gradient(circle at center center,
+    var(--clr-eye) 50%,
+    transparent 50%)
+    13.5em 4.8em / 10em 10em,
+  radial-gradient(circle at center center,
+    var(--clr-shadow-dk) 40%, 
+    var(--clr-shadow) 55%,
+    var(--clr-body) 65%,
+    transparent)
+    12.5em 4.5em / 12em 11em,
+    
+    /* left eye */
+    radial-gradient(circle at center center,
+      var(--clr-pupil) 50%,
+      transparent 50%)
+      6.7em 6em / 2em 2em,
+    radial-gradient(ellipse at center center,
+      var(--clr-eye-lights) 50%,
+      transparent 50%)
+      5em 6em / 5em 2em,
+    radial-gradient(circle at center center,
+      var(--clr-eye) 50%,
+      transparent 50%)
+      2em 2em / 10em 10em,
+    radial-gradient(circle at center center,
+      var(--clr-shadow-dk) 40%, 
+      var(--clr-shadow) 55%,
+      var(--clr-body) 65%,
+      transparent)
+      1.10em 1.45em / 12em 11em;
+
+  background-repeat: no-repeat;
+  background-color: var(--clr-body);
+
+  box-shadow: inset 0.5em 0 1.5em 0 var(--clr-shadow);
+
+  font-size: calc(0.75rem + 0.75vmin);
+}
+
+.zombie::before {
+  content: "";
+  position: absolute;
+  top: 9em;
+  left: -2.3em;
+  width: 4em;
+  height: 8em;
+
+  border-radius: 18% 82% 0% 100% / 14% 100% 0% 86%;
+  background-color: var(--clr-shadow);
+
+  /* prettier-ignore */
+  box-shadow: 
+    inset -1em 0 1em 0 var(--clr-body);
+  z-index: -1;
+}
+
+.zombie::after {
+  content: "";
+  position: absolute;
+  top: 9em;
+  left: 21.5em;
+  width: 4em;
+  height: 8em;
+
+  border-radius: 18% 82% 0% 100% / 14% 100% 0% 86%;
+  background-color: var(--clr-shadow);
+
+  /* prettier-ignore */
+  box-shadow: 
+    inset 1em 0 1em 0 var(--clr-body);
+
+  transform: rotate(225deg);
+  z-index: -1;
+}

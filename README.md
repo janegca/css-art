@@ -24,6 +24,7 @@ Attempts at creating Pure CSS Art.
 - [14. Cheesecake](https://janegca.github.io/css-art/daily-images/14-cheesecake)
 - [15. Cherry Pie](https://janegca.github.io/css-art/daily-images/15-pie)
 - [16. Frankentstein](https://janegca.github.io/css-art/daily-images/16-frankenstein)
+- [17. Zombie](https://janegca.github.io/css-art/daily-images/16-zombie)
 
 ## Objects
 
