@@ -126,7 +126,7 @@ body {
   background-repeat: no-repeat;
   background-color: var(--clr-body);
 
-  box-shadow: inset 0.5em 0 1.5em 0 var(--clr-shadow);
+  box-shadow: inset 0.5em -1em 1.5em 0 var(--clr-shadow);
 
   font-size: calc(0.5rem + 0.5vmin);
 }
