@@ -1,0 +1,53 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: dimgrey;
+}
+
+/* Composition */
+.vampire {
+  /* palette */
+  --skin: aliceblue;
+  --hair: black;
+
+  /* styling */
+  width: 20em;
+  height: 20em;
+
+  border-radius: 35% 35% 50% 50% / 30% 30% 50% 50%;
+
+  /* prettier-ignore */
+  background:    
+    /* hair */
+    radial-gradient(ellipse at center,
+      var(--skin) 50%, transparent 50%)
+      7em 4em / 17em 10em,
+    radial-gradient(ellipse at center,
+      var(--skin) 50%, transparent 50%)
+      -3em 4em / 17em 10.5em,
+    linear-gradient(to bottom,
+      var(--hair),
+      var(--hair))
+      0 0 / 20em 11em;
+
+  background-repeat: no-repeat;
+  background-color: var(--skin);
+
+  font-size: calc(0.5rem + 0.5vmin);
+}
