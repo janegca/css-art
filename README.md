@@ -25,6 +25,7 @@ Attempts at creating Pure CSS Art.
 - [15. Cherry Pie](https://janegca.github.io/css-art/daily-images/15-pie)
 - [16. Frankentstein](https://janegca.github.io/css-art/daily-images/16-frankenstein)
 - [17. Zombie](https://janegca.github.io/css-art/daily-images/17-zombie)
+- [17. Zombie](https://janegca.github.io/css-art/daily-images/18-zombie)
 
 ## Objects
 
