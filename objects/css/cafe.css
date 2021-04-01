@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* -- Composition -- */
+.scene {
+  /* custom properties */
+  --clr-awning: hsl(36, 91%, 57%);
+  --clr-bg: hsl(0, 0%, 89%);
+  --clr-brick: hsl(351, 83%, 77%);
+  --clr-brick-dk: hsl(351, 61%, 64%);
+  --clr-bush: hsl(159, 74%, 34%);
+  --clr-bush-dk: hsl(159, 74%, 30%);
+  --clr-bush-light: hsl(159, 74%, 44%);
+  --clr-clouds: hsl(0, 0%, 100%);
+  --clr-door: hsl(21, 50%, 66%);
+  --clr-glass: hsl(199, 96%, 69%);
+  --clr-glass-light: hsl(199, 96%, 78%);
+  --clr-planter: hsl(18, 53%, 27%);
+  --clr-tables: hsl(208, 46%, 63%);
+  --clr-trim: #2e255e;
+  --clr-wastebasket: hsl(250, 9%, 75%);
+  --clr-windowsills: hsl(21, 50%, 56%);
+
+  /* styling */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 0 5vmin;
+
+  background-color: var(--clr-bg);
+
+  font-size: calc(0.5rem + 0.5vmin);
+}
+
+.cafe {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 38em;
+  height: 20em;
+
+  border-radius: 0.5em;
+  border-bottom: 1em solid var(--clr-trim);
+
+  /* prettier-ignore */
+  background: 
+    linear-gradient(to right,
+      transparent 15%,
+      var(--clr-brick) 15%, 
+      var(--clr-brick) 80%,
+      transparent 80%)
+      0 0 / 100% 100%;
+}
+
+.clouds {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 13em;
+  height: 5em;
+
+  background-color: pink;
+}
