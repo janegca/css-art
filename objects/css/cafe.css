@@ -67,7 +67,60 @@ body {
     linear-gradient(
       var(--clr-brick-dk),
       var(--clr-brick-dk))
-      9.5em 19.6em / 10.1em 2.4em,
+      9.8em 19.6em / 10.1em 2.4em,
+
+    /* awning line at top of trim */
+    linear-gradient(to right,
+      var(--clr-trim),
+      var(--clr-trim))
+      9em 10em / 30em 0.1em,
+
+    /* awning scallop trim */
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      8.5em 10em / 3.8em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      11.4em 10em / 2.7em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      13.3em 10em / 2.7em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      15.3em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      17.1em 10em / 2.7em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      19em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      20.9em 10em / 2.7em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      22.8em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      24.7em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      26.6em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      28.5em 10em / 2.7em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      30.4em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      32.3em 10em / 2.7em 2em,
+    radial-gradient(at center top,
+      var(--clr-awning) 50%, transparent 50%)
+      34.2em 10em / 2.6em 2em,
+    radial-gradient(at center top,
+      var(--clr-clouds) 50%, transparent 50%)
+      35.9em 10em / 3.6em 2em,
 
     /* awning - top stripes */
     repeating-linear-gradient(to right,
