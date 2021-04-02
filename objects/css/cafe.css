@@ -26,6 +26,7 @@ body {
   --clr-bg: hsl(0, 0%, 89%);
   --clr-brick: hsl(351, 83%, 77%);
   --clr-brick-dk: hsl(351, 61%, 64%);
+  --clr-brick-light: hsl(351, 83%, 85%);
   --clr-bush: hsl(159, 74%, 34%);
   --clr-bush-dk: hsl(159, 74%, 30%);
   --clr-bush-light: hsl(159, 74%, 44%);
@@ -37,7 +38,7 @@ body {
   --clr-shadow: hsl(0, 0%, 20%, 0.5);
   --clr-tables: hsl(208, 46%, 63%);
   --clr-trim: #2e255e;
-  --clr-wastebasket: hsl(250, 9%, 75%);
+  --clr-wastebasket: hsl(250, 9%, 85%);
   --clr-windowsills: hsl(21, 50%, 56%);
 
   /* styling */
@@ -59,10 +60,10 @@ body {
       38em 16.5em / 1.5em 1.8em,
     linear-gradient(to right,
       var(--clr-wastebasket),
-      /* var(--clr-wastebasket) 0.5em, */
+      var(--clr-wastebasket) 0.5em,
       var(--clr-clouds) 0.5em,
       var(--clr-clouds) 2em,
-      /* var(--clr-wastebasket) 2em, */
+      var(--clr-wastebasket) 2em,
       var(--clr-wastebasket))
       37.5em 16.5em / 2.5em 5.5em,
 
@@ -203,7 +204,63 @@ body {
       transparent 62%, var(--clr-planter) 63%)
       2.6em 19.6em / 4.4em 2.4em,
 
+    /* building - bricks - right side */
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      35.5em 18.4em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      36.2em 19em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      28.5em 19em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      28em 17em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      30em 12em / 1em 0.5em,
+
+    /* building - bricks - left side */
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      13.2em 18.8em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      12em 18.8em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      12.5em 18.2em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      18.9em 18.5em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      18.9em 13.5em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      18em 13em / 1em 0.5em,
+    linear-gradient(
+      var(--clr-brick-dk),
+      var(--clr-brick-dk))
+      10em 12em / 0.5em 0.5em,
+    
     /* building */
+    linear-gradient(
+      var(--clr-brick-light),
+      var(--clr-brick-light))
+      10em 6em / 28em 0.2em,
     linear-gradient(
       var(--clr-brick), var(--clr-brick)) 
       10em 6em / 28em 16em,
