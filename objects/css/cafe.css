@@ -151,6 +151,25 @@ body {
       8.5em 6.5em / 5em 3.5em,
 
     /* window - door */
+    linear-gradient(
+      /* patch glass */
+      var(--clr-door),var(--clr-door))
+      27.025em 10em / 0.7em 8em,
+
+      /* shine lines */
+    linear-gradient(125deg,
+        transparent 50%, 
+        var(--clr-glass) 50%,
+        var(--clr-glass) 55%,
+        transparent 50%)
+        24em 15em / 4em 4em,
+    linear-gradient(125deg,
+        transparent 50%, 
+        var(--clr-glass) 50%,
+        var(--clr-glass) 53%,
+        transparent 50%)
+        20.5em 11.2em / 8em 7.8em,
+      /* main halves */
     linear-gradient(125deg,
       transparent 50%, var(--clr-glass-light) 50%)
       21em 11em / 6em 8em,
@@ -179,6 +198,25 @@ body {
       11em 17em / 7em 1em,
 
     /* window - right */
+    linear-gradient(
+      /* patch glass */
+      var(--clr-brick), var(--clr-brick))
+      36.5em 12.2em / 0.2em 1em,
+      /* shine lines */
+    linear-gradient(125deg,
+      transparent 50%, 
+      var(--clr-glass) 50%,
+      var(--clr-glass) 55%,
+      transparent 50%)
+      33em 13em / 4em 4em,
+    linear-gradient(125deg,
+      transparent 50%, 
+      var(--clr-glass) 50%,
+      var(--clr-glass) 53%,
+      transparent 50%)
+      30.4em 10em / 7.5em 7.5em,
+
+      /* main halves */
     linear-gradient(125deg,
       transparent 50%, var(--clr-glass-light) 50%)
       30.5em 10em / 6em 8em,
@@ -188,10 +226,29 @@ body {
       30.5em 10em / 6em 8em,  
 
     /* window - left */
+    linear-gradient(
+      /* patch glass */
+      var(--clr-brick), var(--clr-brick))
+      17.5em 12.2em / 0.2em 1em,
+
+      /* shine lines */
+    linear-gradient(125deg,
+      transparent 50%, 
+      var(--clr-glass) 50%,
+      var(--clr-glass) 55%,
+      transparent 50%)
+      14em 13em / 4em 4em,
+    linear-gradient(125deg,
+      transparent 50%, 
+      var(--clr-glass) 50%,
+      var(--clr-glass) 53%,
+      transparent 50%)
+      11.3em 10em / 7.5em 7.5em,
+
+      /* main halves */
     linear-gradient(125deg,
       transparent 50%, var(--clr-glass-light) 50%)
       11.5em 10em / 6em 8em,
-
     linear-gradient(-55deg,
       transparent 50%, var(--clr-glass) 50%)
       11.5em 10em / 6em 8em,
