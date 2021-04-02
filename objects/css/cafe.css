@@ -178,11 +178,13 @@ body {
       transparent 50%, var(--clr-glass) 50%)
       21em 11em / 6em 8em,  
 
-    /* door */
+    /* door handle*/
     radial-gradient(
-      var(--clr-trim) 50%,
-      transparent 50%)
-      20em 14em / 0.5em 3em,
+      var(--clr-trim) 90%,
+      transparent 90%)
+      20.2em 14.5em / 0.3em 2em,
+
+    /* door */
     linear-gradient(
       var(--clr-door), var(--clr-door))
       19.7em 10em / 8.7em 12em,
@@ -197,6 +199,52 @@ body {
       var(--clr-door)) 
       11em 17em / 7em 1em,
 
+    /* table and chairs - right side */
+      /* table */
+    linear-gradient( 
+      var(--clr-tables), var(--clr-tables))
+      32em 16em / 3em 0.5em,
+    linear-gradient(
+      var(--clr-tables), var(--clr-tables))
+      33em 16em / 1em 2em,
+      /* right chair */
+    radial-gradient(ellipse at bottom right,
+      var(--clr-tables) 50%, transparent 40%)
+      35.1em 14.6em / 0.7em 0.5em,
+    linear-gradient(
+      var(--clr-tables), var(--clr-tables))
+      35.3em 15em / 0.5em 2em,  
+      /* left chair */
+    radial-gradient(ellipse at bottom left,
+      var(--clr-tables) 50%, transparent 40%)
+      31em 14.6em / 0.7em 0.5em,
+    linear-gradient(
+      var(--clr-tables), var(--clr-tables))
+      31em 15em / 0.5em 2em,  
+      
+    /* table and chairs - left side */
+      /* table */
+    linear-gradient( 
+      var(--clr-tables), var(--clr-tables))
+      13em 16em / 3em 0.5em,
+    linear-gradient(
+      var(--clr-tables), var(--clr-tables))
+      14em 16em / 1em 2em,
+      /* right chair */
+    radial-gradient(ellipse at bottom right,
+      var(--clr-tables) 50%, transparent 40%)
+      16.3em 14.6em / 0.7em 0.5em,
+    linear-gradient(
+        var(--clr-tables), var(--clr-tables))
+        16.5em 15em / 0.5em 2em,
+      /* left chair */  
+    radial-gradient(ellipse at bottom left,
+      var(--clr-tables) 50%, transparent 40%)
+      12em 14.6em / 0.7em 0.5em,
+    linear-gradient(
+      var(--clr-tables), var(--clr-tables))
+      12em 15em / 0.5em 2em,
+    
     /* window - right */
     linear-gradient(
       /* patch glass */
