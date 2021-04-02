@@ -69,6 +69,26 @@ body {
       var(--clr-brick-dk))
       9.5em 19.6em / 10.1em 2.4em,
 
+    /* awning - top stripes */
+    repeating-linear-gradient(to right,
+      var(--clr-clouds),
+      var(--clr-clouds) 1.9em,
+      var(--clr-awning) 1.9em,
+      var(--clr-awning) 3.8em)
+      9.9em 6.5em / 26.5em 3.5em,
+
+    /* awning - right edge */
+    linear-gradient(75deg,
+      var(--clr-clouds) 75%,
+      transparent 25%)
+      34.5em 6.5em / 5em 3.5em,
+
+    /* awning - left edge */
+    linear-gradient(-75deg,
+      var(--clr-clouds) 75%,
+      transparent 25%)
+      8.5em 6.5em / 5em 3.5em,
+
     /* window - door */
     linear-gradient(125deg,
       transparent 50%, var(--clr-glass-light) 50%)
