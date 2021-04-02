@@ -9,16 +9,19 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   min-height: 100vh;
   margin: 0;
+
+  background-color: aliceblue;
 }
 
 /* -- Composition -- */
-.scene {
+.cafe {
   /* custom properties */
+  --base-font: calc(1rem + 1vmin);
+
   --clr-awning: hsl(36, 91%, 57%);
   --clr-bg: hsl(0, 0%, 89%);
   --clr-brick: hsl(351, 83%, 77%);
@@ -38,44 +41,46 @@ body {
 
   /* styling */
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  padding: 0 5vmin;
-
-  background-color: var(--clr-bg);
-
-  font-size: calc(0.5rem + 0.5vmin);
-}
-
-.cafe {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  width: 38em;
-  height: 20em;
-
-  border-radius: 0.5em;
-  border-bottom: 1em solid var(--clr-trim);
+  width: 50em;
+  height: 23em;
+  padding: 5vmin;
 
   /* prettier-ignore */
-  background: 
-    linear-gradient(to right,
-      transparent 15%,
-      var(--clr-brick) 15%, 
-      var(--clr-brick) 80%,
-      transparent 80%)
-      0 0 / 100% 100%;
+  background:   
+    /* building */
+    /* linear-gradient(
+      var(--clr-brick), var(--clr-brick)) 12em 0.5em / 30em 27em, */
+  
+    /* street */
+    linear-gradient(
+      var(--clr-trim), var(--clr-trim)) 4em 22em / 41em 0.2em;
+
+  background-repeat: no-repeat;
+
+  font-size: calc(1rem + 1vmin);
+  outline: 1px solid red;
 }
 
-.clouds {
-  position: absolute;
-  top: 10%;
-  left: 40%;
-  width: 13em;
-  height: 5em;
+@media (min-width: 200px) {
+  .cafe {
+    font-size: calc(0.25rem + 0.25vmin);
+  }
+}
 
-  background-color: pink;
+@media (min-width: 600px) {
+  .cafe {
+    font-size: calc(0.5rem + 0.5vmin);
+  }
+}
+
+@media (min-width: 900px) {
+  .cafe {
+    font-size: calc(0.75rem + 0.75vmin);
+  }
+}
+
+@media (min-width: 1400px) {
+  .cafe {
+    font-size: calc(1rem + 1vmin);
+  }
 }
