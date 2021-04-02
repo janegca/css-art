@@ -54,8 +54,15 @@ body {
       11em 0.5em / 14em 4em,
 
     /* wastebasket */
-    linear-gradient(
+    radial-gradient(at center top,
+      var(--clr-trim) 50%, transparent 50%)
+      38em 16.5em / 1.5em 1.8em,
+    linear-gradient(to right,
       var(--clr-wastebasket),
+      /* var(--clr-wastebasket) 0.5em, */
+      var(--clr-clouds) 0.5em,
+      var(--clr-clouds) 2em,
+      /* var(--clr-wastebasket) 2em, */
       var(--clr-wastebasket))
       37.5em 16.5em / 2.5em 5.5em,
 
@@ -63,11 +70,11 @@ body {
     linear-gradient(
       var(--clr-brick-dk),
       var(--clr-brick-dk))
-      28.45em 19.6em / 10.1em 2.4em,
+      28.4em 19.6em / 10em 2.4em,
     linear-gradient(
       var(--clr-brick-dk),
       var(--clr-brick-dk))
-      9.8em 19.6em / 10.1em 2.4em,
+      9.8em 19.6em / 9.9em 2.4em,
 
     /* awning line at top of trim */
     linear-gradient(to right,
