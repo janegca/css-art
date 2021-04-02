@@ -25,13 +25,13 @@ body {
   --clr-awning: hsl(36, 91%, 57%);
   --clr-bg: hsl(0, 0%, 89%);
   --clr-brick: hsl(351, 83%, 77%);
-  --clr-brick-dk: hsl(351, 61%, 64%);
+  --clr-brick-dk: hsl(351, 61%, 54%);
   --clr-brick-light: hsl(351, 83%, 85%);
   --clr-bush: hsl(159, 74%, 34%);
   --clr-bush-dk: hsl(159, 74%, 30%);
   --clr-bush-light: hsl(159, 74%, 44%);
   --clr-clouds: hsl(0, 0%, 100%);
-  --clr-door: hsl(21, 50%, 66%);
+  --clr-door: hsl(21, 50%, 56%);
   --clr-glass: hsl(199, 96%, 69%);
   --clr-glass-light: hsl(199, 96%, 78%);
   --clr-planter: hsl(18, 53%, 27%);
@@ -160,9 +160,23 @@ body {
       21em 11em / 6em 8em,  
 
     /* door */
+    radial-gradient(
+      var(--clr-trim) 50%,
+      transparent 50%)
+      20em 14em / 0.5em 3em,
     linear-gradient(
       var(--clr-door), var(--clr-door))
       19.7em 10em / 8.7em 12em,
+
+    /* windowsills */
+    linear-gradient( 
+      var(--clr-door),
+      var(--clr-door)) 
+      30em 17em / 7em 1em,
+    linear-gradient( 
+      var(--clr-door),
+      var(--clr-door)) 
+      11em 17em / 7em 1em,
 
     /* window - right */
     linear-gradient(125deg,
