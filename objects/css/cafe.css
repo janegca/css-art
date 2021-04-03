@@ -28,13 +28,14 @@ body {
   --clr-brick-dk: hsl(351, 61%, 54%);
   --clr-brick-light: hsl(351, 83%, 85%);
   --clr-bush: hsl(159, 74%, 34%);
-  --clr-bush-dk: hsl(159, 74%, 30%);
+  --clr-bush-dk: hsl(159, 64%, 30%);
   --clr-bush-light: hsl(159, 74%, 44%);
   --clr-clouds: hsl(0, 0%, 100%);
   --clr-door: hsl(21, 50%, 56%);
   --clr-glass: hsl(199, 96%, 69%);
   --clr-glass-light: hsl(199, 96%, 78%);
   --clr-planter: hsl(18, 53%, 27%);
+  --clr-planter-dk: hsl(18, 53%, 17%);
   --clr-shadow: hsl(0, 0%, 20%, 0.5);
   --clr-tables: hsl(208, 46%, 63%);
   --clr-trim: #2e255e;
@@ -301,7 +302,60 @@ body {
       transparent 50%, var(--clr-glass) 50%)
       11.5em 10em / 6em 8em,
 
-    /* plant */
+    /* Plant */
+     /* large bush *
+      /* branch */
+     linear-gradient( -45deg,
+      transparent 45%,
+      var(--clr-trim) 45%,
+      var(--clr-trim) 63%, 
+      transparent 50%)
+      6.8em 18.6em / 1em 0.9em,
+     linear-gradient(
+      var(--clr-trim), var(--clr-trim))
+      7.5em 15.7em / 0.28em 3em,
+
+      /* details */
+    linear-gradient(60deg,
+      transparent 25%, 
+      var(--clr-bush-light) 25%, 
+      var(--clr-bush-light) 35%, transparent 35%)
+      7em 14.3em / 2.5em 0.5em,
+    linear-gradient(60deg,
+      transparent 25%, 
+      var(--clr-bush-dk) 25%, 
+      var(--clr-bush-dk) 35%, transparent 35%)
+      6.7em 14.5em / 2.5em 0.5em,
+    linear-gradient(60deg,
+      transparent 25%, 
+      var(--clr-bush-dk) 25%, 
+      var(--clr-bush-dk) 35%, transparent 35%)
+      6.2em 15em / 3em 0.5em,
+
+    /* small bush */  
+      /* branch */
+    linear-gradient(
+        var(--clr-trim), var(--clr-trim))
+        6.05em 18.2em / 0.28em 0.5em,
+    linear-gradient( 45deg,
+      transparent 45%,
+      var(--clr-trim) 45%,
+      var(--clr-trim) 63%, 
+      transparent 50%)
+      6em 18.6em / 1em 0.9em,
+      /* details */
+    linear-gradient(60deg,
+    transparent 25%, 
+      var(--clr-bush-light) 25%, 
+      var(--clr-bush-light) 35%, transparent 35%)
+      5.3em 16em / 2.5em 0.5em,
+    linear-gradient(60deg,
+      transparent 25%, 
+      var(--clr-bush-dk) 25%, 
+      var(--clr-bush-dk) 35%, transparent 35%)
+      5.3em 16.7em / 2.5em 0.5em,
+      
+    /* bushes */
     radial-gradient(ellipse at center,
       var(--clr-bush) 49.5%,
       transparent 50%)
@@ -315,7 +369,26 @@ body {
       transparent 50%)
       5.5em 13em / 4em 6em,
 
-    /* plant pot */
+     /* stem */
+     linear-gradient(
+      var(--clr-trim), var(--clr-trim))
+      6.8em 15.7em / 0.25em 4em,  
+
+    /* planter */
+      /* details */
+    linear-gradient(
+        var(--clr-planter-dk),
+        var(--clr-planter-dk))
+        7.5em 20em / 1em 0.5em,  
+    linear-gradient(
+        var(--clr-planter-dk),
+        var(--clr-planter-dk))
+        5.5em 20.6em / 1em 0.5em,
+    linear-gradient(
+        var(--clr-planter-dk),
+        var(--clr-planter-dk))
+        7.3em 21.2em / 1em 0.5em,
+      /* pot */
     linear-gradient(-80deg, 
       transparent 63%, var(--clr-planter) 62%)
       7em 19.6em / 4.4em 2.4em,
