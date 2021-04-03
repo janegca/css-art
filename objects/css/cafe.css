@@ -1,3 +1,30 @@
+/* =========================================================
+    This started as an experiment, wanted to see if a 'scene'
+    could be created solely as a constructed background image
+    built-up within a single-div, with no before and after
+    pseudo-elements. Also wanted to make it responsive to 
+    both font-size and viewport changes.
+    
+    The image built up below is an attempt at re-creating
+    on originally created by Albert Walicki and posted on
+    Codepen at https://codepen.io/walickialbert/full/eYBqbPa
+
+    I've taken some liberties with a few of the colours and 
+    overall style (have foregone the outlines) but otherwise
+    have generally tried to stay true to the original.
+
+    Responsiveness relies on setting the basic font-size
+    using 'calc(1rem + 1vmin)' and reducing it, when 
+    necessary, using media queries.  
+    
+    When the base font is set using this method, if you want 
+    to stay sane, do not mix EM units and %'s when setting 
+    either postion or size; stick to one or the other; I've
+    chosen to use EM's.
+    
+   ========================================================= */
+
+/* -- STANDARD RESETS -------------------------------------- */
 html {
   box-sizing: border-box;
 }
@@ -8,6 +35,7 @@ html {
   box-sizing: inherit;
 }
 
+/* -- PRESENTATION ONLY ------------------------------------ */
 body {
   display: grid;
   place-content: center;
@@ -17,11 +45,9 @@ body {
   background-color: hsl(208, 100%, 95%);
 }
 
-/* -- Composition -- */
+/* -- COMPOSITION ------------------------------------------ */
 .cafe {
-  /* custom properties */
-  --base-font: calc(1rem + 1vmin);
-
+  /* -- CUSTOM PROPERTIES ---------------------------------- */
   --clr-awning: hsl(36, 91%, 57%);
   --clr-bg: hsl(0, 0%, 89%);
   --clr-brick: hsl(351, 83%, 77%);
@@ -44,7 +70,7 @@ body {
   --clr-wastebasket: hsl(250, 9%, 85%);
   --clr-windowsills: hsl(21, 50%, 56%);
 
-  /* styling */
+  /* -- BASIC STYLING -------------------------------------- */
   position: relative;
   width: 49em;
   height: 23em;
