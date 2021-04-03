@@ -519,14 +519,20 @@ body {
       10em 12em / 0.5em 0.5em,
 
     /* building foundation */
-    linear-gradient(
-        var(--clr-brick-dk),
-        var(--clr-brick-dk))
-        28.4em 19.6em / 10em 2.4em,
-    linear-gradient(
-        var(--clr-brick-dk),
-        var(--clr-brick-dk))
-        9.8em 19.6em / 9.9em 2.4em,
+    linear-gradient(to right,
+      var(--clr-brick-dk2),
+      var(--clr-brick-dk2) 0.3em,
+      var(--clr-brick-dk) 0.3em,
+      var(--clr-brick-dk))
+      28.4em 19.6em / 10em 2.4em,
+    linear-gradient(to right,
+      var(--clr-brick-dk2),
+      var(--clr-brick-dk2) 0.3em,
+      var(--clr-brick-dk) 0.3em,
+      var(--clr-brick-dk) 9.8em,
+      var(--clr-brick-dk2) 9.8em,
+      var(--clr-brick-dk2))
+      9.6em 19.6em / 10.1em 2.4em,
         
 
     /* building */
