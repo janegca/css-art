@@ -307,7 +307,40 @@ body {
       transparent 25%)
       8.5em 6.5em / 5em 3.5em,
  
-  /* -- DOOR AND WINDOWS ----------------------------------- */    
+  /* -- DOOR AND WINDOWS ----------------------------------- */ 
+    
+    /* sign on door */
+    linear-gradient(-10deg,
+      transparent 50%,
+      var(--clr-bg) 50%,
+      var(--clr-bg) 70%,
+      transparent 60%)
+      23.2em 13.8em / 1.5em 2em,
+    linear-gradient(-10deg,
+      transparent 50%,
+      var(--clr-clouds) 50%,
+      var(--clr-clouds) 70%,
+      transparent 60%)
+      23em 13em / 2em 4em,
+
+    /* sign - strings and tack */
+    radial-gradient(circle at center,
+      var(--clr-tables) 50%,
+      transparent 50%)
+      23.5em 13em / 0.4em 0.4em,
+    linear-gradient(-65deg,
+      transparent 50%,
+      var(--clr-trim) 50%,
+      var(--clr-trim) 53%,
+      transparent 51%)
+      23em 13.2em / 1em 1em,
+    linear-gradient(45deg,
+      transparent 50%,
+      var(--clr-trim) 50%,
+      var(--clr-trim) 53%,
+      transparent 51%)
+      23.7em 13.2em / 1em 1em,
+
     /* window - door */
     linear-gradient(
       /* patch glass */
@@ -551,31 +584,31 @@ body {
 
   background-repeat: no-repeat;
 
-  font-size: calc(1rem + 1vmin);
-  outline: 1px solid red;
+  /* assumes default font-size is 16px */
+  font-size: calc(0.25rem + 0.25vmin);
 }
 
 /* -- Media Queries -- */
-@media (min-width: 200px) {
-  .cafe {
-    font-size: calc(0.25rem + 0.25vmin);
-  }
-}
-
-@media (min-width: 600px) {
+@media (min-width: 40em) {
   .cafe {
     font-size: calc(0.5rem + 0.5vmin);
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 60em) {
   .cafe {
     font-size: calc(0.75rem + 0.75vmin);
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 90em) {
   .cafe {
     font-size: calc(1rem + 1vmin);
+  }
+}
+
+@media (min-width: 120em) {
+  .cafe {
+    font-size: calc(1.5rem + 1.5vmin);
   }
 }
