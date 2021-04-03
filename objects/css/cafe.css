@@ -304,14 +304,20 @@ body {
 
     /* Plant */
      /* large bush *
-      /* branch */
-     linear-gradient( -45deg,
+      /* branches */
+    linear-gradient( -45deg,
+      transparent 45%,
+      var(--clr-trim) 45%,
+      var(--clr-trim) 63%, 
+      transparent 50%)
+      7.6em 16.2em / 1em 0.7em,
+    linear-gradient( -45deg,
       transparent 45%,
       var(--clr-trim) 45%,
       var(--clr-trim) 63%, 
       transparent 50%)
       6.8em 18.6em / 1em 0.9em,
-     linear-gradient(
+    linear-gradient(
       var(--clr-trim), var(--clr-trim))
       7.5em 15.7em / 0.28em 3em,
 
@@ -336,13 +342,13 @@ body {
       /* branch */
     linear-gradient(
         var(--clr-trim), var(--clr-trim))
-        6.05em 18.2em / 0.28em 0.5em,
+        5.95em 18.2em / 0.26em 0.4em,
     linear-gradient( 45deg,
       transparent 45%,
       var(--clr-trim) 45%,
       var(--clr-trim) 63%, 
       transparent 50%)
-      6em 18.6em / 1em 0.9em,
+      5.9em 18.6em / 1em 0.9em,
       /* details */
     linear-gradient(60deg,
     transparent 25%, 
