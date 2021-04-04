@@ -30,7 +30,6 @@ Attempts at creating Pure CSS Art.
 ## Objects
 
 - [Bubble, animated](https://janegca.github.io/css-art/objects/bubble.html)<sup>\*</sup>
-- [Cafe Scene](https://janegca.github.io/css-art/objects/cafe.html)<sup>\*</sup>
 - [Clouds](https://janegca.github.io/css-art/objects/clouds.html)<sup>\*</sup>
 - [Coloured Pencil](https://janegca.github.io/css-art/objects/pencil-green.html)
 - [Eye-ball, animated](https://janegca.github.io/css-art/objects/eye-ball.html)<sup>\*</sup>
@@ -44,6 +43,10 @@ Attempts at creating Pure CSS Art.
 Code for the above is stored on both
 [Codepen](https://codepen.io/collection/XjjkgL) and
 [Github](https://github.com/janegca/css-art).
+
+## Scenes
+
+- [Cafe Scene](https://janegca.github.io/css-art/scenes/cafe.html)<sup>\*</sup>
 
 ---
 
