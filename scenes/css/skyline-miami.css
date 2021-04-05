@@ -54,10 +54,39 @@ body {
   background:   
     /* buildings left to right */
     /* 10 */
+     /* balconies */
+      /* top stack */
+    repeating-linear-gradient(to bottom,
+      transparent 0%, 
+      transparent 6%, 
+      var(--bldg) 6%, var(--bldg) 10%,
+      transparent 10%)
+      95.5% 82% / 8.4% 22%,    
+      /* bottom stack */
+    repeating-linear-gradient(to bottom,
+      transparent 0%, 
+      transparent 6%, 
+      var(--bldg) 6%, var(--bldg) 10%,
+      transparent 10%)
+      95.5% 112% / 8.4% 22%,   
+      /* body */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
       100% 100% / 12% 35.8%,
+
     /* 9 */
+      /* roof line */
+    linear-gradient(to right,
+      var(--bldg),var(--bldg))
+      84.5% 59% / 12% 1.6%,
+      /* balconies */
+    repeating-linear-gradient(to bottom,
+      transparent 0%, 
+      transparent 8%, 
+      var(--bldg) 8%, var(--bldg) 16%,
+      transparent 12%)
+      81% 80.5% / 8.4% 25%,
+      /* body */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
       85% 100% / 11% 42%,
@@ -144,7 +173,7 @@ body {
       /* roof line */
     linear-gradient(to right,
       var(--bldg),var(--bldg))
-      0 58.6% / 8.4% 0.5%,
+      0 58.6% / 8.4% 1%,
       /* body */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
