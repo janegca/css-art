@@ -1,0 +1,64 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: oldlace;
+}
+
+/* Composition */
+.skyline {
+  /* Colour palette */
+  --bldg: black;
+  --bldg-bg: hsl(187, 35%, 19%);
+  --cloud-d: hsl(154, 16%, 68%);
+  --cloud-l: hsl(40, 37%, 91%);
+  --cloud-m: hsl(40, 20%, 83%);
+  --sp1: hsl(349, 38%, 58%);
+  --sp2: hsl(349, 46%, 62%);
+  --sp3: hsl(349, 50%, 65%);
+  --so1: hsl(32, 57%, 57%);
+  --so2: hsl(36, 59%, 55%);
+  --so3: hsl(46, 84%, 44%);
+  --sun: hsl(51, 80%, 54%);
+  --wdw-y: hsl(56, 100%, 47%);
+  --wdw-g: hsl(189, 41%, 33%);
+
+  /* prettier-ignore */
+  background:     
+
+    /* lower bg buildings */
+    /* linear-gradient(to right,
+      var(--bldg-bg), var(--bldg-bg))
+      50% 100% / 100% 3.5%, */
+    linear-gradient(to right,
+      var(--bldg-bg), var(--bldg-bg))
+      0 100% / 50% 4.1%,
+
+    /* sky */
+    linear-gradient(
+      var(--sp1), var(--sp2), var(--sp3),
+      var(--so1), var(--so2),var(--so3));
+
+  background-repeat: no-repeat;
+
+  /* Basic styling */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  font-size: calc(0.5rem + 0.5vmin);
+}

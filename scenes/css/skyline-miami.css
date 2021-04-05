@@ -9,19 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-/* Image used as drawing template 
-   See Jhey Tompkins tutorial on Egghead
-   https://egghead.io/courses/create-css-illustrations-b24c
- */
-img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  max-width: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
 /* -- General Styling for display only -- */
 body {
   display: grid;
@@ -34,7 +21,7 @@ body {
 
 /* Composition */
 .skyline {
-  /* Colour palette */
+  /* Custom Properties*/
   --bldg: black;
   --bldg-bg: hsl(187, 35%, 19%);
   --cloud-d: hsl(154, 16%, 68%);
@@ -47,11 +34,16 @@ body {
   --so2: hsl(36, 59%, 55%);
   --so3: hsl(46, 84%, 44%);
   --sun: hsl(51, 80%, 54%);
-  --wdw-y: hsl(56, 100%, 47%);
-  --wdw-g: hsl(189, 41%, 33%);
+  --w-y: hsl(56, 100%, 47%);
+  --w-g: hsl(189, 41%, 33%);
+
+  /* window sizing */
+  --ww: 1%;
+  --wh: 2.8%;
 
   /* prettier-ignore */
   background:   
+
     /* buildings left to right */
     /* 10 */
      /* balconies */
@@ -159,6 +151,26 @@ body {
       12% 100% / 18.4% 17.2%,
 
     /* 1 */
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      6% 61% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      2% 65% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      4% 65% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      6% 70% / var(--ww) var(--wh),
+    linear-gradient(
+        var(--w-y), var(--w-y))
+        6% 75% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      4% 80% / var(--ww) var(--wh),
+        
       /* obtruding bottom */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
@@ -195,8 +207,10 @@ body {
   background-repeat: no-repeat;
 
   /* Basic styling */
+  position: relative;
   width: 100vw;
   height: 100vh;
 
-  font-size: calc(0.5rem + 0.5vmin);
+  /* font-size: calc(0.5rem + 0.5vmin); */
+  font-size: 0.5rem;
 }
