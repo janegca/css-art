@@ -35,8 +35,8 @@ body {
 /* Composition */
 .skyline {
   /* Colour palette */
-  --bldg1: black;
-  --bldg2: hsl(187, 35%, 19%);
+  --bldg: black;
+  --bldg-bg: hsl(187, 35%, 19%);
   --cloud-d: hsl(154, 16%, 68%);
   --cloud-l: hsl(40, 37%, 91%);
   --cloud-m: hsl(40, 20%, 83%);
@@ -47,32 +47,70 @@ body {
   --so2: hsl(36, 59%, 55%);
   --so3: hsl(46, 84%, 44%);
   --sun: hsl(51, 80%, 54%);
-  --wy: hsl(56, 100%, 47%);
-  --wg: hsl(189, 41%, 33%);
+  --wdw-y: hsl(56, 100%, 47%);
+  --wdw-g: hsl(189, 41%, 33%);
 
   /* prettier-ignore */
   background:   
+    /* buildings left to right */
+    /* 6 */
     linear-gradient(to right,
-      var(--bldg1), var(--bldg1))
+      var(--bldg), var(--bldg))
+      36.7% 54% / 7.5% 1%,
+    linear-gradient(to right,
+      var(--bldg),var(--bldg))
+      36.4% 100% / 9.5% 44.8%,
+    linear-gradient(to right,
+      var(--bldg), var(--bldg))
+      38% 100% / 13.2% 24.6%,
+
+    /* 5 - short bg bldg */
+    linear-gradient(to right,
+      var(--bldg-bg), var(--bldg-bg))
+      37% 100% / 16.4% 14.4%,
+
+    /* 4 */
+    linear-gradient(to right,
+      var(--bldg), var(--bldg))
+      25% 100% / 8% 40%,
+
+    /* 3 */
+    linear-gradient(to right,
+      var(--bldg),var(--bldg))
+      15% 100% / 8% 37%,
+
+    /* 2 - short/wide bg building */
+    linear-gradient(to right,
+      var(--bldg-bg), var(--bldg-bg))
+      12% 100% / 18.4% 17.2%,
+
+    /* 1 */
+      /* obtruding bottom */
+    linear-gradient(to right,
+      var(--bldg), var(--bldg))
       0 100% / 8.4% 14.6%,
+      /* balconies */
     repeating-linear-gradient(to bottom,
       transparent 4.3%, 
-      var(--bldg1) 4.3%, var(--bldg1) 8.3%, 
-      transparent 8.3%,
+      var(--bldg) 4.3%, var(--bldg) 12.3%, 
+      transparent 12.3%,
       transparent 20%)
       0 85% / 8.4% 28.2%,
+      /* roof line */
     linear-gradient(to right,
-      var(--bldg1),var(--bldg1))
+      var(--bldg),var(--bldg))
       0 58.6% / 8.4% 0.5%,
+      /* body */
     linear-gradient(to right,
-      var(--bldg1), var(--bldg1))
+      var(--bldg), var(--bldg))
       0 100% / 7.4% 41.4%,
-      /* lower bg buildings */
+
+    /* lower bg buildings */
     linear-gradient(to right,
-      var(--bldg2), var(--bldg2))
+      var(--bldg-bg), var(--bldg-bg))
       50% 100% / 100% 3.5%,
     linear-gradient(to right,
-      var(--bldg2), var(--bldg2))
+      var(--bldg-bg), var(--bldg-bg))
       0 100% / 50% 4.1%,
    
     /* sky */
