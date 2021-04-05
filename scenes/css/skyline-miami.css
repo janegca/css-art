@@ -53,6 +53,28 @@ body {
   /* prettier-ignore */
   background:   
     /* buildings left to right */
+    /* 10 */
+    linear-gradient(to right,
+      var(--bldg), var(--bldg))
+      100% 100% / 12% 35.8%,
+    /* 9 */
+    linear-gradient(to right,
+      var(--bldg), var(--bldg))
+      85% 100% / 11% 42%,
+
+    /* 8 short bg building */
+    linear-gradient(to right,
+      var(--bldg-bg),var(--bldg-bg))
+      100% 86% / 27% 2%,
+    linear-gradient(to right,
+      var(--bldg-bg),var(--bldg-bg))
+      100% 100% / 26.3% 14.4%,
+
+    /* 7 (arena?) */
+    linear-gradient(to right,
+      var(--bldg), var(--bldg))
+      60.5% 100% / 21% 14.4%,
+
     /* 6 */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
@@ -115,7 +137,7 @@ body {
    
     /* sky */
     linear-gradient(
-      var(--sp1), var(--sp2),
+      var(--sp1), var(--sp2), var(--sp3),
       var(--so1), var(--so2),var(--so3));
 
   background-repeat: no-repeat;
