@@ -38,11 +38,13 @@ body {
   --sn3: hsla(0, 0%, 80%, 0.1);
   --sun: hsl(51, 80%, 54%);
   --w-y: hsl(56, 100%, 47%);
+  --w-y-bg: hsl(56, 100%, 47%, 0.9);
   --w-g: hsl(189, 41%, 33%);
 
   /* window sizing */
   --ww: 1%;
   --wh: 2.8%;
+  --wr: 2%;
 
   /* prettier-ignore */
   background:   
@@ -150,6 +152,33 @@ body {
       15% 100% / 8% 37%,
 
     /* 2 - short/wide bg building */
+      /* windows (top to bottom) */
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        10.5% 86% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        12.3% 86% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        10.5% 90% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        12.3% 90% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        10.5% 94% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        12.3% 94% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        10.5% 98% / var(--wr) var(--wr),
+      radial-gradient(circle at center center,
+        var(--w-y-bg) 49.5%, transparent 50%)
+        12.3% 98% / var(--wr) var(--wr),
+
+      /* body */
     linear-gradient(to right,
       var(--bldg-bg), var(--bldg-bg))
       12% 100% / 18.4% 17.2%,
