@@ -33,6 +33,9 @@ body {
   --so1: hsl(32, 57%, 57%);
   --so2: hsl(36, 59%, 55%);
   --so3: hsl(46, 84%, 44%);
+  --sn1: hsla(0, 0%, 60%, 0.5);
+  --sn2: hsla(0, 0%, 70%, 0.3);
+  --sn3: hsla(0, 0%, 80%, 0.1);
   --sun: hsl(51, 80%, 54%);
   --w-y: hsl(56, 100%, 47%);
   --w-g: hsl(189, 41%, 33%);
@@ -44,8 +47,9 @@ body {
   /* prettier-ignore */
   background:   
 
-    /* buildings left to right */
-    /* 10 */
+    /* Buildings (left to right) */
+
+    /* 10 ------------------------------------------- */
      /* balconies */
       /* top stack */
     repeating-linear-gradient(to bottom,
@@ -66,7 +70,7 @@ body {
       var(--bldg), var(--bldg))
       100% 100% / 12% 35.8%,
 
-    /* 9 */
+    /* 9 ------------------------------------------- */
       /* roof line */
     linear-gradient(to right,
       var(--bldg),var(--bldg))
@@ -83,7 +87,7 @@ body {
       var(--bldg), var(--bldg))
       85% 100% / 11% 42%,
 
-    /* 8 short bg building */
+    /* 8 short bg building ------------------------- */
     linear-gradient(to right,
       var(--bldg-bg),var(--bldg-bg))
       100% 86% / 27% 2%,
@@ -91,7 +95,7 @@ body {
       var(--bldg-bg),var(--bldg-bg))
       100% 100% / 26.3% 14.4%,
 
-    /* 7 (arena?) */
+    /* 7 (arena?) ---------------------------------- */
       /* dome */
     radial-gradient(
       var(--bldg) 50%, transparent 50%)
@@ -119,7 +123,7 @@ body {
       var(--bldg), var(--bldg))
       60.5% 100% / 18% 14.4%,
 
-    /* 6 */
+    /* 6 ------------------------------------------- */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
       36.7% 54% / 7.5% 1%,
@@ -130,17 +134,17 @@ body {
       var(--bldg), var(--bldg))
       38% 100% / 13.2% 24.6%,
 
-    /* 5 - short bg bldg */
+    /* 5 - short bg bldg --------------------------- */
     linear-gradient(to right,
       var(--bldg-bg), var(--bldg-bg))
       37% 100% / 16.4% 14.4%,
 
-    /* 4 */
+    /* 4 ------------------------------------------- */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
       25% 100% / 8% 40%,
 
-    /* 3 */
+    /* 3 ------------------------------------------- */
     linear-gradient(to right,
       var(--bldg),var(--bldg))
       15% 100% / 8% 37%,
@@ -150,7 +154,7 @@ body {
       var(--bldg-bg), var(--bldg-bg))
       12% 100% / 18.4% 17.2%,
 
-    /* 1 */
+    /* 1 ------------------------------------------- */
       /* windows (top to bottom) */
     linear-gradient(
       var(--w-y), var(--w-y))
@@ -191,7 +195,7 @@ body {
       var(--bldg), var(--bldg))
       0 100% / 7.4% 41.4%,
 
-    /* lower bg buildings */
+    /* lower bg buildings ----------------------------- */
     linear-gradient(to right,
       var(--bldg-bg), var(--bldg-bg))
       50% 100% / 100% 3.5%,
@@ -199,7 +203,10 @@ body {
       var(--bldg-bg), var(--bldg-bg))
       0 100% / 50% 4.1%,
    
-    /* sky */
+    /* Sky ------------------------------------------- */
+    linear-gradient(
+      var(--sn1), var(--sn2), var(--sn3), transparent
+    ),
     linear-gradient(
       var(--sp1), var(--sp2), var(--sp3),
       var(--so1), var(--so2),var(--so3));
@@ -211,6 +218,10 @@ body {
   width: 100vw;
   height: 100vh;
 
-  /* font-size: calc(0.5rem + 0.5vmin); */
+  /* Don't mess with vmin font-size when using
+     100vw/100vh for page sizing, really messes
+     up positioning when viewport size changes */
+
+  /* font-size: calc(0.5rem + 0.5vmin) */
   font-size: 0.5rem;
 }
