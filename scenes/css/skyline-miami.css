@@ -55,6 +55,46 @@ body {
     /* Buildings (left to right) */
 
     /* 10 ------------------------------------------- */
+      /* windows */
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      90.5% 67% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      93% 67% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      90.5% 72% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      93% 72% / var(--ww-d) var(--wh),
+  
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      90.5% 80% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      93% 80% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      90.5% 85% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      93% 85% / var(--ww-d) var(--wh),
+  
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      90.5% 90% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      93% 90% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      90.5% 95% / var(--ww-d) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      93% 95% / var(--ww-d) var(--wh),
+  
      /* balconies */
       /* top stack */
     repeating-linear-gradient(to bottom,
@@ -70,6 +110,7 @@ body {
       var(--bldg) 6%, var(--bldg) 10%,
       transparent 10%)
       95.5% 112% / 8.4% 22%,   
+
       /* body */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
