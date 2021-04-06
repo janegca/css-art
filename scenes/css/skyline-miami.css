@@ -22,8 +22,8 @@ body {
 /* Composition */
 .skyline {
   /* Custom Properties*/
-  --bldg: black;
-  --bldg-bg: hsl(187, 35%, 19%);
+  --bldg: hsl(169, 15%, 10%);
+  --bldg-bg: hsl(169, 15%, 15%);
   --cloud-d: hsl(154, 16%, 68%);
   --cloud-l: hsl(40, 37%, 91%);
   --cloud-m: hsl(40, 20%, 83%);
@@ -33,13 +33,13 @@ body {
   --so1: hsl(32, 57%, 57%);
   --so2: hsl(36, 59%, 55%);
   --so3: hsl(46, 84%, 44%);
-  --sn1: hsla(0, 0%, 60%, 0.5);
-  --sn2: hsla(0, 0%, 70%, 0.3);
-  --sn3: hsla(0, 0%, 80%, 0.1);
+  --sn1: hsla(169, 0%, 60%, 0.5);
+  --sn2: hsla(169, 0%, 70%, 0.3);
+  --sn3: hsla(169, 0%, 80%, 0.1);
   --sun: hsl(51, 80%, 54%);
   --w-y: hsl(56, 100%, 47%);
   --w-y-bg: hsl(56, 100%, 47%, 0.9);
-  --w-g: hsl(189, 41%, 33%);
+  --w-g: hsl(169, 41%, 33%);
 
   /* window sizing */
   --ww: 1%;
@@ -142,11 +142,57 @@ body {
       37% 100% / 16.4% 14.4%,
 
     /* 4 ------------------------------------------- */
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      25.5% 64% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      27.5% 64% / var(--ww) var(--wh),   
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      24% 72% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      27% 72% / var(--ww) var(--wh),      
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      24% 77% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      27% 82% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      29% 82% / var(--ww) var(--wh),
+  
+      /* body */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
       25% 100% / 8% 40%,
 
     /* 3 ------------------------------------------- */
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      15% 66% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      17% 71% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      16% 79% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      18% 79% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      20% 85% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      17% 89% / var(--ww) var(--wh),
+        
+
+      /* body */
     linear-gradient(to right,
       var(--bldg),var(--bldg))
       15% 100% / 8% 37%,
