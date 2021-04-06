@@ -100,32 +100,20 @@ body {
       100% 100% / 26.3% 14.4%,
 
     /* 7 (arena?) ---------------------------------- */
-      /* dome */
+
+      /* body */
     radial-gradient(
       var(--bldg) 50%, transparent 50%)
-      61% 90% / 19% 10%,
-      /* patch */
-    linear-gradient(to right,
-      var(--bldg),var(--bldg))
-      64.5% 86% / 10% 1%,
-      /* sloped roof - right */
+      61% 93% / 19% 10%,
     linear-gradient(-10deg,
-      var(--bldg) 49.5%, transparent 50%)
-      64.5% 85% / 10% 3%, 
-      /* sloped side */
-    linear-gradient(-85deg,
-      transparent 48%, 
-      var(--bldg) 48.5%, var(--bldg) 52%,
-      transparent 52%)
-      73% 100% / 25% 17%,
-      /* sloped roof - left */
+      var(--bldg) 70%, transparent 30%)
+      68% 100% / 14% 19%,
     linear-gradient(10deg,
-      var(--bldg) 50%, transparent 50%)
-      53.7% 85.2% / 10% 3%, 
-      /* body */
-    linear-gradient(to right,
-      var(--bldg), var(--bldg))
-      60.5% 100% / 18% 14.4%,
+      var(--bldg) 70%, transparent 30%)
+      57% 101% / 14% 19%,
+    linear-gradient(
+      var(--bldg),var(--bldg))
+      55.5% 100% / 13% 13%,
 
     /* 6 ------------------------------------------- */
       /* windows (top to bottom) */
