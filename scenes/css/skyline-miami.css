@@ -15,8 +15,6 @@ body {
   place-content: center;
   min-height: 100vh;
   margin: 0;
-
-  background-color: oldlace;
 }
 
 /* Composition */
@@ -154,6 +152,12 @@ body {
       85% 100% / 11% 42%,
 
     /* 8 short bg building ------------------------- */
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y-bg),var(--w-y-bg))
+      88% 96% / 0.5% 9%,
+      
+      /* body */
     linear-gradient(to right,
       var(--bldg-bg),var(--bldg-bg))
       100% 86% / 27% 2%,
