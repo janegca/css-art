@@ -76,6 +76,26 @@ body {
       100% 100% / 12% 35.8%,
 
     /* 9 ------------------------------------------- */
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      76.5% 61.3% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      78% 65.3% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      80% 65.3% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      76.5% 70% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      76.5% 74% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      78% 79% / var(--ww) var(--wh),
+
       /* roof line */
     linear-gradient(to right,
       var(--bldg),var(--bldg))
