@@ -51,7 +51,6 @@ body {
   background:   
 
     /* Buildings (left to right) */
-
     /* 10 ------------------------------------------- */
       /* windows */
     linear-gradient(
@@ -417,6 +416,13 @@ body {
       0 100% / 50% 4.1%,
    
     /* Sky ------------------------------------------- */
+
+    /* sun */
+    radial-gradient(circle at center,
+      var(--sun) 49.5%, transparent 50%)
+      66% 80% / 15vmin 15vmin,
+
+    /* backdrop */
     linear-gradient(
       var(--sn1), var(--sn2), var(--sn3), transparent
     ),
