@@ -44,6 +44,8 @@ body {
   /* window sizing */
   --ww: 1%;
   --wh: 2.8%;
+  --ww-l: 6%;
+  --wh-l: 1%;
   --wr: 2%;
 
   /* prettier-ignore */
@@ -126,6 +128,45 @@ body {
       60.5% 100% / 18% 14.4%,
 
     /* 6 ------------------------------------------- */
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      34.5% 59% / var(--ww-l) var(--wh-l),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      34.5% 61% / var(--ww-l) var(--wh-l),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      34.5% 63% / var(--ww-l) var(--wh-l),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      34.5% 65% / var(--ww-l) var(--wh-l),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      39% 79% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      45% 79% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      39% 83% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      41% 83% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      41% 87% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      43% 87% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      45% 87% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y), var(--w-y))
+      39% 95% / var(--ww) var(--wh),
+      
+      /* body */
     linear-gradient(to right,
       var(--bldg), var(--bldg))
       36.7% 54% / 7.5% 1%,
@@ -136,7 +177,16 @@ body {
       var(--bldg), var(--bldg))
       38% 100% / 13.2% 24.6%,
 
-    /* 5 - short bg bldg --------------------------- */
+    /* 5 - short bg bldg --------------------------- */  
+      /* windows (top to bottom) */
+    linear-gradient(
+      var(--w-y-bg), var(--w-y-bg))
+      31.7% 89% / var(--ww) var(--wh),
+    linear-gradient(
+      var(--w-y-bg), var(--w-y-bg))
+      31.7% 93% / var(--ww) var(--wh),
+  
+      /* body */
     linear-gradient(to right,
       var(--bldg-bg), var(--bldg-bg))
       37% 100% / 16.4% 14.4%,
