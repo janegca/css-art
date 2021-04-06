@@ -41,12 +41,13 @@ body {
   --w-y-bg: hsl(56, 100%, 47%, 0.9);
   --w-g: hsl(169, 41%, 33%);
 
-  /* window sizing */
+  /* window sizing (excpet bldg 7) */
   --ww: 1%;
+  --ww-d: 2%; /* double */
+  --ww-l: 6%; /* long */
   --wh: 2.8%;
-  --ww-l: 6%;
   --wh-l: 1%;
-  --wr: 2%;
+  --wr: 2%; /* round */
 
   /* prettier-ignore */
   background:   
@@ -78,7 +79,7 @@ body {
       /* roof line */
     linear-gradient(to right,
       var(--bldg),var(--bldg))
-      84.5% 59% / 12% 1.6%,
+      84% 59% / 12% 1.6%,
       /* balconies */
     repeating-linear-gradient(to bottom,
       transparent 0%, 
@@ -112,7 +113,7 @@ body {
       54% 92% / 5% 0.5%,
     linear-gradient(to right,
       var(--w-g), var(--w-g))
-      70.5% 92% / 5% 0.5%,
+      71% 92% / 5% 0.5%,
     linear-gradient(to right,
       var(--w-g), var(--w-g))
       60% 95% / 5% 0.5%,
