@@ -100,6 +100,40 @@ body {
       100% 100% / 26.3% 14.4%,
 
     /* 7 (arena?) ---------------------------------- */
+      /* windows (top to bottom) */
+    linear-gradient(to right,
+      var(--w-g), var(--w-g))
+      65% 90% / 3% 0.5%,
+    linear-gradient(to right,
+      var(--w-g), var(--w-g))
+      70.5% 88% / 6% 0.5%,
+    linear-gradient(to right,
+      var(--w-g), var(--w-g))
+      54% 92% / 5% 0.5%,
+    linear-gradient(to right,
+      var(--w-g), var(--w-g))
+      70.5% 92% / 5% 0.5%,
+    linear-gradient(to right,
+      var(--w-g), var(--w-g))
+      60% 95% / 5% 0.5%,
+    linear-gradient(to right,
+      var(--w-g), var(--w-g))
+      67% 97.5% / 2% 0.5%,
+      /* vertical bars */
+    repeating-linear-gradient(to right,
+      var(--bldg),
+      var(--bldg) 2%,
+      transparent 2%,
+      transparent 6%,
+      var(--bldg) 5%)
+      58.5% 99% / 14% 3%,
+      /* horizontal lights */
+    repeating-linear-gradient(
+      transparent 0%,
+      transparent 15%,
+      var(--w-y) 15%, var(--w-y) 30%,
+      transparent 30%)
+      58% 99% / 15.6% 2.8%,
 
       /* body */
     radial-gradient(
