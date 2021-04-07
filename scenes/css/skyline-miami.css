@@ -416,6 +416,20 @@ body {
     /* Sky ------------------------------------------- */
 
     /* clouds */
+
+    /* right hand cloud */
+    radial-gradient(ellipse at 100% 90%,
+      var(--cloud-d) 50%, transparent 50%)
+      right 42em / 60em 4em,
+    radial-gradient(circle at center,
+      var(--cloud-l) 50%, transparent 50%)
+      calc(100% - 8em) 39em / 6em 6em,
+    radial-gradient(circle at center,
+      var(--cloud-l) 50%, transparent 50%)
+      right 35em / 12em 12em,
+    radial-gradient(ellipse at 100% 100%,
+      var(--cloud-l) 50%, transparent 50%)
+      right 38em / 50em 8em,
    
     /* large, left cloud */
     radial-gradient(ellipse at 10% 90%,
