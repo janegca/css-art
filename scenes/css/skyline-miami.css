@@ -415,6 +415,40 @@ body {
    
     /* Sky ------------------------------------------- */
 
+    /* birds */
+    radial-gradient(ellipse at 100% 100%,
+      transparent 25%, 
+      black 25%,black 30%, transparent 30%)
+      calc(100% - 30.5%) 28rem / 2rem 1rem,
+    radial-gradient(ellipse at 17% 100%,
+      transparent 25%, 
+      black 25%, black 30%, transparent 30%)
+      calc(100% - 30%) 28rem / 2rem 1rem,
+    radial-gradient(ellipse at 100% 100%,
+      transparent 25%, 
+      black 25%,black 30%, transparent 30%)
+      calc(100% - 35.5%) 27rem / 2rem 1rem,
+    radial-gradient(ellipse at 17% 100%,
+      transparent 25%, 
+      black 25%, black 30%, transparent 30%)
+      calc(100% - 35%) 27rem / 2rem 1rem,
+    radial-gradient(ellipse at 100% 100%,
+      transparent 25%, 
+      black 25%,black 30%, transparent 30%)
+      calc(100% - 40.5%) 29rem / 4rem 2rem,
+    radial-gradient(ellipse at 17% 100%,
+      transparent 25%, 
+      black 25%, black 30%, transparent 30%)
+      calc(100% - 40%) 29rem / 4rem 2rem,
+    radial-gradient(ellipse at 100% 100%,
+      transparent 25%, 
+      black 25%,black 30%, transparent 30%)
+      calc(100% - 51%) 27rem / 6rem 3rem,
+    radial-gradient(ellipse at 17% 100%,
+      transparent 25%, 
+      black 25%, black 30%, transparent 30%)
+      calc(100% - 50%) 27rem / 6rem 3rem,
+
     /* clouds */
     /* center cloud */
     radial-gradient(ellipse at bottom,
