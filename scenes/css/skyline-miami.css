@@ -450,44 +450,76 @@ body {
       calc(100% - 50%) 27rem / 6rem 3rem,
 
     /* clouds */
-    /* center cloud */
+
+      /* top most cloud */
     radial-gradient(ellipse at bottom,
       var(--cloud-d) 50%, transparent 50%)
-      right 6.4rem / 80em 2.5em,
+      20rem 6.4rem / 80em 2.5em,
      radial-gradient(ellipse at bottom,
-      var(--cloud-l) 50%, transparent 50%)
-      calc(100% - 15em) 9.8em / 30em 3em,      
+      var(--cloud-m) 50%, transparent 50%)
+      29rem 9.8em / 30em 3em,      
     radial-gradient(ellipse at bottom,
-      var(--cloud-l) 50%, transparent 50%)
-      right 5rem / 80em 5em,
+      var(--cloud-m) 50%, transparent 50%)
+      23rem 5rem / 80em 5em,
 
-    /* right hand cloud */
+      /* right most cloud */
     radial-gradient(ellipse at 100% 90%,
       var(--cloud-d) 50%, transparent 50%)
-      right 42em / 60em 4em,
+      right 40em / 60em 4em,
     radial-gradient(circle at center,
-      var(--cloud-l) 50%, transparent 50%)
-      calc(100% - 8em) 39em / 6em 6em,
+      var(--cloud-m) 50%, transparent 50%)
+      calc(100% - 8em) 37em / 6em 6em,
     radial-gradient(circle at center,
-      var(--cloud-l) 50%, transparent 50%)
-      right 35em / 12em 12em,
+      var(--cloud-m) 50%, transparent 50%)
+      right 33em / 12em 12em,
     radial-gradient(ellipse at 100% 100%,
-      var(--cloud-l) 50%, transparent 50%)
-      right 38em / 50em 8em,
+      var(--cloud-m) 50%, transparent 50%)
+      right 36em / 50em 8em,
+
    
-    /* large, left cloud */
+      /* large left cloud */
     radial-gradient(ellipse at 10% 90%,
       var(--cloud-d) 50%, transparent 50%)
       0 13rem / 40rem 5rem,
     radial-gradient(ellipse at center,
-      var(--cloud-l) 50%, transparent 50%)
+      var(--cloud-m) 50%, transparent 50%)
       3rem 7rem / 15rem 10rem,
     radial-gradient(circle at center,
-      var(--cloud-l) 50%, transparent 50%)
+      var(--cloud-m) 50%, transparent 50%)
      -2rem 5rem / 12rem 12rem,
     radial-gradient(ellipse at 10% 90%,
-      var(--cloud-l) 50%, transparent 50%)
+      var(--cloud-m) 50%, transparent 50%)
       0 8rem / 40rem 10rem,
+
+      /* small left cloud */
+    radial-gradient(ellipse at bottom,
+      var(--cloud-d) 50%, transparent 50%)
+      9rem 12rem / 72em 4em,    
+    radial-gradient(ellipse at center,
+      var(--cloud-m) 50%, transparent 50%)
+      17rem 9.6rem / 6rem 3rem,
+    radial-gradient(circle at center,
+      var(--cloud-m) 50%, transparent 50%)
+      20rem 7.5rem / 6rem 6rem,  
+    radial-gradient(ellipse at bottom,
+      var(--cloud-m) 50%, transparent 50%)
+      10rem 8rem / 70em 12em,  
+
+    /* behind the building */
+    radial-gradient(ellipse at bottom,
+      var(--cloud-m) 50%, transparent 50%)
+      right 26rem / 85em 2.5em,
+    radial-gradient(ellipse at bottom,
+      var(--cloud-m) 50%, transparent 50%)
+      right 26rem / 80em 3.5em,
+    
+    /* across the sun */
+    radial-gradient(ellipse at bottom,
+      var(--so3) 50%, transparent 50%)
+      64% 74% / 10em 1em,    
+    radial-gradient(ellipse at bottom,
+      var(--so3) 50%, transparent 50%)
+      68% 78% / 15em 0.8em,     
 
     /* sun */
     radial-gradient(circle at center,
@@ -495,7 +527,6 @@ body {
       66% 80% / 15vmin 15vmin,
 
     /* backdrop */
-    
     linear-gradient(
       var(--sp1), var(--sp2), var(--sp3),
       var(--so1), var(--so2),var(--so3));
