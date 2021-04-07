@@ -423,10 +423,10 @@ body {
       0 13rem / 40rem 5rem,
     radial-gradient(ellipse at center,
       var(--cloud-l) 50%, transparent 50%)
-      0rem 8rem / 15rem 8rem,
+      3rem 7rem / 15rem 10rem,
     radial-gradient(circle at center,
       var(--cloud-l) 50%, transparent 50%)
-     -2rem 8rem / 8rem 8rem,
+     -2rem 5rem / 12rem 12rem,
     radial-gradient(ellipse at 10% 90%,
       var(--cloud-l) 50%, transparent 50%)
       0 8rem / 40rem 10rem,
