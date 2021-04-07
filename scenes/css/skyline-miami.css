@@ -22,7 +22,7 @@ body {
   /* Custom Properties*/
   --bldg: hsl(169, 15%, 10%);
   --bldg-bg: hsl(169, 15%, 15%);
-  --cloud-d: hsl(154, 16%, 68%);
+  --cloud-d: hsl(169, 6%, 78%);
   --cloud-l: hsl(40, 37%, 91%);
   --cloud-m: hsl(40, 20%, 83%);
   --sp1: hsl(349, 38%, 58%);
@@ -31,9 +31,7 @@ body {
   --so1: hsl(32, 57%, 57%);
   --so2: hsl(36, 59%, 55%);
   --so3: hsl(46, 84%, 44%);
-  --sn1: hsla(169, 0%, 60%, 0.5);
-  --sn2: hsla(169, 0%, 70%, 0.3);
-  --sn3: hsla(169, 0%, 80%, 0.1);
+
   --sun: hsl(51, 80%, 54%);
   --w-y: hsl(56, 100%, 47%);
   --w-y-bg: hsl(56, 100%, 47%, 0.9);
@@ -417,15 +415,29 @@ body {
    
     /* Sky ------------------------------------------- */
 
+    /* clouds */
+   
+    /* large, left cloud */
+    radial-gradient(ellipse at 10% 90%,
+      var(--cloud-d) 50%, transparent 50%)
+      0 13rem / 40rem 5rem,
+    radial-gradient(ellipse at center,
+      var(--cloud-l) 50%, transparent 50%)
+      0rem 8rem / 15rem 8rem,
+    radial-gradient(circle at center,
+      var(--cloud-l) 50%, transparent 50%)
+     -2rem 8rem / 8rem 8rem,
+    radial-gradient(ellipse at 10% 90%,
+      var(--cloud-l) 50%, transparent 50%)
+      0 8rem / 40rem 10rem,
+
     /* sun */
     radial-gradient(circle at center,
       var(--sun) 49.5%, transparent 50%)
       66% 80% / 15vmin 15vmin,
 
     /* backdrop */
-    linear-gradient(
-      var(--sn1), var(--sn2), var(--sn3), transparent
-    ),
+    
     linear-gradient(
       var(--sp1), var(--sp2), var(--sp3),
       var(--so1), var(--so2),var(--so3));
