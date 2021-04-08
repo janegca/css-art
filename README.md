@@ -47,6 +47,7 @@ Code for the above is stored on both
 ## Scenes
 
 - [Cafe Scene](https://janegca.github.io/css-art/scenes/cafe.html)<sup>\*</sup>
+- [Old Miami Skyline](https://janegca.github.io/css-art/scenes/skyline-miami.html)
 
 ---
 
