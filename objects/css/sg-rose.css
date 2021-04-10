@@ -29,7 +29,7 @@ body {
   --frame-d: hsla(60, 50%, 29%, 0.7);
   --rose: hsl(0, 75%, 38%);
   --leading: hsl(200, 0%, 9%);
-  --leaf: hsl(144, 61%, 61%);
+  --leaf: hsl(144, 61%, 51%);
   --stem: hsl(144, 49%, 42%);
 
   /* Image */
@@ -151,7 +151,7 @@ body {
 
   border: 0.2em solid var(--leading);
   border-radius: 83% 17% 83% 17% / 100% 0% 100% 0%;
-  background-color: var(--stem);
+  background-color: var(--leaf);
 }
 
 .sg-rose .leaf:last-of-type {
