@@ -29,7 +29,7 @@ body {
   --frame-d: hsla(60, 50%, 29%, 0.7);
   --rose: hsl(0, 75%, 38%);
   --leading: hsl(200, 0%, 9%);
-  --leaf: hsl(144, 61%, 61%);
+  --leaf: hsla(144, 61%, 61%, 0.6);
   --stem: hsl(144, 49%, 42%);
 
   --leading-width: 0.2em;
@@ -79,14 +79,67 @@ body {
     linear-gradient(
       var(--frame), var(--frame))
       0 0 / 
-      calc(100% - var(--frame-width)) var(--frame-width);
+      calc(100% - var(--frame-width)) var(--frame-width),
+
+    /* background glass */
+    linear-gradient(
+      var(--bg), var(--bg))
+      100% 54% / 50% 8%,
+    linear-gradient(
+      transparent 0% 24%,
+      var(--bg) 24% 51%,
+      var(--bg-d) 51%
+    );
 
   background-repeat: no-repeat;
+  background-color: var(--bg-l);
 
   /* Basic Styling */
+  position: relative;
   width: 18em;
   height: 24em;
   border: var(--leading-width) solid var(--leading);
 
   font-size: calc(0.625rem + 1vmin);
+}
+
+.sg-rose * * {
+  position: absolute;
+}
+
+.sg-rose .petal {
+  top: 30%;
+  width: 28%;
+  height: 28%;
+
+  border: var(--leading-width) solid var(--leading);
+  border-radius: 83% 17% 83% 17% / 100% 0% 100% 0%;
+
+  background-color: var(--rose);
+  transform: rotate(-10deg);
+}
+
+.sg-rose .front-petals .petal:first-of-type {
+  /* front, right petal */
+  left: 45%;
+}
+
+.sg-rose .front-petals .petal:last-of-type {
+  /* front, left petal */
+  left: 24%;
+  transform: scale(1, -1) rotate(-10deg);
+}
+
+.sg-rose .back-petals .petal {
+  top: 26%;
+}
+.sg-rose .back-petals .petal:first-of-type {
+  /* left, back petal */
+  left: 35%;
+  transform: scaleY(-1) rotate(-10deg);
+}
+
+.sg-rose .back-petals .petal:last-of-type {
+  /* right, back petal */
+  left: 36%;
 }
