@@ -1,0 +1,92 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Composition */
+.sg-rose {
+  /* Custom properties */
+  --bg: hsl(200, 60%, 47%);
+  --bg-l: hsl(200, 83%, 66%);
+  --bg-d: hsl(200, 56%, 40%);
+  --frame: hsla(60, 43%, 33%, 0.7);
+  --frame-l: hsla(60, 100%, 28%, 0.7);
+  --frame-d: hsla(60, 50%, 29%, 0.7);
+  --rose: hsl(0, 75%, 38%);
+  --leading: hsl(200, 0%, 9%);
+  --leaf: hsl(144, 61%, 61%);
+  --stem: hsl(144, 49%, 42%);
+
+  --leading-width: 0.2em;
+  --frame-width: 0.5em;
+  --frame-comb-width: calc(var(--leading-width) + var(--frame-width));
+
+  /* Image */
+  /* prettier-ignore */
+  background:   
+
+    /* frame - bottom */
+    linear-gradient(
+      var(--leading),var(--leading))
+      var(--frame-comb-width) 
+      calc(100% - var(--frame-width)) / 
+      100% var(--leading-width),
+    linear-gradient(
+      var(--frame), var(--frame))
+      var(--frame-comb-width) 100% /
+      100% var(--frame-width),
+
+    /* frame - right */
+    linear-gradient(
+      black, black)
+      calc(100% - var(--frame-width)) 0 / 
+      var(--leading-width) 
+      calc(100% - var(--frame-comb-width)),
+    linear-gradient(
+      var(--frame-d), var(--frame-d))
+      100% 0 / var(--frame-width) 
+      calc(100% - var(--frame-comb-width)),
+
+    /* frame - left */
+    linear-gradient(
+      var(--leading), var(--leading))
+      var(--frame-width) var(--frame-comb-width) / 
+      var(--leading-width) 100%,
+    linear-gradient(
+      var(--frame-d), var(--frame-d))
+      0 var(--frame-comb-width) / var(--frame-width)  100%,
+
+    /* frame - top */
+    linear-gradient(
+      var(--leading), var(--leading))
+      0 var(--frame-width) / 
+      calc(100% - var(--frame-width)) var(--leading-width),
+    linear-gradient(
+      var(--frame), var(--frame))
+      0 0 / 
+      calc(100% - var(--frame-width)) var(--frame-width);
+
+  background-repeat: no-repeat;
+
+  /* Basic Styling */
+  width: 18em;
+  height: 24em;
+  border: var(--leading-width) solid var(--leading);
+
+  font-size: calc(0.625rem + 1vmin);
+}
