@@ -16,6 +16,8 @@ body {
   place-content: center;
   min-height: 100vh;
   margin: 0;
+
+  background-color: #d1ca9c;
 }
 
 /* Composition */
@@ -24,9 +26,9 @@ body {
   --bg: hsl(200, 60%, 47%);
   --bg-l: hsl(200, 83%, 66%);
   --bg-d: hsl(200, 56%, 40%);
-  --frame: hsla(60, 43%, 33%, 0.7);
-  --frame-l: hsla(60, 100%, 28%, 0.7);
-  --frame-d: hsla(60, 50%, 29%, 0.7);
+  --frame: hsl(60, 11%, 30%);
+  --frame-l: hsl(60, 100%, 28%);
+  --frame-d: hsl(60, 50%, 29%);
   --rose: hsl(0, 75%, 38%);
   --leading: hsl(200, 0%, 9%);
   --leaf: hsl(144, 61%, 51%);
@@ -80,13 +82,73 @@ body {
       48% calc(100% - 0.7em) / 1em 50%,
 
     /* background glass */
+
+    /* top-left rectangle - right leading */
+    linear-gradient(
+      to right,
+      transparent calc(100% - 0.2em), 
+      var(--leading) 0.2em)
+      0 0.5em / 28% 29%,
+
+    /* top-left rectangle - bottom leading */
+    linear-gradient(
+      to bottom,
+      transparent 97%,
+      var(--leading) 0.5em)
+      0.5em 0 / 25% 29%,
+
+    /* top-left rectangle - diagonal */
+    linear-gradient(
+      55deg,
+      var(--bg) 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      transparent 50%)
+      0.5em -1em / 25% 40%,
+
+     /* leading - middle left to leaf */
+     linear-gradient(
+      to bottom,
+      var(--leading),
+      var(--leading))
+      0.5em 60.5% / 30% 0.2em,
+
+     /* patch - under left leaf */
+     linear-gradient(
+      to right,
+      var(--bg), var(--bg))
+      40% 65% / 2em 2em,
+
+    /* leading - right petal to right side of frame */
+    linear-gradient(
+      to bottom,
+      var(--leading),
+      var(--leading))
+      94% 30% / 40% 0.2em,
+
+    /* leading - right leaf to right side of frame */
+    linear-gradient(
+      to bottom,
+      var(--leading),
+      var(--leading))
+      100% 70.5% / 37% 0.2em, 
+
+    /* patch - under right leaf */
+    linear-gradient(
+      to right,
+      var(--bg), var(--bg))
+      57% 75% / 2em 2em,
+
+    /* right hand middle section extension to leaf */
     linear-gradient(
       var(--bg), var(--bg))
-      100% 54% / 50% 8%,
+      100% 66% / 50% 11%,
+
+    /* 3 shades top to bottom */
     linear-gradient(
-      transparent 0% 24%,
-      var(--bg) 24% 51%,
-      var(--bg-d) 51%
+      transparent 0% 30%,
+      var(--bg) 28% 60%,
+      var(--bg-d) 60%
     );
 
   background-repeat: no-repeat;
