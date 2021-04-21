@@ -23,9 +23,10 @@ body {
 /* Composition */
 .sg-rose {
   /* Custom properties */
-  --bg: hsl(200, 60%, 47%);
-  --bg-l: hsl(200, 83%, 66%);
-  --bg-d: hsl(200, 56%, 40%);
+  --bg: hsl(200, 70%, 57%);
+  --bg-l: hsl(200, 98%, 79%);
+  --bg-d: hsl(200, 46%, 40%);
+
   --frame: hsl(60, 11%, 30%);
   --frame-l: hsl(60, 100%, 28%);
   --frame-d: hsl(60, 50%, 29%);
@@ -81,7 +82,54 @@ body {
       var(--stem), var(--stem))
       48% calc(100% - 0.7em) / 1em 50%,
 
-    /* background glass */
+    /* -- background glass -- */
+
+    /* leading - right petal to right side of frame */
+    linear-gradient(
+      to bottom,
+      var(--leading),
+      var(--leading))
+      94% 29% / 40% 0.2em,
+
+    /* top, right diagonal section */
+    linear-gradient(
+      -52deg,
+      var(--bg-d) 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      transparent 50%)
+      96% -1em / 28% 39%,
+
+    /* top - 5th section */
+    linear-gradient(
+      to right,
+      var(--bg-l) calc(100% - 0.2em),
+      var(--leading) calc(100% - 0.2em),
+      var(--leading))
+      67% 0 / 8.5% 31%,    
+
+    /* top - 4th section */
+    linear-gradient(
+      to right,
+      var(--bg) calc(100% - 0.2em),
+      var(--leading) calc(100% - 0.2em),
+      var(--leading))
+      56.5% 0 / 11% 31%,
+
+    /* top - 3rd section */
+    linear-gradient(
+      to right,
+      var(--bg-d) calc(100% - 0.2em),
+      var(--leading) calc(100% - 0.2em),
+      var(--leading) )
+      44% 0 / 11% 31%,
+
+    /* top - 2nd section */
+    linear-gradient(
+      to right,
+      var(--bg-l) calc(100% - 0.2em),
+      var(--leading) calc(100% - 0.2em), var(--leading))
+      31.5% 0 / 11% 31%,
 
     /* top-left rectangle - right leading */
     linear-gradient(
@@ -100,7 +148,7 @@ body {
     /* top-left rectangle - diagonal */
     linear-gradient(
       55deg,
-      var(--bg) 49%,
+      var(--bg-d) 49%,
       var(--leading) 49%,
       var(--leading) 51%,
       transparent 50%)
@@ -119,12 +167,7 @@ body {
       var(--bg), var(--bg))
       40% 65% / 2em 2em,
 
-    /* leading - right petal to right side of frame */
-    linear-gradient(
-      to bottom,
-      var(--leading),
-      var(--leading))
-      94% 30% / 40% 0.2em,
+  
 
     /* leading - right leaf to right side of frame */
     linear-gradient(
@@ -152,7 +195,7 @@ body {
     );
 
   background-repeat: no-repeat;
-  background-color: var(--bg-l);
+  background-color: var(--bg);
 
   /* Basic Styling */
   position: relative;
