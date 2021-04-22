@@ -85,6 +85,33 @@ body {
 
     /* -- background glass -- */
 
+    /* bottom, left corner to top of leaf */
+    linear-gradient(
+      -60deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 51.5%,
+      transparent 50%)
+      0 14.3em / 6.1em 9em,
+
+    /* bottom, left corner to bottom of leaf */
+    linear-gradient(
+      -40deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      transparent 50%)
+      -0.5em 16.5em / 9.5em 7.5em,
+
+    /* bottom, left diagonal */
+    linear-gradient(
+      50deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 50.5%,
+      transparent 50%)
+      -1.5em 14em / 12em 40%,
+
     /* middle, right diagonal section */
     linear-gradient(
       65deg,
@@ -228,7 +255,7 @@ body {
     linear-gradient(
       transparent 0% 30%,
       var(--bg-d) 28% 60%,
-      var(--bg) 60%
+      var(--bg-d) 60%
     );
 
   background-repeat: no-repeat;
