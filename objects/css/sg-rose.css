@@ -84,12 +84,28 @@ body {
 
     /* -- background glass -- */
 
+    /* middle, right diagonal section */
+    linear-gradient(
+      65deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      var(--bg-l) 50%)
+      10.1em 7em / 9em 9.6em,
+
+    /* middle, right patch */
+    linear-gradient(
+      to right,
+      var(--bg), 
+      var(--bg))
+      9em 7em / 7em 7em,
+
     /* middle, left diagonal section */
     linear-gradient(
       -60deg,
       transparent 49%,
       var(--leading) 49%,
-      var(--leading) 51%,
+      var(--leading) 52%,
       var(--bg) 50%)
       0 45.5% / 28% 36%,
 
@@ -98,7 +114,7 @@ body {
       to bottom,
       var(--leading),
       var(--leading))
-      94% 29% / 40% 0.2em,
+      95% 29% / 30% 0.2em,
 
     /* top, lower leading from leading to inner petal */
     linear-gradient(
@@ -148,9 +164,9 @@ body {
     /* top - 2nd section */
     linear-gradient(
       to right,
-      var(--bg-l) 86%,
-      var(--leading) 86%,
-      var(--leading) 100%)
+      var(--bg-l) 84%,
+      var(--leading) 84%,
+      var(--leading))
       31.8% 0 / 11.7% 31%,
 
     /* top-left rectangle - right leading */
