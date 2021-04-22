@@ -30,6 +30,7 @@ body {
   --frame: hsl(60, 11%, 30%);
   --frame-l: hsl(60, 100%, 28%);
   --frame-d: hsl(60, 50%, 29%);
+
   --rose: hsl(0, 75%, 38%);
   --leading: hsl(200, 0%, 9%);
   --leaf: hsl(144, 61%, 51%);
@@ -44,7 +45,7 @@ body {
       var(--leading),var(--leading))
       0.7em calc(100% - 0.5em) / 100% 0.2em,
     linear-gradient(
-      var(--frame), var(--frame))
+      var(--frame-l), var(--frame-l))
       0.7em 100% / 100% 0.5em,
 
     /* frame - right */
@@ -68,7 +69,7 @@ body {
       var(--leading), var(--leading))
       0 0.5em / calc(100% - 0.5em) 0.2em,
     linear-gradient(
-      var(--frame), var(--frame))
+      var(--frame-l), var(--frame-l))
       0 0 / calc(100% - 0.5em) 0.5em,
 
     /* stem */
