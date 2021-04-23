@@ -36,6 +36,7 @@ Attempts at creating Pure CSS Art.
 - [Happy-face](https://janegca.github.io/css-art/objects/happy-face.html)<sup>\*</sup>
 - [Marbles](https://janegca.github.io/css-art/objects/marbles.html)
 - [Polaroid Camera](https://janegca.github.io/css-art/objects/polaroid.html)<sup>\*</sup>
+- [Stained Glass Rose](https://janegca.github.io/css-art/objects/sg-rose.html)
 - [Xmas Tree](https://janegca.github.io/css-art/objects/xmas-tree.html)<sup>\*</sup>
 
 ## Code
