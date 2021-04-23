@@ -85,14 +85,77 @@ body {
 
     /* -- background glass -- */
 
+    /* bottom, right diagonal section overlay*/
+    linear-gradient(
+      -38deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      transparent 50%)
+      110% 16.6em / 11.5em 7em,
+
+    /* bottom, right corner to top of leaf */
+    linear-gradient(
+      45deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 50.5%,
+      var(--bg-l) 50%)
+      11.2em 16.7em / 12em 12.2em,
+
+    /* bottom, right corner to bottom of leaf */
+    linear-gradient(
+      20deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      transparent 50%)
+      8em 16.4em / 9.1em 9.6em,
+
+    /* bottom, right diagonal section */
+    linear-gradient(
+      -38deg,
+      var(--bg-d) 49%,
+      var(--leading) 49%,
+      var(--leading) 51%,
+      transparent 50%)
+      110% 16.6em / 11.5em 7em,
+
+    /* bottom, right, cone patch */ 
+    linear-gradient(
+      var(--bg-d),var(--bg-d) )
+      9.3em 19.5em / 3em .7em,
+    linear-gradient(
+      var(--bg-d),var(--bg-d) )
+      10.4em 19.9em / 3em .7em,  
+   
+    /* bottom right top down patch */
+    radial-gradient(
+      circle at center,
+      var(--bg-d) 50%, transparent 50%)
+      9.5em 18.8em / 2em 2em,
+    linear-gradient(
+      var(--bg), var(--bg) )
+      7.9em 20em / 3.3em 2.5em,
+   
+
+    /* bottom, left diagonal overlay */
+    linear-gradient(
+      50deg,
+      transparent 49%,
+      var(--leading) 49%,
+      var(--leading) 50.5%,
+      transparent 50%)
+      -1.5em 14em / 12em 40%,
+
     /* bottom, left corner to top of leaf */
     linear-gradient(
       -60deg,
       transparent 49%,
       var(--leading) 49%,
       var(--leading) 51.5%,
-      transparent 50%)
-      0 14.3em / 6.1em 9em,
+      var(--bg) 50%)
+      0 14.4em / 6.1em 9em,
 
     /* bottom, left corner to bottom of leaf */
     linear-gradient(
@@ -100,13 +163,13 @@ body {
       transparent 49%,
       var(--leading) 49%,
       var(--leading) 51%,
-      transparent 50%)
-      -0.5em 16.5em / 9.5em 7.5em,
+      var(--bg-d) 50%)
+      -0.5em 16.5em / 9.5em 7.5em,  
 
     /* bottom, left diagonal */
     linear-gradient(
       50deg,
-      transparent 49%,
+      var(--bg-l) 49%,
       var(--leading) 49%,
       var(--leading) 50.5%,
       transparent 50%)
