@@ -1,0 +1,96 @@
+/* -- Standard Resets -- */
+html {
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* -- General Styling for display only -- */
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Composition */
+.tulips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: calc(100vw * 0.9);
+  min-height: calc(100vh * 0.9);
+
+  /* prettier-ignore */
+  background: 
+    linear-gradient(to right,
+    #eee 30%,rgba(255, 255, 255,0) 60%,#eee),
+    linear-gradient(to bottom, 
+    white 50%, ghostwhite 25%, #ccc);
+
+  font: calc(0.625rem + 1vmin);
+  overflow: hidden;
+}
+
+.tulips > .tulip + .tulip {
+  margin-left: 2em;
+}
+
+.tulips * {
+  outline: 1px solid red;
+}
+
+/* Tulip - general styling */
+.tulips > .tulip {
+  --panel-width: 25%;
+  --panel-height: 80%;
+
+  position: relative;
+  width: var(--panel-width);
+  height: var(--panel-height);
+}
+
+.tulips > .tulip * {
+  position: absolute;
+}
+
+.tulips > .tulip > .head {
+  width: 66.67%;
+  height: 28.6%;
+}
+
+/* First tulip */
+.tulips > .tulip:nth-of-type(1) {
+  top: 1em;
+  width: var(--panel-width);
+}
+
+/* Second tulip */
+.tulips > .tulip:nth-of-type(2) {
+  --panel-width: 28%;
+  --panel-height: 78%;
+
+  top: -2em;
+}
+
+.tulips > .tulip:nth-of-type(2) .stem {
+  left: 30%;
+  bottom: 0;
+  width: 1em;
+  height: 71%;
+}
+
+/* Third tulip */
+.tulips > .tulip:nth-of-type(3) {
+  --panel-width: 21%;
+}
+
+.tulips > .tulip:last-of-type .head {
+  right: 0;
+}
