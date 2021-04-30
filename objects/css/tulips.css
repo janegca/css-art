@@ -1,3 +1,7 @@
+/* References:   
+    To get stem gradients and keep border-radius: 
+      https://dev.to/rumansaleem/gradient-borders-with-css-3mnk
+ */
 /* -- Standard Resets -- */
 html {
   box-sizing: border-box;
@@ -18,8 +22,51 @@ body {
   margin: 0;
 }
 
+/* -- Drawing Grid -- */
+.bg-grid {
+  /*
+    Add to 'body'
+    Can include inline style --grid-line-color: transparent
+      to turn lines on or off as required
+    And/or set the properties --grid-cell-size,
+      --grid-line-width, and --font-size (for rem/em's)
+      using inline style
+  */
+
+  /* responsive to font and viewport resizing */
+  --font-size: calc(0.625rem + 1vmin);
+
+  /* use 'em' if sizing/positioning in em's 
+     or 'vmin' if using viewport percentages
+  */
+  --grid-cell-size: 10vmin;
+  --grid-line-width: 0.05em;
+  --grid-line-color: #ccc;
+
+  /* prettier-ignore */
+  background:  
+    linear-gradient(
+      to right, 
+      var(--grid-line-color) var(--grid-line-width), 
+      transparent 0)
+      0 0 / var(--grid-cell-size) var(--grid-cell-size),
+    linear-gradient(
+      to bottom, 
+      var(--grid-line-color) var(--grid-line-width), 
+      transparent 0)
+      0 0 /  var(--grid-cell-size) var(--grid-cell-size);
+
+  /* Basic styling */
+  min-width: 100vw;
+  min-height: 100vh;
+
+  font-size: var(--font-size);
+}
+
 /* Composition */
 .tulips {
+  --bg: white;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +75,9 @@ body {
   min-height: calc(100vh * 0.9);
 
   /* prettier-ignore */
-  background: 
-    linear-gradient(to right,
-    #eee 30%,rgba(255, 255, 255,0) 60%,#eee),
-    linear-gradient(to bottom, 
-    white 50%, ghostwhite 25%, #ccc);
+  /* background: var(--bg); */
 
-  font: calc(0.625rem + 1vmin);
+  font-size: calc(0.625rem + 1vmin);
   overflow: hidden;
 }
 
@@ -65,10 +108,45 @@ body {
   height: 28.6%;
 }
 
+.tulips .tulip .stem {
+  /* allows gradient to appear in border
+     while ensuring border-radius is maintained 
+     (border-image does not respect border-radius)
+   */
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
 /* First tulip */
 .tulips > .tulip:nth-of-type(1) {
   top: 1em;
   width: var(--panel-width);
+}
+
+.tulips > .tulip:nth-of-type(1) .head {
+  background: pink;
+  z-index: 1;
+}
+
+.tulips > .tulip:nth-of-type(1) .stem {
+  left: -40%;
+  bottom: -65%;
+  width: 10em;
+  height: 150%;
+
+  border-radius: 100%;
+  border-left: 1em solid transparent;
+
+  /* prettier-ignore */
+  background-image: 
+    linear-gradient(
+      to right, var(--bg), var(--bg)),
+    radial-gradient(
+      ellipse at 0% 40%, 
+      hsl(60, 70%, 50%), 
+      green);
+
+  transform: scaleX(-1);
 }
 
 /* Second tulip */
@@ -79,11 +157,28 @@ body {
   top: -2em;
 }
 
+.tulips > .tulip:nth-of-type(2) .head {
+  background: pink;
+  z-index: 1;
+}
+
 .tulips > .tulip:nth-of-type(2) .stem {
-  left: 30%;
-  bottom: 0;
-  width: 1em;
-  height: 71%;
+  left: 20%;
+  bottom: -55%;
+  width: 4em;
+  height: 150%;
+
+  border-radius: 100%;
+  border-left: 1em solid transparent;
+
+  /* prettier-ignore */
+  background-image: 
+    linear-gradient(
+      to right, var(--bg), var(--bg)),
+    radial-gradient(
+      ellipse at 0% 40%, 
+      hsl(60, 70%, 50%), 
+      green);
 }
 
 /* Third tulip */
@@ -93,4 +188,25 @@ body {
 
 .tulips > .tulip:last-of-type .head {
   right: 0;
+  background: pink;
+  z-index: 1;
+}
+
+.tulips > .tulip:nth-of-type(3) .stem {
+  left: 40%;
+  bottom: -65%;
+  width: 10em;
+  height: 150%;
+
+  border-radius: 100%;
+  border-left: 1em solid transparent;
+
+  /* prettier-ignore */
+  background-image: 
+    linear-gradient(
+      to right, var(--bg), var(--bg)),
+    radial-gradient(
+      ellipse at 0% 40%, 
+      hsl(60, 70%, 50%), 
+      green);
 }
